@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.18.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "spfx-list-demo",
+    "libraryId": "e591e395-6395-436b-b394-fe19203a4456",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-list-demo",
+    "solutionShortDescription": "spfx-list-demo description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

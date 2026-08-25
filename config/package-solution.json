@@ -1,0 +1,39 @@
+{
+  "solution": {
+    "name": "spfx-list-demo-client-side-solution",
+    "id": "e591e395-6395-436b-b394-fe19203a4456",
+    "version": "1.0.9.5",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-list-demo description"
+      },
+      "longDescription": {
+        "default": "spfx-list-demo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-list-demo Feature",
+        "description": "The feature that activates elements of the spfx-list-demo solution.",
+        "id": "ba24e897-5a7b-44fc-b1de-ed79562ec95e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-list-demo.sppkg"
+  }
+}

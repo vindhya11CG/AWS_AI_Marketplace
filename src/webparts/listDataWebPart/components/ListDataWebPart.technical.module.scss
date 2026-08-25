@@ -1,0 +1,238 @@
+/* Technical (dark) theme overrides when body has .technicalMode */
+:global(.technicalMode) [class*="webpartContainer"],
+:global(.technicalMode) [class*="background"] {
+  background: #111827;
+  color: #e6e6e6;
+}
+:global(.technicalMode) [class*="modalContent"] {
+  background: #111827;
+  color: #e6e6e6;
+  border-color: #222;
+}
+:global(.technicalMode) [class*="modalContent"] h2{
+  color: #9adff0;
+}
+:global(.technicalMode) [class*="modalContent"] li{
+  color: white;
+}
+:global(.technicalMode) [class*="modalContent"] strong{
+  color: #9adff0;
+}
+:global(.technicalMode) [class*="modalTabs"] {
+  border-bottom: 1px solid #e6eef6;
+}
+:global(.technicalMode) [class*="tabContentSection"] strong{
+  color: #9adff0;
+}
+:global(.technicalMode) [class*="tabActive"]:hover,
+:global(.technicalMode) [class*="tabActive"]:focus {
+  background: #0070ad !important;
+  color: #f5f5f7 !important;
+  cursor: default;
+}
+:global(.technicalMode) [class*="expectedRoi"] strong{
+  color: #9adff0;
+}
+:global(.technicalMode) [class*="roiCard"] {
+  background: black;
+}
+:global(.technicalMode) [class*="fixedHeader"] {
+  background: #0b0f14; /* dark header */
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+:global(.technicalMode) [class*="sectionHeader"] {
+  background: #0070ad;
+  color: #f5f5f7;
+}
+:global(.technicalMode) [class*="bannerWrapper"] {
+  background-color: #08384f;
+}
+/* tiles & content boxes */
+/* Keep the tiles container background unchanged so only tiles receive the theme color */
+:global(.technicalMode) [class^="tile_"] {
+  background: #7b96bc !important;
+  color: #f5f5f7 !important;
+  box-shadow: none;
+}
+:global(.technicalMode) [class^="tile_"]:hover {
+  box-shadow: 0 4px 8px rgba(255,255,255,0.03) !important;
+}
+:global(.technicalMode) [class*="sectionDesc"],
+:global(.technicalMode) [class*="sectionIntro"],
+:global(.technicalMode) [class*="sectionIntroText"] {
+  background: #535a65;
+  color: #e6e6e6;
+  border-color: #222;
+  box-shadow: none;
+}
+:global(.technicalMode) [class*="leftNavButton"] {
+  background: transparent;
+  color: #e6e6e6;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+:global(.technicalMode) [class*="industrySelect"],
+:global(.technicalMode) [class*="searchInput"]{
+  background: #535a65;
+  color: #e6e6e6;
+  border-color: #535a65;
+}
+/* Placeholder color for inputs in technical mode — lighter for readability */
+// :global(.technicalMode) [class*="searchInput"]::placeholder {
+//   color: #e6e6e6;
+//   opacity: 1;
+// }
+// :global(.technicalMode) [class*="searchInput"]::-webkit-input-placeholder {
+//   color: #e6e6e6;
+//   opacity: 1;
+// }
+// :global(.technicalMode) [class*="searchInput"]::-moz-placeholder {
+//   color: #e6e6e6;
+//   opacity: 1;
+// }
+// :global(.technicalMode) [class*="searchInput"]:-ms-input-placeholder {
+//   color: #e6e6e6;
+//   opacity: 1;
+// }
+
+:global(.technicalMode) [class*="searchInput"] :focus{
+  border-color: #535a65;
+}
+:global(.technicalMode) [class*="credentialsBox"] {
+  background: #0070ad;
+  border-color: #08323b;
+  color: #e6e6e6;
+}
+:global(.technicalMode) [class*="credentialLine"] {
+  background: transparent;
+  color: #e6e6e6;
+}
+:global(.technicalMode) [class*="commentsPanel"] {
+  background: #0f0f12;
+  color: #e6e6e6;
+  box-shadow: none;
+  border-color: #222;
+}
+:global(.technicalMode) [class*="starFront"] {
+  color: #9adff0;
+}
+:global(.technicalMode) [class*="commentsPanel"] h4 {
+  color: #9adff0;
+}
+:global(.technicalMode) [class*="commentsSection"] {
+  background: #111827;
+  border:black;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 1px 10px #0070ad, inset 0 1px 0 hsl(0deg 86.38% 62.59% / 2%);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+:global(.technicalMode)  [class*="commentInput"] {
+  background: #111827;
+  // border: 1px solid #9adff0 !important;
+  color:white;
+}
+:global(.technicalMode)  [class*="commentInput"]:focus {
+  outline: 2px solid rgba(154,223,240,0.12) !important;
+  outline-offset: 2px !important;
+  border: 1px solid #9adff0 !important;
+}
+:global(.technicalMode)  [class*="commentToggle"] {
+    color:#9adff0;
+}
+:global(.technicalMode)  [class*="commentButton"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+:global(.technicalMode)  [class*="commentAuthor"] {
+    font-weight: 600;
+    color: white;
+}
+:global(.technicalMode)  [class*="commentDate"] {
+    color: white;
+    font-size: 0.65rem;
+}
+:global(.technicalMode)  [class*="commentText"] {
+  font-size: 0.75rem;
+  color: white;
+}
+:global(.technicalMode) [class*="linkIconLabel"] {
+  color: #e6e6e6;
+}
+:global(.technicalMode) [class*="rawJsonBox"] {
+  background: #101214;
+  border-color: #222;
+  color: #cfcfcf;
+}
+:global(.technicalMode) [class*="linkButtonDisabled"] {
+  background: grey !important;
+  color: white !important;
+  border-color: #1f2937 !important;
+}
+:global(.technicalMode) [class*="comingSoonLabel"] {
+  color: #9ca3af !important;
+}
+:global(.technicalMode) [class*="workflowStep"] {
+  background:#9adff0;
+  color:black;
+}
+:global(.technicalMode) [class*="workflowMeta"] {
+  color: white;
+}
+:global(.technicalMode) [class*="arrow"] {
+  color:#9adff0;
+}
+/* Availability stacked style overrides for Technical mode */
+:global(.technicalMode) [class*="availabilityCards"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+:global(.technicalMode) [class*="availabilityCard"] {
+  background: #071016 !important;
+  color: #e6e6e6 !important;
+  border: 1px solid #14232b !important;
+}
+:global(.technicalMode) [class*="availabilityCard"]:hover {
+  border-color: black !important; 
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 0 6px rgba(255,182,193,0.06) !important;
+}
+:global(.technicalMode) [class*="availabilityCards"] {
+  background: transparent !important;
+}
+/* Floating sidebar dark mode */
+:global(.technicalMode) [class*="floatingSidebar"] {
+  background: #0e1013;
+  border: 1px solid #1f1f22;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  color: #e6e6e6;
+}
+:global(.technicalMode)  [class*="countTextBelow"] {
+    color:white;
+}
+:global(.technicalMode)  [class*="avgText"] {
+    color:white;
+}
+:global(.technicalMode) [class*="segmentButton"] {
+  background: #535a65;
+  color: white;
+}
+:global(.technicalMode) [class*="segmentedToggle"] {
+  background: #535a65;
+}
+
+:global(.technicalMode) [class*="activeSegment"] {
+  background: #0070AD;
+  color: #f5f5f7;
+  font-weight: bold;
+}
+// :global(.technicalMode) [class*="activeSegment"] :hover {
+//   background: #e0e0e0;
+//   color: black;
+//   font-weight: bold;
+// }
+/* Left nav button dark-mode polish */
+:global(.technicalMode) [class*="leftNavButton"] {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.6) inset, 0 2px 6px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.02);
+}

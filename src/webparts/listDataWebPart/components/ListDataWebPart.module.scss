@@ -1,0 +1,1444 @@
+//banner
+.bannerWrapper {
+  position: relative; /* was absolute — make it part of the header flow */
+  width: 100%;
+  // height: min-content;
+  height: 55px;
+  background-color: #0070AD;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  top:20px;
+}
+
+.background {
+  background: #f5f5f7;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 40px;
+  width: 100%;
+  padding-top: 80px; /* Prevent overlap */
+  margin: 0; /* Remove negative margin */
+  box-sizing: border-box;
+}
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.bannerOverlayImage {
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 150%;
+  max-width: 220px;
+  object-fit: contain;
+  object-position: top center;
+  display: block;
+  z-index: 2;
+  pointer-events: none;
+}
+ 
+.bannerTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5f5f7;
+  font-size: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+
+/* Search Bar */
+.searchBarContainer {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 30px;
+}
+
+.searchInput {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  width: 30%;
+  height: 30px;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
+}
+
+/* Section Header */
+.section {
+  margin-bottom: 10px;
+}
+
+.sectionHeader {
+  display: flex;
+  width: 99%;
+  justify-content: space-between;
+  align-items: center;
+  background: #0070AD;
+  color: #f5f5f7;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 5px;
+}
+
+.sectionHeader h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.sectionHeader:hover {
+  background: #12ABDB;
+}
+
+/* Description box that appears above section headers.*/
+.sectionDesc,
+.sectionIntro,
+.sectionIntroText {
+  background: #ffffff;
+  color: #222222;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e6eef6;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.sectionDesc p,
+.sectionIntro p {
+  margin: 0;
+}
+
+/* inner spacer for intro text so TSX doesn't need inline styles */
+.sectionIntroInner {
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .sectionDesc,
+  .sectionIntro,
+  .sectionIntroText {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+.root {
+  margin-top: -24px;   // cancels SharePoint’s top spacing
+  padding: -8px;
+}
+.webpartContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  height: auto;
+  width: 93vw;
+  overflow: hidden;
+  background: #f5f5f7;
+  box-sizing: border-box;
+  margin: -30px auto 0; /* center the webpart horizontally */
+}
+
+.fixedHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f5f5f7;
+  // padding-bottom: 10px;
+}
+
+.scrollableContent {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex; /* arrange left / center / right in a row */
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contentWrapper {
+  display: flex;
+  min-height: 0;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+}
+
+.rightPanel {
+  width: 20%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+  height: auto;
+  max-height: calc(100vh - 100px);
+}
+
+.floatingSidebar {
+  /* in-flow container inside the sticky rightPanel so it aligns with center row */
+  position: relative;
+  width: 100%;
+  max-height: calc(50vh - 16px);
+  min-height: 200px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  font-family: 'Ubuntu', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.scrollArea {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.caseStudyCarousel {
+  margin-top: 0;
+  background: #f4f4f4;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  padding: 10px;
+  flex: 1 1 auto;
+  min-height: 280px;
+  max-height: calc(100vh - 260px);
+  width: 100%;
+  overflow: hidden;
+}
+.carouselImage {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.carouselTitle {
+  font-weight: bold;
+  color: #0070AD;
+  margin-bottom: 10px;
+}
+
+.marqueeContainer {
+  height: auto;
+  max-height: calc(100vh - 340px);
+  overflow: hidden;
+}
+
+.marqueeContent {
+  display: flex;
+  flex-direction: column;
+  // gap: 10px;
+  animation: scrollUp 20s linear infinite;
+}
+
+.marqueeContent:hover {
+  animation-play-state: paused;
+}
+
+.carouselCard {
+  cursor: pointer;
+  margin-bottom: 12px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 112, 173, 0.1);
+}
+
+.carouselCard img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.carouselLabel {
+  text-align: center;
+  padding: 5px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #003b6d;
+  background: rgba(245, 247, 249, 0.95);
+  border-top: 1px solid rgba(0, 112, 173, 0.08);
+}
+
+@keyframes scrollUp {
+  from {
+     transform: translateY(0);
+  }
+
+  to {
+     transform: translateY(-50%);
+  }
+}
+
+/* Left navigation container for Starter Packs / Agents */
+.leftNav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.leftSidebar {
+  width: 18%;
+  position: sticky;
+  top: 80px; /* space beneath the header */
+  align-self: flex-start;
+  height: calc(100vh - 120px);
+  overflow: auto;
+}
+
+.centerPanel {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding-right: 12px;
+  width:75%;
+}
+
+/* Left nav button style to match header controls */
+.leftNavButton {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #ffffff;
+  text-align: left;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.leftNavButton:hover {
+  background: #f0f8fb;
+  color:black;
+}
+.leftNavButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,112,173,0.12);
+}
+
+.industrySelect {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.95rem;
+  background: #ffffff;
+}
+
+/* Technical (dark) theme overrides when body has .technicalMode */
+
+
+.sidebarItem {
+  cursor: pointer;
+  padding: 6px 10px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebarItem:hover {
+  background-color: #e0e0e0;
+}
+/* Tiles */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  // max-width: 1300px;
+  margin: auto;
+}
+
+.tile {
+  background: #2B0A3D;
+  border-radius: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: calc(20% - 10px);
+  min-height: 120px;
+  box-sizing: border-box;
+  margin: 3px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;  
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
+}
+
+.tile h3 {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.4;
+  color: #F5F5F7;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.tile h5 {
+  margin: 0;
+  line-height: 1.4;
+  color: #F5F5F7;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 4px white;
+}
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalContent {
+  background: #F5F5F7;
+  padding: 20px;
+  border-radius: 16px;
+  width: 92vw;       /* 92% of viewport width */
+  max-width: 1550px;
+  height: 86vh;      /* 86% of viewport height */
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: slideUp 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:1rem;
+  padding-bottom: 0px;
+}
+
+/* Video container inside modal */
+.modalVideoContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.modalVideoPlayer {
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 320px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  background: #000;
+}
+
+@media (max-width: 900px) {
+  .modalVideoContainer {
+    padding-top: 56.25%;
+  }
+}
+
+/* Compact modal variant used for small dialogs (Contact list, confirmations) */
+.contactModalContent {
+  width: 420px;
+  max-width: 92vw;
+  height: auto;
+  max-height: 70vh;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+
+.modalContent h2 {
+  font-size: 1.5rem;
+  // margin-bottom: 15px;
+  margin-top: 5px;
+  color: #0070AD;
+}
+
+/* Modal header row: title left, action buttons right */
+.modalHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  // margin-bottom: 12px;
+}
+
+.modalTitle {
+  margin: 0;
+  text-align: left;
+  flex: 1 1 auto;
+  font-size: 1.5rem;
+  color: #0070AD;
+}
+
+.agenticButton {
+  margin-left: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+/* Credentials box shown in modal for Agents */
+.credentialsBox {
+  background: #0070AD;
+  border: 1px solid #0070AD;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin: 2px 0 12px 0;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  box-sizing: border-box;
+  max-width: 100%;
+  white-space: normal; /* allow wrapping */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.credentialsTitle {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+.credentialLine {
+  font-size: 0.70rem;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding-left: 4px;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 1px;
+}
+.credentialValue {
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(0,0,0,0.03);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  display: inline-block;
+  word-break: break-all; /* ensure long tokens (like URLs) will wrap */
+}
+
+/* link style inside the credentials box */
+.credentialsLink {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.modalScrollArea {
+  margin-top: 20px;
+  overflow-y: auto;
+  max-height: 70vh;
+  padding-right: 8px;
+  background: transparent;
+  flex: 1 1 auto;
+  scroll-behavior: smooth;
+  font-size:1rem;
+}
+
+.modalContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modalContent li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.modalContent li strong {
+  color: #0070AD;
+}
+.tabContentSection strong,
+.expectedRoi strong {
+  color: #0070AD;
+}
+
+.richTextContent {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.richTextContent a {
+  color: #333;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.link {
+  color: #333;
+  text-decoration: underline;
+}
+.workflowContainer {
+  display: block;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.workflowInline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.workflowStep {
+  background-color: #0070AD;
+  color: #f5f5f7;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Vertical workflow layout for Agents Involved */
+.workflowVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.workflowRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.workflowMeta {
+  color: #4b5563; /* subdued grey */
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.workflowConnector {
+  display: flex;
+  align-items: center;
+  padding-left: 6px; /* align under the pill */
+  margin: 4px 0 6px 0;
+}
+
+.arrowDown {
+  color: #0070AD;
+  font-size: 18px;
+  line-height: 1;
+  margin-left: 6px;
+}
+
+.arrow {
+  font-size: 1rem;
+  color: #0070AD;
+}
+
+.segmentedToggle {
+  display: inline-flex;
+  border-radius: 12px;
+  overflow: hidden;
+  vertical-align: middle;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  margin-bottom: 5px;
+  height: 50px;
+  background:#ffffff;
+}
+
+.segmentButton {
+ background: #ffffff;
+  color: black;
+  border: none;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  border-radius: 12px;
+  gap:5px;
+}
+
+.activeSegment {
+  background: #0070AD;
+  color: #f5f5f7;
+  font-weight: bold;
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f53b53;
+  border: none;
+  font-size: 2rem;
+  color: #f5f5f7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10001;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  background-color: #e60000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+
+}
+
+
+.toggleAllButton {
+  background: #0070AD;
+  color: #f5f5f7;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+  height:50px;
+
+  &:hover {
+    background-color: #12ABDB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    box-shadow: inset 0 2px 4px rgba(250, 249, 249, 0.3);
+    transform: translateY(1px);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.5);
+  }
+}
+
+.toggleAllButton[title="Submit Request"] {
+  background: #0070AD; 
+  color: #f5f5f7;
+  box-shadow: 0 6px 18px rgba(40,167,69,0.18);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.toggleAllButton[title="Submit Request"]:hover {
+  background: #12ABDB;
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@media (max-width: 768px) {
+  .modalContent {
+    width: 90%;
+    height: 90vh;
+  }
+    .bannerWrapper {
+    height: 50px;
+  }
+  .bannerTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Modal split layout: main content (80%) + comments (20%) */
+.modalLayout {
+  display: flex;
+  gap: 16px;
+  height: 100% ;
+  align-items: flex-start;
+}
+
+.modalMain {
+  flex: 4 1 0%;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  padding-right: 8px;
+}
+
+.commentsPanel {
+  flex: 1 1 0%;
+  max-width: 500px;
+  min-width: 500px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  margin-top:20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.commentsPanel h4 {
+  color: #0070AD;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.commentsList {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* Generic section card inside comments panel */
+.commentsSection {
+  background: #ffffff;
+  border: 1px solid #eef3f6;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 12px rgba(16,24,40,0.03);
+}
+
+.commentsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.commentToggle {
+  background: transparent;
+  border: 1px solid rgba(0,112,173,0.15);
+  color: #0070AD;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+.commentToggle:hover { background: rgba(0,112,173,0.06); }
+
+/* Make the panel scrollbar visible and slightly styled */
+.commentsPanel::-webkit-scrollbar {
+  width: 10px;
+}
+.commentsPanel::-webkit-scrollbar-thumb {
+  background: rgba(15,23,42,0.12);
+  border-radius: 10px;
+}
+.commentsPanel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Ratings area inside comments panel (top ~20%) */
+.commentsRating {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px;
+  background: transparent;
+}
+
+/* Expected ROI box in the right panel */
+.expectedRoi {
+  margin-bottom: 12px;
+}
+.roiCards {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  margin-top:10px;
+}
+/* Availability (stacked) variant used in Technical mode */
+.availabilityCards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  margin-top: 6px;
+}
+.availabilityCard {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: left;
+  box-shadow: 0 6px 14px rgba(16,24,40,0.08);
+  color: #ffffff;
+}
+
+/* Hover / interaction polish */
+.availabilityCards {
+  padding: 6px; /* create an area that will be visible between cards when container has a background */
+  border-radius: 10px;
+  background: transparent; /* allow outer container (your pink sample) to show through in gaps */
+}
+.availabilityCard {
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+.availabilityCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(16,24,40,0.18), 0 0 0 6px rgba(255,182,193,0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  border-color: rgba(255,182,193,0.6);
+}
+
+/* When any card is hovered, show the container's background in the gaps.
+   Uses :has() which is supported by modern browsers (Chromium, Safari 15.4+, Firefox with flag).
+   This lets your sample pink container background show through the gaps between cards on hover. */
+.availabilityCards:has(.availabilityCard:hover) {
+  background-clip: padding-box;
+  /* keep transparent so the parent/pink shows through; the hovered card will add a pink glow */
+  background: transparent;
+}
+.roiCard {
+  flex: 1 1 0;
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 14px 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  /* ROI cards are informational only; disable pointer interaction */
+  cursor: default;
+  pointer-events: none;
+  transition: none;
+}
+.roiCard:hover {
+  /* remove hover animation for non-interactive cards */
+  transform: none;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+.roiCard .value {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0f172a;
+  display: block; /* ensure vertical stacking */
+  margin-bottom: 6px;
+}
+.roiCard .bigNumber {
+  display: block;
+  font-size: 1.5rem; /* reduced size for better fit */
+  line-height: 1.05;
+  margin: 0 auto 6px auto;
+  /* Keep numeric ranges together on a single line (e.g. "10-20%") */
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+.roiCard .label {
+  font-size: 0.85rem;
+  color: #0f172a;
+  display: block;
+  margin-top: 4px;
+}
+.roiCard .roiDetails {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #374151;
+  background: rgba(255,255,255,0.6);
+  border-radius: 6px;
+  padding: 8px;
+  text-align: left;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.simulateButton {
+  display: block;
+  width: 100%;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 6px;
+}
+
+/* Quick Links list as stacked buttons */
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0070AD;
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+}
+
+/* Disabled / coming soon variant for quick links */
+.linkButtonDisabled {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: grey; /* light grey */
+  color: white; /* muted text */
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e7ea;
+  text-decoration: none;
+  cursor: default;
+}
+.linkButton {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.linkButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.comingSoonLabel {
+  margin-left: 12px;
+  color: #6b7280;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Tabs under the video */
+.modalTabs {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid #0070ad;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.tabButton {
+  background: #f3f6f9;
+  border: 1px solid transparent;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #0f172a;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.tabButton:hover {
+  background: #ebf2f8;
+  color:black;
+}
+.tabActive {
+  color: white;
+  background: #0070AD;
+  border-color: #0070AD;
+}
+
+/* Ensure active tab retains its active color on hover/focus */
+.tabActive:hover,
+.tabActive:focus {
+  background: #0070ad;
+  color: white;
+  cursor: default;
+}
+
+/* Tab content spacing */
+.tabContentSection {
+  padding: 8px 0 18px 0;
+}
+
+.commentsBody {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* allow proper scrolling in children */
+  overflow: hidden; /* ensure inner list handles scrolling */
+  padding:2px;
+}
+
+.commentsPanel h4 {
+  flex: 0 0 auto;
+}
+
+.commentItem {
+  padding: 8px 0;
+}
+
+.commentMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.commentAuthor {
+  font-weight: 600;
+  color: #222;
+}
+
+.commentDate {
+  color: #777;
+  font-size: 0.65rem;
+}
+
+.commentText {
+  font-size: 0.75rem;
+  color: #333;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.noComments {
+  color: #777;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.commentInputArea {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.commentInput {
+  flex: 1 1 auto;
+  resize: vertical;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.75rem;
+}
+
+.commentInput:focus {
+  outline: 2px solid rgba(0,112,173,0.12);
+  outline-offset: 2px;
+  border: 1px solid #ddd;
+}
+
+.commentButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.commentButton {
+  background: #0070AD;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.commentButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.commentError {
+  background: #fef5f5;
+  border-left: 4px solid #d32f2f;
+  color: #c62828;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(211, 47, 47, 0.12);
+}
+
+.commentError::before {
+  content: "⚠";
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.commentActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.commentActionBtn {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.commentActionBtn:hover {
+  background: #f5f5f5;
+}
+
+.commentEditTextarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.75rem;
+}
+
+/* keep responsive behavior for smaller screens: stack panels */
+@media (max-width: 900px) {
+  .modalLayout {
+    flex-direction: column;
+  }
+  .commentsPanel {
+    max-width: none;
+    width: 100%;
+    min-width: auto;
+    margin-top: 12px;
+  }
+}
+
+.rawJsonBox {
+  background: #f7f9fb;
+  border: 1px solid #e6eef6;
+  padding: 8px;
+  font-size: 12px;
+  color: #222;
+  max-height: 220px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Rating stars (modal) */
+.ratingRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+.ratingTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-right: 15px;
+}
+.ratingStars {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.countTextBelow {
+  color: #666;
+  font-size: 0.75rem;
+  text-align: left;
+}
+.starBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ddd;
+  padding: 2px 4px;
+}
+.starWrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+.starBack {
+  color: #ddd;
+  display: inline-block;
+}
+.starFront {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  color: #0070AD; /* primary blue */
+  display: inline-block;
+}
+.starBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,112,173,0.15);
+}
+.starFilled {
+  color: #0070AD; /* primary blue */
+}
+.ratingSummary {
+  display: flex;
+  flex-direction: column;
+}
+.avgText {
+  color: #333;
+  font-weight: 600;
+}
+.countText {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Rating error alert styling */
+.ratingErrorBox {
+  background: #fef5f5;
+  border-left: 4px solid #d32f2f;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(211, 47, 47, 0.12);
+}
+
+.ratingErrorBox::before {
+  content: "⚠";
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* circular background that contains the inner svg; keep circle size but make inner svg smaller */
+.iconCircle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.iconCircle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.linkIconLabel {
+  color: #222;
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.linkIconBlue i,
+.linkIconBlue svg {
+  background: #0070AD; /* blue */
+}
+
+.linkIconGrey i,
+.linkIconGrey svg {
+  background: #888888; /* grey */
+}
+
+/* ensure the linkIcon color variants also apply to the new circle wrapper */
+.linkIconBlue .iconCircle { background: #0070AD; }
+.linkIconGrey .iconCircle { background: #888888; }
+
+.linkIconsRow {
+  display: flex;
+  width: 75%;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.linkIcon {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.85rem;
+  font-family: 'Ubuntu', sans-serif;
+}
