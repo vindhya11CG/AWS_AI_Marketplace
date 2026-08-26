@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+﻿import React, { useState } from 'react'
 import {
   AppLayout,
   Box,
-  Button,
   ButtonDropdown,
   Cards,
   Container,
@@ -155,6 +154,7 @@ const mockWorkflows = [
 export default function Dashboard() {
   const [activeHref, setActiveHref] = useState('#/dashboard')
   const [selectedItems, setSelectedItems] = useState([])
+  const [searchText, setSearchText] = useState('')
 
   /**
    * Maps workflow status to badge color
@@ -274,23 +274,75 @@ export default function Dashboard() {
     ],
   }
 
+  const filteredDomains = mockDomains.filter((domain) => {
+    const query = searchText.trim().toLowerCase()
+    if (!query) return true
+    return (
+      domain.title.toLowerCase().includes(query) ||
+      domain.seller.toLowerCase().includes(query) ||
+      domain.description.toLowerCase().includes(query)
+    )
+  })
+
+  const filteredWorkflows = mockWorkflows.filter((workflow) => {
+    const query = searchText.trim().toLowerCase()
+    if (!query) return true
+    return (
+      workflow.name.toLowerCase().includes(query) ||
+      workflow.domain.toLowerCase().includes(query) ||
+      workflow.status.toLowerCase().includes(query)
+    )
+  })
+
   return (
     <AppLayout
       navigation={<Sidebar activeHref={activeHref} onNavigate={setActiveHref} />}
       content={
-        <SpaceBetween size="l" direction="vertical">
-          <Header
-            variant="h1"
-            actions={
-              <div className="dashboard-actions">
-                <Button variant="primary">+ Create New Domain</Button>
-                <Button variant="primary">+ Create New Workflow</Button>
-              </div>
-            }
-          >
-            Dashboard
-          </Header>
+        <SpaceBetween size="m" direction="vertical">
+          {/* Top Row: Dashboard Title on Left, Search Bar on Right */}
+          <div className="dashboard-top-row">
+            <h1 className="dashboard-page-title">Dashboard</h1>
+            <div className="top-search-bar">
+              <input
+                type="text"
+                placeholder="Search workflows/domains"
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+                className="top-search-input"
+              />
+              <button
+                type="button"
+                className="top-search-button"
+                aria-label="Search"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+            </div>
+          </div>
 
+          {/* Action Buttons: Positioned directly below Dashboard title */}
+          <div className="dashboard-action-buttons-row">
+            <button type="button" className="btn-create-domain">
+              + Create New Domain
+            </button>
+            <button type="button" className="btn-create-workflow">
+              + Create New Workflow
+            </button>
+          </div>
+
+          {/* My Domains Section */}
           <Container header={<Header variant="h2">My Domains</Header>}>
             <Cards
               cardDefinition={domainCardDefinition}
@@ -299,7 +351,7 @@ export default function Dashboard() {
                 { minWidth: 500, cards: 2 },
                 { minWidth: 1100, cards: 3 },
               ]}
-              items={mockDomains}
+              items={filteredDomains}
               loadingText="Loading domains"
               empty={
                 <Box textAlign="center" color="inherit">
@@ -312,12 +364,15 @@ export default function Dashboard() {
             />
           </Container>
 
+          {/* Recent Workflows Section */}
           <Container header={<Header variant="h2">Recent Workflows</Header>}>
             <Table
               columnDefinitions={workflowColumnDefinitions}
-              items={mockWorkflows}
+              items={filteredWorkflows}
               selectedItems={selectedItems}
-              onSelectionChange={(event) => setSelectedItems(event.detail.selectedItems)}
+              onSelectionChange={(event) =>
+                setSelectedItems(event.detail.selectedItems)
+              }
               variant="embedded"
               pagination={<Pagination currentPageIndex={1} pagesCount={1} />}
             />

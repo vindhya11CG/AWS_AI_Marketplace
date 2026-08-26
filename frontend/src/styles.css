@@ -1,10 +1,11 @@
-* {
+﻿* {
   box-sizing: border-box;
 }
 
 :root {
   /* AWS Color Palette */
   --aws-orange: #FF9900;
+  --aws-primary-blue: #0073bb;
   --aws-dark-blue: #232F3E;
   --aws-light-gray: #EAECEF;
   --aws-medium-gray: #848484;
@@ -85,26 +86,26 @@ body {
   padding: var(--spacing-md) var(--spacing-lg);
 }
 
-/* Button styling */
+/* Button styling - Blue pill buttons matching screenshot */
 .awsui button.awsui-button--variant-primary {
-  background-color: var(--aws-orange);
-  border-color: var(--aws-orange);
-  color: var(--aws-white);
-  font-weight: 600;
-  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--aws-primary-blue) !important;
+  border-color: var(--aws-primary-blue) !important;
+  color: var(--aws-white) !important;
+  font-weight: 600 !important;
+  border-radius: 16px !important;
+  padding: var(--spacing-sm) var(--spacing-md) !important;
 }
 
 .awsui button.awsui-button--variant-primary:hover {
-  background-color: #EC7211;
+  background-color: #005a94 !important;
 }
 
 /* Link styling */
 a {
-  color: var(--aws-orange);
+  color: var(--aws-primary-blue);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
 }
-
