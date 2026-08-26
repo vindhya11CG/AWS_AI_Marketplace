@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import {
   AppLayout,
+  Box,
   Button,
+  ButtonDropdown,
+  Cards,
+  Container,
+  Header,
+  Link,
+  SpaceBetween,
   Table,
   Pagination,
   Badge,
 } from '@cloudscape-design/components'
 import Sidebar from './Sidebar'
-import DomainCard from './DomainCard'
 import '../styles/Dashboard.css'
 
 const mockDomains = [
@@ -202,50 +208,121 @@ export default function Dashboard() {
       id: 'actions',
       header: 'Actions',
       cell: () => (
-        <button className="action-button" aria-label="More actions">
-          ⋮
-        </button>
+        <ButtonDropdown
+          variant="icon"
+          ariaLabel="Workflow actions"
+          items={[
+            { id: 'open', text: 'Open workflow' },
+            { id: 'duplicate', text: 'Duplicate workflow' },
+            { id: 'archive', text: 'Archive workflow' },
+          ]}
+        />
       ),
     },
   ]
+
+  const domainCardDefinition = {
+    header: (item) => (
+      <SpaceBetween size="xs" direction="horizontal" alignItems="center">
+        <Box fontSize="heading-s">{item.logo || '📦'}</Box>
+        <Link href="#" fontSize="heading-s">
+          {item.title}
+        </Link>
+      </SpaceBetween>
+    ),
+    sections: [
+      {
+        id: 'seller',
+        header: 'Sold by',
+        content: (item) => item.seller || 'Provider',
+      },
+      {
+        id: 'rating',
+        header: 'Rating',
+        content: (item) => `${item.rating || 0} (${item.ratingCount || 0})`,
+      },
+      {
+        id: 'badge',
+        header: 'Tag',
+        content: (item) => (
+          <Badge color={item.badge === 'AWS Free Tier' ? 'blue' : 'red'}>
+            {item.badge || 'Standard'}
+          </Badge>
+        ),
+      },
+      {
+        id: 'description',
+        header: 'Description',
+        content: (item) => item.description,
+      },
+      {
+        id: 'actions',
+        content: (item) => (
+          <ButtonDropdown
+            variant="normal"
+            items={[
+              { id: 'start-template', text: 'Start from template' },
+              { id: 'open-workflows', text: 'Open workflows' },
+              { id: 'view-domain', text: 'View domain details' },
+            ]}
+            ariaLabel={`Get started with ${item.title}`}
+          >
+            Get Started
+          </ButtonDropdown>
+        ),
+      },
+    ],
+  }
 
   return (
     <AppLayout
       navigation={<Sidebar activeHref={activeHref} onNavigate={setActiveHref} />}
       content={
-        <div style={{ padding: 'var(--spacing-lg)' }}>
-          {/* Dashboard Header */}
-          <section className="dashboard-header">
-            <h1 className="dashboard-title">Dashboard</h1>
-            <div className="dashboard-actions">
-              <Button variant="primary">+ Create New Domain</Button>
-              <Button variant="primary">+ Create New Workflow</Button>
-            </div>
-          </section>
+        <SpaceBetween size="l" direction="vertical">
+          <Header
+            variant="h1"
+            actions={
+              <div className="dashboard-actions">
+                <Button variant="primary">+ Create New Domain</Button>
+                <Button variant="primary">+ Create New Workflow</Button>
+              </div>
+            }
+          >
+            Dashboard
+          </Header>
 
-          {/* My Domains Section */}
-          <section>
-            <h2 className="section-title">My Domains</h2>
-            <div className="domains-grid">
-              {mockDomains.map((domain) => (
-                <DomainCard key={domain.id} domain={domain} />
-              ))}
-            </div>
-          </section>
+          <Container header={<Header variant="h2">My Domains</Header>}>
+            <Cards
+              cardDefinition={domainCardDefinition}
+              cardsPerRow={[
+                { cards: 1 },
+                { minWidth: 500, cards: 2 },
+                { minWidth: 1100, cards: 3 },
+              ]}
+              items={mockDomains}
+              loadingText="Loading domains"
+              empty={
+                <Box textAlign="center" color="inherit">
+                  <b>No domains</b>
+                  <Box variant="p" color="inherit">
+                    No domains to display.
+                  </Box>
+                </Box>
+              }
+            />
+          </Container>
 
-          {/* Recent Workflows Section */}
-          <section>
-            <h2 className="section-title">Recent Workflows</h2>
+          <Container header={<Header variant="h2">Recent Workflows</Header>}>
             <Table
               columnDefinitions={workflowColumnDefinitions}
               items={mockWorkflows}
               selectedItems={selectedItems}
               onSelectionChange={(event) => setSelectedItems(event.detail.selectedItems)}
-              variant="full-page"
+              variant="embedded"
               pagination={<Pagination currentPageIndex={1} pagesCount={1} />}
             />
-          </section>
-        </div>
+          </Container>
+        </SpaceBetween>
       }
       toolsHide={true}
     />
