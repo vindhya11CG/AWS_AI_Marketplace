@@ -118,9 +118,30 @@
   background-color: #00467a;
 }
 
-/* =========================================
+.domain-card-title-link {
+  color: #0073bb;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.domain-card-title-link:hover {
+  text-decoration: underline;
+}
+
+.wf-name-clickable {
+  color: #0073bb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wf-name-clickable:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
    Card Hover Effect
-========================================= */
+========================== */
 
 .awsui-cards-card {
   transition: transform 0.2s ease;
