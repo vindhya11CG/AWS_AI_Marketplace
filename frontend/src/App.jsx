@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard'
 import ManageDomains from './components/ManageDomains'
 import DomainDetails from './components/DomainDetails'
 import WorkflowBuilder from './components/WorkflowBuilder'
+import MarketplaceHome from './components/marketplace/MarketplaceHome'
 import { initialDomains, initialWorkflows } from './data/mockData'
 
 export default function App() {
@@ -106,6 +107,15 @@ export default function App() {
           initialDomain={selectedDomain}
           onAddWorkflow={handleAddWorkflow}
           activeHref="#/workflows"
+          onNavigate={handleNavigate}
+        />
+      )
+    }
+
+    if (currentRoute.startsWith('#/marketplace')) {
+      return (
+        <MarketplaceHome
+          activeHref="#/marketplace"
           onNavigate={handleNavigate}
         />
       )
