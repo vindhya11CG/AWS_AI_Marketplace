@@ -1,2 +1,110 @@
-body { font-family: Inter, Arial, sans-serif; margin: 0; padding: 0; }
-#root { min-height: 100vh; background: #f7f7f8; }
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* AWS Color Palette */
+  --aws-orange: #FF9900;
+  --aws-dark-blue: #232F3E;
+  --aws-light-gray: #EAECEF;
+  --aws-medium-gray: #848484;
+  --aws-dark-gray: #232F3E;
+  --aws-white: #FFFFFF;
+  --aws-border-gray: #CCCCCC;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  
+  /* Typography */
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-base: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --line-height-tight: 1.4;
+  --line-height-normal: 1.6;
+}
+
+body {
+  font-family: 'Amazon Ember', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--aws-light-gray);
+  color: var(--aws-dark-gray);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+#root {
+  min-height: 100vh;
+  background-color: var(--aws-light-gray);
+}
+
+/* Cloudscape component overrides */
+.awsui-root {
+  --container-general-border-radius: 2px;
+}
+
+.awsui .awsui-app-layout {
+  background-color: var(--aws-light-gray);
+}
+
+.awsui .awsui-app-layout__main {
+  padding: var(--spacing-lg);
+}
+
+/* Table styling */
+.awsui table {
+  background-color: var(--aws-white);
+  border-collapse: collapse;
+}
+
+.awsui .awsui-table-cell {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--aws-border-gray);
+}
+
+/* Badge styling */
+.awsui .awsui-badge {
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+/* TopNavigation styling */
+.awsui .awsui-top-navigation {
+  background-color: var(--aws-white);
+  border-bottom: 1px solid var(--aws-border-gray);
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+/* Button styling */
+.awsui button.awsui-button--variant-primary {
+  background-color: var(--aws-orange);
+  border-color: var(--aws-orange);
+  color: var(--aws-white);
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.awsui button.awsui-button--variant-primary:hover {
+  background-color: #EC7211;
+}
+
+/* Link styling */
+a {
+  color: var(--aws-orange);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

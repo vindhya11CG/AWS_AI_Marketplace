@@ -1,13 +1,20 @@
 import React from 'react'
-import { TopNavigation, Container } from '@cloudscape-design/components'
+import { TopNavigation } from '@cloudscape-design/components'
+import Dashboard from './components/Dashboard'
 
 export default function App() {
   return (
     <div>
-      <TopNavigation identity={{ title: 'AWS AI Marketplace' }} />
-      <Container header={<h2>Welcome</h2>}>
-        <p>Cloudscape smoke test app — frontend works.</p>
-      </Container>
+      <TopNavigation
+        identity={{ title: 'Amplifier for Agentic AI' }}
+        utilities={[
+          {
+            type: 'button',
+            text: 'Log Out',
+          },
+        ]}
+      />
+      <Dashboard />
     </div>
   )
 }
