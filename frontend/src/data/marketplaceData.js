@@ -1,331 +1,447 @@
-/**
- * Marketplace data model.
- *
- * Each starter pack follows the shape:
- * {
- *   id: string,
- *   title: string,
- *   description: string,
- *   benefits: string,
- *   category: string,
- *   demoAvailable: boolean
- * }
- *
- * Industries group related starter packs for the industry catalog.
- */
-
-/**
- * @typedef {Object} StarterPack
- * @property {string} id - Unique identifier for the starter pack.
- * @property {string} title - Display name of the starter pack.
- * @property {string} description - Short summary of what the pack does.
- * @property {string} benefits - Key business benefits, comma separated.
- * @property {string} category - Business category the pack belongs to.
- * @property {boolean} demoAvailable - Whether a live demo is available.
- */
-
-/**
- * @typedef {Object} Industry
- * @property {string} id - Unique identifier for the industry.
- * @property {string} name - Display name of the industry.
- * @property {StarterPack[]} starterPacks - Starter packs within the industry.
- */
-
-/** @type {Industry[]} */
-export const INDUSTRIES = [
+﻿export const INDUSTRIES = [
   {
     id: 'bfsi',
-    name: 'Banking and Financial Services (BFSI)',
+    name: 'Banking & Financial Services (BFSI)',
     starterPacks: [
       {
-        id: 'bfsi-smart-loan-origination',
+        id: 'smart-loan-origination',
         title: 'Smart Loan Origination',
-        description: 'Automates verification, risk assessment, and KYC.',
-        benefits: 'Faster approvals, reduced risk, automated KYC',
-        category: 'Banking',
+        tagline: 'Automates verification, risk assessment, and KYC.',
+        category: 'Finance',
+        industry: 'Banking and Financial Services (BFSI)',
+        description: 'End-to-end multi-agent loan application processing and underwriting automation.',
+        benefits: 'Reduces loan approval turnaround from 4 days to under 15 minutes while cutting operational compliance overhead.',
         demoAvailable: true,
+        agenticLinkUrl: 'https://agenticexperience.azurewebsites.net/login',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        duration: '1:41',
+        problemSolved:
+          'Loan processing is slowed by manual checks of identity, eligibility, and documents, causing delays and errors. In BFSI, loan officers still manually review KYC, income proofs, and bank statements for each applicant, which extends turnaround time. This leads to inconsistent assessments and increases the operational burden on processing teams.',
+        solutionDescription:
+          'A fast, AI-driven loan automation engine that verifies identities, checks eligibility, and validates documents instantly calculating optimal loan terms while boosting accuracy, compliance, and processing speed.',
+        agentPipeline: [
+          {
+            name: 'KYC Verifier',
+            role: "Checks the customer's identity using official documents",
+          },
+          {
+            name: 'Eligibility Assessor',
+            role: 'Looks at customer data to decide if they qualify for a loan',
+          },
+          {
+            name: 'Document Validator',
+            role: 'Verifies the authenticity and completeness of submitted documents',
+          },
+          {
+            name: 'Loan Calculator',
+            role: 'Figures out the maximum loan amount and interest rate',
+          },
+        ],
+        availability: [
+          'Amplifier for Agentic Experience',
+          'Azure AI Foundry',
+          'Amplifier for Foundations',
+        ],
+        roiMetrics: {
+          timeSavings: '~60%',
+          timeLabel: 'time-to-approval',
+          costSavings: '~35%',
+          costLabel: 'cost',
+          summary: 'Speeds approvals, reduces errors, and boosts customer experience.',
+        },
+        ratings: {
+          score: 5,
+          maxScore: 5,
+          count: 9,
+        },
+        quickLinks: [
+          {
+            id: 'demo',
+            label: 'Click Through Demo',
+            icon: 'video',
+            url: 'https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0',
+          },
+          {
+            id: 'deck',
+            label: 'Pitch Deck',
+            icon: 'deck',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/_layouts/15/viewer.aspx?sourcedoc={e4cede9f-c8e8-403d-b63f-0f7a14e3ce85}',
+          },
+          {
+            id: 'setup',
+            label: 'Workflow Setup Instructions',
+            icon: 'workflow',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SitePages/Workflow-Instructions.aspx',
+          },
+          {
+            id: 'sample',
+            label: 'Sample Input File',
+            icon: 'file',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SiteAssets/Sample_Loan_Application_Data.csv',
+          },
+        ],
+        comments: [
+          {
+            id: 1,
+            author: 'Sarah Jenkins (Risk Director)',
+            time: '2 days ago',
+            text: 'Deployed this in our pilot branch. Identity verification accuracy has exceeded 99.4%.',
+          },
+        ],
       },
       {
-        id: 'bfsi-intelligent-fraud-detector',
-        title: 'Intelligent Fraud Detector',
-        description:
-          'Reduces undetected fraud, minimizes human effort, and adapts to evolving schemes through automated detection and compliance enforcement.',
-        benefits: 'Fewer missed frauds, less manual effort, adaptive detection',
-        category: 'Banking',
+        id: 'aml-surveillance-agent',
+        title: 'AML & Fraud Surveillance Agent',
+        tagline: 'Autonomous transaction anomaly screening and compliance reporting.',
+        category: 'Compliance',
+        industry: 'Banking and Financial Services (BFSI)',
+        description: 'Monitors suspicious wire transfers and automates SAR (Suspicious Activity Report) generation.',
+        benefits: 'Cuts false positive AML alerts by 70% and generates regulatory filing packets automatically.',
         demoAvailable: true,
-      },
-      {
-        id: 'bfsi-intelligent-underwriter',
-        title: 'Intelligent Underwriter (Insurance) Advisor',
-        description:
-          'Automates policy customization and premium calculation, speeds up insurance decision-making, and improves accuracy and consistency across underwriting.',
-        benefits: 'Faster decisions, consistent pricing, higher accuracy',
-        category: 'Insurance',
-        demoAvailable: false,
+        agenticLinkUrl: 'https://agenticexperience.azurewebsites.net/login',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        duration: '2:15',
+        problemSolved:
+          'Compliance analysts spend 80% of their time triaging false-positive fraud alerts generated by legacy rule-based monitoring engines, creating massive alert backlogs and audit exposure.',
+        solutionDescription:
+          'Autonomous multi-agent system that correlates cross-border transactions against sanctions lists, entity graph topologies, and customer behavioral baselines to isolate genuine financial crime.',
+        agentPipeline: [
+          { name: 'Transaction Monitor', role: 'Ingests real-time SWIFT, SEPA, and ACH wire transactions' },
+          { name: 'Graph Investigator', role: 'Constructs entity relationship networks and hidden beneficial ownership' },
+          { name: 'Sanctions Screener', role: 'Cross-checks global OFAC, PEP, and international watchlists' },
+          { name: 'SAR Compiler', role: 'Generates regulatory FinCEN filing drafts with full audit lineage' },
+        ],
+        availability: ['Amplifier for Agentic Experience', 'AWS Bedrock', 'Amplifier for Foundations'],
+        roiMetrics: {
+          timeSavings: '~75%',
+          timeLabel: 'investigation-time',
+          costSavings: '~40%',
+          costLabel: 'compliance-cost',
+          summary: 'Eliminates repetitive alert triage and surfaces true illicit financial networks instantly.',
+        },
+        ratings: { score: 4.8, maxScore: 5, count: 14 },
+        quickLinks: [
+          {
+            id: 'demo',
+            label: 'Click Through Demo',
+            icon: 'video',
+            url: 'https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0',
+          },
+          {
+            id: 'deck',
+            label: 'Pitch Deck',
+            icon: 'deck',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/_layouts/15/viewer.aspx?sourcedoc={38dc62e7-deb6-41e5-a020-a3ff607d2a36}',
+          },
+          {
+            id: 'setup',
+            label: 'Workflow Setup Instructions',
+            icon: 'workflow',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SitePages/AML-Setup.aspx',
+          },
+          {
+            id: 'sample',
+            label: 'Sample Input File',
+            icon: 'file',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SiteAssets/Sample_SWIFT_Transactions.csv',
+          },
+        ],
+        comments: [],
       },
     ],
   },
   {
     id: 'healthcare',
-    name: 'Healthcare',
+    name: 'Healthcare & Life Sciences',
     starterPacks: [
       {
-        id: 'healthcare-clinical-documentation',
-        title: 'Clinical Documentation Assistants',
-        description: 'Automates intake, symptom analysis, and smart routing to doctors.',
-        benefits: 'Faster intake, accurate routing, less admin',
-        category: 'Healthcare',
+        id: 'clinical-documentation-enhancer',
+        title: 'Clinical Documentation & EHR Copilot',
+        tagline: 'Automates patient encounter transcription and ICD-10 coding.',
+        category: 'Clinical',
+        industry: 'Healthcare & Life Sciences',
+        description: 'Turns physician-patient audio dialogues into structured FHIR records and billing codes.',
+        benefits: 'Saves clinicians 2.5 hours per shift on clinical administrative documentation.',
         demoAvailable: true,
-      },
-      {
-        id: 'healthcare-prior-authorization',
-        title: 'Prior Authorization in Healthcare Insurance',
-        description:
-          'Automates eligibility checks, diagnosis validation, coverage-limit retrieval, and decision generation using a RAG-enabled knowledge base, with clear explanations and audit logs.',
-        benefits: 'Automated eligibility, auditable decisions, faster approvals',
-        category: 'Healthcare',
-        demoAvailable: false,
-      },
-      {
-        id: 'healthcare-pii-redaction',
-        title: 'PII Redaction Agent',
-        description:
-          'Applies version-controlled, deterministic redaction rules with optional human review, producing sanitized outputs and complete audit trails suitable for GDPR and health-data compliance.',
-        benefits: 'GDPR-ready redaction, audit trails, reduced compliance risk',
-        category: 'Healthcare',
-        demoAvailable: false,
-      },
-    ],
-  },
-  {
-    id: 'horizontal',
-    name: 'Horizontal',
-    starterPacks: [
-      {
-        id: 'horizontal-autonomous-procurement',
-        title: 'Autonomous Procurement Agent',
-        description:
-          'Transforms procurement from reactive to proactive, captures opportunities efficiently using AI, and minimizes coordination overhead.',
-        benefits: 'Proactive sourcing, captured savings, less overhead',
-        category: 'Cross-Industry',
-        demoAvailable: true,
-      },
-      {
-        id: 'horizontal-smart-talent-advisor',
-        title: 'Smart Talent Advisor',
-        description:
-          'Minimizes bench time through AI-driven skill-to-role matching, boosts confidence via realistic interview simulations using AI avatars, and accelerates deployment while improving engagement.',
-        benefits: 'Less bench time, faster deployment, better matching',
-        category: 'Cross-Industry',
-        demoAvailable: false,
-      },
-      {
-        id: 'horizontal-contract-legal-analyzer',
-        title: 'Contract Legal Analyzer & Advisor',
-        description:
-          'Delivers scalable legal support by automating document analysis and legal research, providing actionable recommendations, and using specialized AI agents trained on legal reasoning.',
-        benefits: 'Scalable legal review, faster research, actionable advice',
-        category: 'Cross-Industry',
-        demoAvailable: false,
+        agenticLinkUrl: 'https://agenticexperience.azurewebsites.net/login',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        duration: '1:50',
+        problemSolved:
+          'Physician burnout is at an all-time high due to manual EHR data entry and complex ICD-10 medical billing code selection, reducing the amount of quality time spent with patients.',
+        solutionDescription:
+          'Ambient AI listening agent that synthesizes doctor-patient conversations into standardized SOAP notes, cross-checks clinical guidelines, and verifies medical necessity criteria.',
+        agentPipeline: [
+          { name: 'Ambient Transcriber', role: 'Converts multi-speaker clinical audio into medical transcript' },
+          { name: 'SOAP Synthesizer', role: 'Structures subjective, objective, assessment, and plan notes' },
+          { name: 'ICD-10 Coder', role: 'Maps clinical diagnoses and procedures to billing ontologies' },
+          { name: 'EHR Synchronizer', role: 'Validates note completeness and pushes to Epic/Cerner' },
+        ],
+        availability: ['Amplifier for Agentic Experience', 'Azure AI Foundry', 'AWS HealthLake'],
+        roiMetrics: {
+          timeSavings: '~65%',
+          timeLabel: 'charting-time',
+          costSavings: '~30%',
+          costLabel: 'coding-audit-cost',
+          summary: 'Boosts clinician satisfaction and accelerates insurance claim reimbursement.',
+        },
+        ratings: { score: 4.9, maxScore: 5, count: 21 },
+        quickLinks: [
+          {
+            id: 'demo',
+            label: 'Click Through Demo',
+            icon: 'video',
+            url: 'https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0',
+          },
+          {
+            id: 'deck',
+            label: 'Pitch Deck',
+            icon: 'deck',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/_layouts/15/viewer.aspx?sourcedoc={1ba70de9-29a9-4c9a-9af1-31cdad7e5805}',
+          },
+          {
+            id: 'setup',
+            label: 'Workflow Setup Instructions',
+            icon: 'workflow',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SitePages/Clinical-Setup.aspx',
+          },
+          {
+            id: 'sample',
+            label: 'Sample Input File',
+            icon: 'file',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SiteAssets/Sample_Patient_Encounter.json',
+          },
+        ],
+        comments: [],
       },
     ],
   },
   {
     id: 'manufacturing',
-    name: 'Manufacturing',
+    name: 'Manufacturing & Supply Chain',
     starterPacks: [
       {
-        id: 'manufacturing-predictive-maintenance',
-        title: 'Predictive Maintenance',
-        description:
-          'AI-driven predictive maintenance minimizes downtime, lowers repair costs, and improves operational efficiency by preventing failures before they happen.',
-        benefits: 'Less downtime, lower repair cost, higher efficiency',
-        category: 'Manufacturing',
+        id: 'intelliwork-manufacturing',
+        title: 'IntelliWork - Work Order & QC Adherence',
+        tagline: 'Automated work order resolution adherence and quality inspection.',
+        category: 'Operations',
+        industry: 'Manufacturing & Supply Chain',
+        description: 'Enhances manufacturing efficiency through real-time resolution adherence and automated quality control.',
+        benefits: 'Increases first-time fix rate by 45% and reduces production line downtime by 38%.',
         demoAvailable: true,
-      },
-      {
-        id: 'manufacturing-quality-inspection',
-        title: 'Quality Inspection Agents',
-        description:
-          'AI-powered inspection eliminates subjectivity, accelerates defect detection, and streamlines compliance, reducing costs and improving customer satisfaction.',
-        benefits: 'Faster defect detection, objective QC, lower cost',
-        category: 'Manufacturing',
-        demoAvailable: false,
-      },
-      {
-        id: 'manufacturing-design-document-qc',
-        title: 'Design Document Quality Check',
-        description:
-          'Automates document validation, detects inconsistencies, accelerates timelines, improves audit readiness, and reduces errors.',
-        benefits: 'Fewer errors, faster timelines, audit-ready',
-        category: 'Manufacturing',
-        demoAvailable: false,
-      },
-      {
-        id: 'manufacturing-sopla',
-        title: 'Self-Optimizing Production Line Agents (SOPLA)',
-        description:
-          'Adjusts throughput, energy, and process parameters, enforces safety and compliance, and drives continuous improvements through anomaly detection and actionable insights.',
-        benefits: 'Optimized throughput, energy savings, continuous improvement',
-        category: 'Manufacturing',
-        demoAvailable: false,
+        agenticLinkUrl: 'https://agenticexperience.azurewebsites.net/login',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+        duration: '2:05',
+        problemSolved:
+          'Shopfloor technician variability and incomplete maintenance documentation lead to recurring machine faults, prolonged downtime, and inconsistent quality inspection across assembly lines.',
+        solutionDescription:
+          'Multi-agent workflow assistant that ingests error codes, compares equipment history against digital SOPs, verifies parts availability, and guides repair execution step-by-step.',
+        agentPipeline: [
+          { name: 'Work Order Ingestion Agent', role: 'Parses incoming maintenance tickets and SCADA alarms' },
+          { name: 'Diagnostic Reasoner', role: 'Matches symptoms against historical equipment failure logs' },
+          { name: 'SOP Resolution Assistant', role: 'Provides interactive step-by-step repair checklists' },
+          { name: 'QC Validation Inspector', role: 'Analyzes post-repair inspection images to certify sign-off' },
+        ],
+        availability: ['Amplifier for Agentic Experience', 'AWS IoT TwinMaker', 'Azure IoT Operations'],
+        roiMetrics: {
+          timeSavings: '~55%',
+          timeLabel: 'resolution-time',
+          costSavings: '~38%',
+          costLabel: 'downtime-cost',
+          summary: 'Speeds machine recovery, standardizes SOP compliance, and prevents repetitive breakdowns.',
+        },
+        ratings: { score: 4.8, maxScore: 5, count: 16 },
+        quickLinks: [
+          {
+            id: 'demo',
+            label: 'Click Through Demo',
+            icon: 'video',
+            url: 'https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0',
+          },
+          {
+            id: 'deck',
+            label: 'Pitch Deck',
+            icon: 'deck',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/_layouts/15/viewer.aspx?sourcedoc={e4cede9f-c8e8-403d-b63f-0f7a14e3ce85}',
+          },
+          {
+            id: 'setup',
+            label: 'Workflow Setup Instructions',
+            icon: 'workflow',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SitePages/IntelliWork-Setup.aspx',
+          },
+          {
+            id: 'sample',
+            label: 'Sample Input File',
+            icon: 'file',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SiteAssets/Sample_WorkOrder_Payload.json',
+          },
+        ],
+        comments: [],
       },
     ],
   },
   {
-    id: 'public-sector',
-    name: 'Public Sector',
+    id: 'sdlc',
+    name: 'SDLC & DevOps',
     starterPacks: [
       {
-        id: 'public-smart-municipal-complaint',
-        title: 'Smart Municipal Complaint Agent',
-        description:
-          'Auto-classifies photo complaints, detects duplicates, sets priority/SLA, and routes tasks to the right team.',
-        benefits: 'Auto-classification, SLA routing, duplicate detection',
-        category: 'Public Sector',
+        id: 'sdlc-requirements-agent',
+        title: 'SDLC Requirements Clarification & Test Agent',
+        tagline: 'Autonomous user story slicing, acceptance criteria, and test generator.',
+        category: 'Engineering',
+        industry: 'Software Development Life Cycle (SDLC)',
+        description: 'Transforms ambiguous product specifications into developer-ready Jira epics, user stories, and test suites.',
+        benefits: 'Reduces sprint backlog grooming time by 60% and eliminates requirement ambiguity defects.',
         demoAvailable: true,
-      },
-      {
-        id: 'public-citizen-data-access',
-        title: 'Citizen Data Access Compliance Solution',
-        description:
-          'Automates DSAR intake tracking, workflow orchestration, evidence collection, redaction support, compliance checks, and audit-ready packaging with human approvals at key stages.',
-        benefits: 'Automated DSAR, audit-ready, faster compliance',
-        category: 'Public Sector',
-        demoAvailable: false,
-      },
-      {
-        id: 'public-intelligent-tender-review',
-        title: 'Intelligent Tender Review Assistant',
-        description:
-          'Applies deterministic rule packs to validate mandatory requirements, signatures, declarations, certificates, and integrity checks, producing clear eligibility outcomes with evidence-linked explanations and controlled human review for ambiguous cases.',
-        benefits: 'Rule-based validation, clear eligibility, less manual review',
-        category: 'Public Sector',
-        demoAvailable: false,
-      },
-      {
-        id: 'public-action-logement-intake',
-        title: 'Action Logement Intake & Eligibility Agent',
-        description:
-          'Automates data capture, document quality checks, eligibility validation, and duplicate detection at the point of intake, creating complete, compliant, and traceable dossiers ready for downstream processing.',
-        benefits: 'Clean dossiers, validated eligibility, full traceability',
-        category: 'Public Sector',
-        demoAvailable: false,
-      },
-      {
-        id: 'public-tender-comparison',
-        title: 'Tender Comparison Agent',
-        description:
-          'Parses and normalizes all tender documents, runs deterministic rule checks and scoring uniformly across bidders, and outputs an evidence-backed compliance matrix + final report with complete auditability.',
-        benefits: 'Uniform scoring, evidence-backed, full auditability',
-        category: 'Public Sector',
-        demoAvailable: false,
-      },
-    ],
-  },
-  {
-    id: 'real-estate',
-    name: 'Real Estate',
-    starterPacks: [
-      {
-        id: 'realestate-property-listing',
-        title: 'Property Listing Agent',
-        description:
-          'Automates structured property data capture, validates mandatory fields and documents, enforces workflow guardrails, and creates marketing-ready listings directly in CRM/ERP systems.',
-        benefits: 'Validated data, faster listings, CRM-ready',
-        category: 'Real Estate',
-        demoAvailable: true,
-      },
-      {
-        id: 'realestate-construction-underwriting',
-        title: 'Construction Underwriting Agent',
-        description:
-          'Automates document validation, hazard analysis, risk scoring, and policy-premium calculations using multi-agent orchestration, delivering structured underwriting summaries with clear decision rationale and auditability.',
-        benefits: 'Automated risk scoring, clear rationale, auditability',
-        category: 'Real Estate',
-        demoAvailable: false,
+        agenticLinkUrl: 'https://agenticexperience.azurewebsites.net/login',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
+        duration: '1:35',
+        problemSolved:
+          'Incomplete or ambiguous product requirements cause frequent scope creep, rework, and misunderstandings between product managers, developers, and QA engineers.',
+        solutionDescription:
+          'Multi-agent pipeline that analyzes product briefs, identifies edge cases, generates Gherkin acceptance criteria, and drafts automated test scaffolds before development starts.',
+        agentPipeline: [
+          { name: 'Spec Analyzer', role: 'Identifies missing edge cases and unstated dependencies' },
+          { name: 'User Story Slicer', role: 'Breaks large features into INVEST-compliant stories' },
+          { name: 'Acceptance Criteria Generator', role: 'Formats Given-When-Then criteria for each story' },
+          { name: 'Test Scaffold Synthesizer', role: 'Generates starter Cypress/Playwright and Jest test specs' },
+        ],
+        availability: ['Amplifier for Agentic Experience', 'GitHub Copilot Workspace', 'Amplifier for Foundations'],
+        roiMetrics: {
+          timeSavings: '~60%',
+          timeLabel: 'grooming-time',
+          costSavings: '~45%',
+          costLabel: 'rework-cost',
+          summary: 'Accelerates sprint velocity, tightens team alignment, and guarantees clean QA coverage.',
+        },
+        ratings: { score: 4.9, maxScore: 5, count: 27 },
+        quickLinks: [
+          {
+            id: 'demo',
+            label: 'Click Through Demo',
+            icon: 'video',
+            url: 'https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0',
+          },
+          {
+            id: 'deck',
+            label: 'Pitch Deck',
+            icon: 'deck',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/_layouts/15/viewer.aspx?sourcedoc={38dc62e7-deb6-41e5-a020-a3ff607d2a36}',
+          },
+          {
+            id: 'setup',
+            label: 'Workflow Setup Instructions',
+            icon: 'workflow',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SitePages/SDLC-Agent-Setup.aspx',
+          },
+          {
+            id: 'sample',
+            label: 'Sample Input File',
+            icon: 'file',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SiteAssets/Sample_Feature_PRD.docx',
+          },
+        ],
+        comments: [],
       },
     ],
   },
   {
     id: 'retail',
-    name: 'Retail',
+    name: 'Retail & Consumer Goods',
     starterPacks: [
       {
-        id: 'retail-fashion-retrieval',
-        title: 'Fashion Retrieval Agent',
-        description:
-          'Fuses image similarity + semantic style prompts to retrieve and rank catalog items that match both appearance and aesthetic intent, enabling "shop-the-look" and inspiration-driven discovery without relying on manual tagging.',
-        benefits: 'Shop-the-look discovery, no manual tagging, better relevance',
-        category: 'Retail',
+        id: 'brandguard-retail',
+        title: 'BrandGuardv4 - Brand Integrity & Counterfeit Monitor',
+        tagline: 'Real-time multi-agent counterfeit detection and sentiment intelligence.',
+        category: 'Brand Protection',
+        industry: 'Retail & Consumer Goods',
+        description: 'Scans e-commerce marketplaces and social channels to detect counterfeit products, rogue sellers, and MAP violations.',
+        benefits: 'Automates 90% of marketplace infringement notices and protects premium brand equity.',
         demoAvailable: true,
-      },
-      {
-        id: 'retail-in-store-return',
-        title: 'In Store Return Authorization',
-        description:
-          'Automates policy eligibility checks, fraud screening, refund calculation, authorization decisions, and POS/ERP updates, while keeping staff and managers in the loop for physical inspection and exceptions.',
-        benefits: 'Faster returns, fraud screening, POS integration',
-        category: 'Retail',
-        demoAvailable: false,
-      },
-      {
-        id: 'retail-import-export-compliance',
-        title: 'Import Export Compliance Agent',
-        description:
-          'Continuously validates shipment data and documents against jurisdictional rules, coordinates submissions and revalidations, manages exceptions, and synchronizes customs outcomes with logistics and finance systems.',
-        benefits: 'Continuous validation, fewer exceptions, synced systems',
-        category: 'Retail',
-        demoAvailable: false,
-      },
-      {
-        id: 'retail-invoice-processing',
-        title: 'Invoice Processing Agent',
-        description:
-          'Automates invoice ingestion, data extraction, validation, PO/contract matching, and exception handling using AI-driven workflows with secure integrations and full audit logging.',
-        benefits: 'Automated processing, accurate matching, full audit logging',
-        category: 'Retail',
-        demoAvailable: false,
+        agenticLinkUrl: 'https://agenticexperience.azurewebsites.net/login',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4',
+        duration: '1:45',
+        problemSolved:
+          'Luxury and consumer brands lose billions to unauthorized grey-market sellers and counterfeiters across global digital marketplaces.',
+        solutionDescription:
+          'Autonomous crawler and computer vision agent pipeline that verifies seller authenticity, flags MAP pricing breaches, and drafts automated DMCA takedown requests.',
+        agentPipeline: [
+          { name: 'Marketplace Crawler', role: 'Monitors Amazon, eBay, and social commerce feeds' },
+          { name: 'Visual Trademark Matcher', role: 'Compares product images against official brand catalogs' },
+          { name: 'MAP Price Auditor', role: 'Flags unauthorized discounting and grey-market sellers' },
+          { name: 'Takedown Dispatcher', role: 'Compiles legal infringement evidence and files automated notices' },
+        ],
+        availability: ['Amplifier for Agentic Experience', 'AWS Bedrock', 'Amplifier for Foundations'],
+        roiMetrics: {
+          timeSavings: '~80%',
+          timeLabel: 'infringement-triage-time',
+          costSavings: '~50%',
+          costLabel: 'brand-loss-recovery',
+          summary: 'Guarantees brand protection across all major global retail channels around the clock.',
+        },
+        ratings: { score: 4.7, maxScore: 5, count: 11 },
+        quickLinks: [
+          {
+            id: 'demo',
+            label: 'Click Through Demo',
+            icon: 'video',
+            url: 'https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0',
+          },
+          {
+            id: 'deck',
+            label: 'Pitch Deck',
+            icon: 'deck',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/_layouts/15/viewer.aspx?sourcedoc={1ba70de9-29a9-4c9a-9af1-31cdad7e5805}',
+          },
+          {
+            id: 'setup',
+            label: 'Workflow Setup Instructions',
+            icon: 'workflow',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SitePages/BrandGuard-Setup.aspx',
+          },
+          {
+            id: 'sample',
+            label: 'Sample Input File',
+            icon: 'file',
+            url: 'https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/SiteAssets/Sample_Product_Catalog.json',
+          },
+        ],
+        comments: [],
       },
     ],
   },
 ]
 
-/**
- * Case studies highlighting real-world outcomes.
- * @type {{ id: string, title: string, industry: string, description: string }[]}
- */
 export const CASE_STUDIES = [
   {
-    id: 'cnhi',
-    title: 'CNHI',
-    industry: 'Manufacturing',
-    description:
-      'Streamlined design document quality checks and accelerated engineering timelines with orchestrated AI agents.',
+    id: 1,
+    client: 'Tier 1 Global Retail Bank',
+    useCase: 'Smart Loan Origination & KYC Pipeline',
+    result: 'Cut commercial loan approval times from 5 days to 22 minutes with zero compliance violations.',
+    tag: 'Banking',
   },
   {
-    id: 'innovative-medicine',
-    title: 'Innovative Medicine',
-    industry: 'Healthcare',
-    description:
-      'Automated prior authorization and clinical documentation to reduce turnaround time and improve compliance.',
+    id: 2,
+    client: 'Multinational Health Network',
+    useCase: 'Clinical Documentation & EHR Copilot',
+    result: 'Scaled to 45 hospitals, saving over 120,000 clinician charting hours annually.',
+    tag: 'Healthcare',
   },
   {
-    id: 'disruption-management',
-    title: 'Disruption Management',
-    industry: 'Cross-Industry',
-    description:
-      'Proactively identified operational disruptions and coordinated multi-agent responses to minimize downtime.',
+    id: 3,
+    client: 'Global Automotive Manufacturer',
+    useCase: 'IntelliWork - Shopfloor Maintenance Copilot',
+    result: 'Reduced unplanned stamping press downtime by 41% across 6 European assembly plants.',
+    tag: 'Manufacturing',
   },
 ]
 
-/**
- * Builds Select options for the industry filter, including an "All" option.
- * @returns {{ label: string, value: string }[]} Industry filter options.
- */
 export function buildIndustryFilterOptions() {
   return [
     { label: 'All Industries', value: 'all' },
-    ...INDUSTRIES.map((industry) => ({ label: industry.name, value: industry.id })),
+    ...INDUSTRIES.map((ind) => ({
+      label: ind.name,
+      value: ind.id,
+    })),
   ]
 }

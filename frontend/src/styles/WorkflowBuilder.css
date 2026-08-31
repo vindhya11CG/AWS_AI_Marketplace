@@ -13,13 +13,13 @@
 .builder-title {
   font-size: 22px;
   font-weight: 700;
-  color: #111827;
+  color: #FFFFFF;
   margin: 0 0 6px 0;
 }
 
 .builder-subtitle {
   font-size: 13.5px;
-  color: #5f6b7a;
+  color: #94A3B8;
   margin: 0;
 }
 
@@ -38,16 +38,17 @@
   height: 38px;
   padding: 0 12px;
   font-size: 13.5px;
-  color: #16191f;
-  background-color: #ffffff;
-  border: 1px solid #d5dbdb;
+  color: #FFFFFF;
+  background-color: #121A38;
+  border: 1px solid #2A3764;
   border-radius: 4px;
   outline: none;
+  transition: border-color 0.15s ease;
 }
 
 .form-select:focus {
-  border-color: #0073bb;
-  box-shadow: 0 0 0 1px #0073bb;
+  border-color: #00A3E0;
+  box-shadow: 0 0 0 1px #00A3E0;
 }
 
 /* Agent Selection Cards */
@@ -58,24 +59,24 @@
 }
 
 .agent-card-item {
-  border: 1.5px solid #e2e8f0;
+  border: 1.5px solid #2A3764;
   border-radius: 6px;
   padding: 14px;
-  background-color: #ffffff;
+  background-color: #121A38;
   cursor: pointer;
   transition: all 0.15s ease;
   user-select: none;
 }
 
 .agent-card-item:hover {
-  border-color: #0073bb;
-  background-color: #f8fafc;
+  border-color: #00A3E0;
+  background-color: #1A254C;
 }
 
 .agent-card-item.selected {
-  border-color: #0073bb;
-  background-color: #f0f7ff;
-  box-shadow: 0 0 0 1px #0073bb;
+  border-color: #00A3E0;
+  background-color: #1E2D5A;
+  box-shadow: 0 0 0 1px #00A3E0;
 }
 
 .agent-card-header {
@@ -88,19 +89,19 @@
 .agent-name {
   font-size: 13px;
   font-weight: 600;
-  color: #1e293b;
+  color: #FFFFFF;
   flex: 1;
 }
 
 .agent-checkbox {
   width: 16px;
   height: 16px;
-  accent-color: #0073bb;
+  accent-color: #00A3E0;
 }
 
 .agent-desc {
   font-size: 12px;
-  color: #64748b;
+  color: #94A3B8;
   line-height: 1.4;
   margin: 0;
 }
@@ -114,8 +115,8 @@
 }
 
 .btn-deploy-workflow {
-  background-color: #0073bb;
-  color: #ffffff;
+  background-color: #0073BB;
+  color: #FFFFFF;
   border: none;
   border-radius: 4px;
   padding: 8px 20px;
@@ -123,8 +124,9 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-deploy-workflow:hover {
-  background-color: #005a94;
+  background-color: #005A94;
 }

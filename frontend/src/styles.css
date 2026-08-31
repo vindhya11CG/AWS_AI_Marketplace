@@ -3,15 +3,21 @@
 }
 
 :root {
-  /* AWS Color Palette */
-  --aws-orange: #FF9900;
-  --aws-primary-blue: #0073bb;
-  --aws-dark-blue: #232F3E;
-  --aws-light-gray: #EAECEF;
-  --aws-medium-gray: #848484;
-  --aws-dark-gray: #232F3E;
-  --aws-white: #FFFFFF;
-  --aws-border-gray: #CCCCCC;
+  /* Sogeti Capgemini Midnight Blue Dark Mode Palette */
+  --sogeti-dark-bg: #121A38;
+  --sogeti-dark-nav: #0D142C;
+  --sogeti-surface-bg: #182246;
+  --sogeti-surface-hover: #222E58;
+  --sogeti-border: #2A3764;
+  --sogeti-text-primary: #FFFFFF;
+  --sogeti-text-secondary: #94A3B8;
+  --sogeti-text-muted: #64748B;
+  
+  --sogeti-accent-blue: #00A3E0;
+  --sogeti-primary-blue: #0073BB;
+  --sogeti-deep-blue: #005A9C;
+  --sogeti-orange: #FF7A00;
+  --sogeti-coral: #E05A47;
   
   /* Spacing */
   --spacing-xs: 4px;
@@ -20,7 +26,7 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
   --spacing-2xl: 40px;
-  
+
   /* Typography */
   --font-size-xs: 12px;
   --font-size-sm: 13px;
@@ -34,78 +40,120 @@
 }
 
 body {
-  font-family: 'Amazon Ember', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Amazon Ember', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--aws-light-gray);
-  color: var(--aws-dark-gray);
+  background-color: var(--sogeti-dark-bg) !important;
+  color: var(--sogeti-text-primary) !important;
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
 }
 
 #root {
   min-height: 100vh;
-  background-color: var(--aws-light-gray);
+  background-color: var(--sogeti-dark-bg) !important;
 }
 
-/* Cloudscape component overrides */
+/* ==========================================================================
+   Cloudscape Dark Theme Tokens & Overrides (Sogeti Blue #121A38)
+   ========================================================================== */
+
+.awsui-dark-mode,
 .awsui-root {
-  --container-general-border-radius: 2px;
+  --color-background-layout-main: #121A38 !important;
+  --color-background-layout-mobile: #121A38 !important;
+  --color-background-container-content: #182246 !important;
+  --color-background-container-header: #182246 !important;
+  --color-border-container-top: #2A3764 !important;
+  --color-border-container-line: #2A3764 !important;
+  --color-border-item-default: #2A3764 !important;
+  --color-border-item-focused: #00A3E0 !important;
+  --color-background-home-header: #0D142C !important;
+  --color-text-body-default: #FFFFFF !important;
+  --color-text-heading-default: #FFFFFF !important;
+  --color-text-body-secondary: #94A3B8 !important;
+  --color-background-input-default: #121A38 !important;
+  --color-border-input-default: #2A3764 !important;
+  --color-background-dropdown-item-hover: #222E58 !important;
+  --color-background-dropdown-item-selected: #1E2D5A !important;
 }
 
-.awsui .awsui-app-layout {
-  background-color: var(--aws-light-gray);
+/* App Layout & Main Canvas */
+.awsui-app-layout,
+.awsui-app-layout__main,
+.awsui-app-layout__content,
+.awsui-app-layout__canvas {
+  background-color: var(--sogeti-dark-bg) !important;
 }
 
-.awsui .awsui-app-layout__main {
-  padding: var(--spacing-lg);
+/* Top Navigation Bar */
+.awsui .awsui-top-navigation,
+.awsui-top-navigation {
+  background-color: var(--sogeti-dark-nav) !important;
+  border-bottom: 1px solid var(--sogeti-border) !important;
 }
 
-/* Table styling */
-.awsui table {
-  background-color: var(--aws-white);
-  border-collapse: collapse;
+/* Side Navigation */
+.awsui-side-navigation {
+  background-color: var(--sogeti-dark-nav) !important;
 }
 
-.awsui .awsui-table-cell {
-  padding: var(--spacing-md);
-  border-bottom: 1px solid var(--aws-border-gray);
+.awsui-side-navigation__link-active {
+  background-color: var(--sogeti-surface-bg) !important;
+  color: var(--sogeti-accent-blue) !important;
 }
 
-/* Badge styling */
-.awsui .awsui-badge {
-  font-weight: 600;
-  font-size: var(--font-size-xs);
-  padding: var(--spacing-xs) var(--spacing-sm);
+/* Containers and Cards */
+.awsui-container,
+.awsui-cards-card {
+  background-color: var(--sogeti-surface-bg) !important;
+  border: 1px solid var(--sogeti-border) !important;
+  color: var(--sogeti-text-primary) !important;
+  border-radius: 8px !important;
 }
 
-/* TopNavigation styling */
-.awsui .awsui-top-navigation {
-  background-color: var(--aws-white);
-  border-bottom: 1px solid var(--aws-border-gray);
-  padding: var(--spacing-md) var(--spacing-lg);
+/* Table in Dark Mode */
+.awsui table,
+.awsui-table {
+  background-color: var(--sogeti-surface-bg) !important;
+  color: var(--sogeti-text-primary) !important;
 }
 
-/* Button styling - Blue pill buttons matching screenshot */
+.awsui .awsui-table-cell,
+.awsui-table__cell {
+  background-color: var(--sogeti-surface-bg) !important;
+  border-bottom: 1px solid var(--sogeti-border) !important;
+  color: var(--sogeti-text-primary) !important;
+}
+
+.awsui-table__header {
+  background-color: var(--sogeti-surface-bg) !important;
+  border-bottom: 1px solid var(--sogeti-border) !important;
+  color: #FFFFFF !important;
+}
+
+/* Primary Button Styling */
 .awsui button.awsui-button--variant-primary {
-  background-color: var(--aws-primary-blue) !important;
-  border-color: var(--aws-primary-blue) !important;
-  color: var(--aws-white) !important;
+  background-color: var(--sogeti-primary-blue) !important;
+  border-color: var(--sogeti-primary-blue) !important;
+  color: #FFFFFF !important;
   font-weight: 600 !important;
   border-radius: 16px !important;
-  padding: var(--spacing-sm) var(--spacing-md) !important;
+  padding: 6px 18px !important;
 }
 
 .awsui button.awsui-button--variant-primary:hover {
-  background-color: #005a94 !important;
+  background-color: #005A94 !important;
 }
 
-/* Link styling */
-a {
-  color: var(--aws-primary-blue);
+/* Global Link styling */
+a,
+.awsui-link {
+  color: var(--sogeti-accent-blue) !important;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover,
+.awsui-link:hover {
+  text-decoration: underline !important;
 }
