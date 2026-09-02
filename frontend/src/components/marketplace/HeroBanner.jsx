@@ -23,16 +23,16 @@ export default function HeroBanner() {
             fontSize: '28px',
             fontWeight: 800,
             margin: '0 0 10px 0',
-            color: '#ffffff',
+            color: '#ffffff !important',
             letterSpacing: '-0.02em',
           }}
         >
-          Amplifier for Agentic AI - Discovery Portal
+          <span style={{ color: '#ffffff' }}>Amplifier for Agentic AI - Discovery Portal</span>
         </h1>
         <p
           style={{
             fontSize: '15px',
-            color: '#e68a00',
+            color: '#f59e0b',
             fontWeight: 600,
             margin: '0 0 10px 0',
           }}

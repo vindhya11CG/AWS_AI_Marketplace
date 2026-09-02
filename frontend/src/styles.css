@@ -80,7 +80,7 @@ body,
   border-left: 3px solid var(--aws-blue-primary) !important;
 }
 
-/* Top-level Containers & Cards */
+/* Containers & Cards (Pure Clean White) */
 .awsui-cards-card,
 div[class*='awsui_card_']:not([class*='header']):not([class*='section']):not([class*='body']),
 div[class*='awsui_container_']:not([class*='header']):not([class*='content']):not([class*='footer']),
@@ -92,7 +92,7 @@ div[class*='awsui_container_']:not([class*='header']):not([class*='content']):no
   color: var(--aws-text-body) !important;
 }
 
-/* Remove nested borders / backgrounds / curves inside card headers & sections */
+/* Remove nested borders & backgrounds inside card headers & sections */
 [class*='awsui_card-header_'],
 [class*='awsui_card-section_'],
 [class*='awsui_container-header_'],
@@ -104,10 +104,9 @@ div[class*='awsui_container_']:not([class*='header']):not([class*='content']):no
   border-radius: 0 !important;
 }
 
-/* Container Inner Header */
-[class*='awsui_header_'],
-[class*='awsui_header-text_'],
-h1, h2, h3, h4 {
+/* Headings in Containers */
+h1:not(.hero-title), h2, h3, h4,
+[class*='awsui_header-text_'] {
   color: var(--aws-text-dark) !important;
   font-weight: 700 !important;
 }
@@ -117,26 +116,65 @@ p, span, [class*='awsui_content_'] {
   color: var(--aws-text-body);
 }
 
-/* Action Buttons */
-button[class*='awsui_variant-primary_'] {
-  background-color: var(--aws-blue-primary) !important;
-  border-color: var(--aws-blue-primary) !important;
+/* ==========================================================================
+   SOLID BLUE BUTTONS WITH CRISP WHITE TEXT (NO INNER BORDERS / BOXES)
+   ========================================================================== */
+button[class*='awsui_button_'],
+button[class*='awsui_variant-primary_'],
+button[class*='awsui_variant-normal_'],
+[class*='awsui_button-dropdown_'] button,
+[class*='awsui_button-trigger_'],
+.btn-primary-blue {
+  background-color: #0073bb !important;
+  border: 1px solid #0073bb !important;
   color: #ffffff !important;
   font-weight: 600 !important;
-  border-radius: 6px !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 20px !important;
+  padding: 6px 16px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
   transition: all 0.15s ease !important;
+  cursor: pointer !important;
+  outline: none !important;
 }
 
-button[class*='awsui_variant-primary_']:hover {
-  background-color: var(--aws-blue-hover) !important;
-  border-color: var(--aws-blue-hover) !important;
+button[class*='awsui_button_']:hover,
+button[class*='awsui_variant-primary_']:hover,
+[class*='awsui_button-dropdown_'] button:hover,
+[class*='awsui_button-trigger_']:hover {
+  background-color: #005a94 !important;
+  border-color: #005a94 !important;
+  color: #ffffff !important;
   transform: translateY(-1px);
 }
 
+/* Clean inside text and icons on buttons (no inner boxes or focus rings) */
+button[class*='awsui_button_'] span,
+button[class*='awsui_button_'] svg,
+[class*='awsui_button_'] * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* View Details link button */
 button[class*='awsui_variant-link_'] {
-  color: var(--aws-blue-primary) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #0073bb !important;
   font-weight: 600 !important;
+}
+
+button[class*='awsui_variant-link_'] span {
+  color: #0073bb !important;
+}
+
+button[class*='awsui_variant-link_']:hover span {
+  color: #005a94 !important;
+  text-decoration: underline;
 }
 
 /* Form Inputs & Search Fields */

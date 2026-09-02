@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import {
   Badge,
   Box,
@@ -7,13 +7,10 @@ import {
   SpaceBetween,
 } from '@cloudscape-design/components'
 
-/**
- * Creates Cloudscape card definition for a starter pack with dynamic event handlers.
- */
 const createStarterPackCardDefinition = (onViewDetails) => ({
   header: (pack) => (
     <span
-      style={{ cursor: 'pointer', color: '#0073bb', fontWeight: 600 }}
+      style={{ cursor: 'pointer', color: '#0073bb', fontWeight: 700, fontSize: '16px' }}
       onClick={() => onViewDetails && onViewDetails(pack)}
     >
       {pack.title}
@@ -65,14 +62,6 @@ const createStarterPackCardDefinition = (onViewDetails) => ({
   ],
 })
 
-/**
- * StarterPackCards renders a responsive grid of starter pack cards.
- *
- * @param {Object} props - Component props.
- * @param {import('../../data/marketplaceData').StarterPack[]} props.starterPacks - Packs to render.
- * @param {(pack: any) => void} [props.onViewDetails] - Details modal trigger callback.
- * @returns {React.ReactElement} The starter pack cards grid.
- */
 export default function StarterPackCards({ starterPacks, onViewDetails }) {
   const cardDefinition = createStarterPackCardDefinition(onViewDetails)
 

@@ -152,7 +152,7 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
                     variant="h2"
                     actions={
                       <Button
-                        variant="normal"
+                        variant="primary"
                         iconName="upload"
                         onClick={() => setIsImporterOpen(true)}
                       >
