@@ -1,5 +1,5 @@
-﻿/* =========================================
-   Manage Domains Page Styling (Dark Mode)
+/* =========================================
+   Manage Domains Page Styling (Clean White)
 ========================================= */
 
 .manage-domains-page {
@@ -17,26 +17,22 @@
 .manage-domains-title {
   font-size: 22px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #111827;
   margin: 0 0 6px 0;
 }
 
 .manage-domains-subtitle {
   font-size: 13.5px;
-  color: #94A3B8;
+  color: #4b5563;
   margin: 0;
 }
 
-/* =========================================
-   Accordion Cards (Create & Existing Domains)
-========================================= */
-
 .custom-accordion-card {
-  background: #182246;
-  border: 1px solid #2A3764;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .accordion-header {
@@ -45,24 +41,24 @@
   align-items: center;
   padding: 16px 20px;
   cursor: pointer;
-  background-color: #182246;
-  border-bottom: 1px solid #2A3764;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
   user-select: none;
   transition: background-color 0.15s ease;
 }
 
 .accordion-header:hover {
-  background-color: #1E2B56;
+  background-color: #f3f4f6;
 }
 
 .accordion-title {
   font-size: 15px;
   font-weight: 600;
-  color: #00A3E0;
+  color: #0073bb;
 }
 
 .accordion-arrow {
-  color: #94A3B8;
+  color: #6b7280;
   display: flex;
   align-items: center;
   transition: transform 0.2s ease;
@@ -74,12 +70,8 @@
 
 .accordion-body {
   padding: 20px;
-  background-color: #182246;
+  background-color: #ffffff;
 }
-
-/* =========================================
-   Create Domain Form (Dark Mode)
-========================================= */
 
 .form-group {
   margin-bottom: 18px;
@@ -89,19 +81,19 @@
   display: block;
   font-size: 13px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #111827;
   margin-bottom: 6px;
 }
 
 .required-star {
-  color: #F87171;
+  color: #ef4444;
   margin-left: 2px;
 }
 
 .info-icon {
   display: inline-block;
   margin-left: 6px;
-  color: #00A3E0;
+  color: #0073bb;
   cursor: pointer;
   font-size: 13px;
 }
@@ -111,21 +103,21 @@
   height: 38px;
   padding: 0 12px;
   font-size: 13.5px;
-  color: #FFFFFF;
-  background-color: #121A38;
-  border: 1px solid #2A3764;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
   outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease;
 }
 
 .form-input::placeholder {
-  color: #64748B;
+  color: #9ca3af;
 }
 
 .form-input:focus {
-  border-color: #00A3E0;
-  box-shadow: 0 0 0 1px #00A3E0;
+  border-color: #0073bb;
+  box-shadow: 0 0 0 1px #0073bb;
 }
 
 .form-textarea {
@@ -133,65 +125,55 @@
   padding: 10px 12px;
   font-size: 13.5px;
   font-family: inherit;
-  color: #FFFFFF;
-  background-color: #121A38;
-  border: 1px solid #2A3764;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
   outline: none;
   resize: vertical;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease;
 }
 
 .form-textarea::placeholder {
-  color: #64748B;
+  color: #9ca3af;
 }
 
 .form-textarea:focus {
-  border-color: #00A3E0;
-  box-shadow: 0 0 0 1px #00A3E0;
+  border-color: #0073bb;
+  box-shadow: 0 0 0 1px #0073bb;
 }
 
-.kb-icon {
-  margin-right: 4px;
-}
-
-/* Drag & Drop File Upload Area */
 .drag-drop-zone {
-  border: 2px dashed #2A3764;
+  border: 2px dashed #d1d5db;
   border-radius: 6px;
   padding: 24px 16px;
   text-align: center;
-  background-color: #121A38;
+  background-color: #f9fafb;
   cursor: pointer;
   transition: all 0.2s ease;
   margin-bottom: 8px;
 }
 
-.drag-drop-zone:hover,
-.drag-drop-zone.dragging {
-  border-color: #00A3E0;
-  background-color: #1A254C;
-}
-
-.upload-icon-box {
-  margin-bottom: 6px;
+.drag-drop-zone:hover {
+  border-color: #0073bb;
+  background-color: #eff6ff;
 }
 
 .upload-main-text {
   font-size: 13px;
   font-weight: 500;
-  color: #E2E8F0;
+  color: #111827;
   margin-bottom: 4px;
 }
 
 .upload-sub-text {
   font-size: 11.5px;
-  color: #94A3B8;
+  color: #6b7280;
 }
 
 .upload-footer-hint {
   font-size: 12px;
-  color: #94A3B8;
+  color: #6b7280;
   margin-bottom: 12px;
   text-align: center;
 }
@@ -200,8 +182,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: #121A38;
-  border: 1px solid #2A3764;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 4px;
   padding: 8px 12px;
   font-size: 12.5px;
@@ -209,11 +191,11 @@
 
 .uploaded-label {
   font-weight: 600;
-  color: #E2E8F0;
+  color: #111827;
 }
 
 .no-file-text {
-  color: #64748B;
+  color: #9ca3af;
 }
 
 .files-pill-list {
@@ -226,34 +208,27 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: #182246;
-  border: 1px solid #2A3764;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
   border-radius: 12px;
   padding: 2px 8px;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #111827;
 }
 
 .file-remove-btn {
   background: transparent;
   border: none;
-  color: #F87171;
+  color: #ef4444;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
   padding: 0;
-  line-height: 1;
-}
-
-.form-actions-row {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
 }
 
 .btn-save-domain {
-  background-color: #FF7A00;
-  color: #FFFFFF;
+  background-color: #0073bb;
+  color: #ffffff;
   border: none;
   border-radius: 6px;
   padding: 8px 22px;
@@ -261,17 +236,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.15s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-save-domain:hover {
-  background-color: #E56E00;
+  background-color: #005a94;
 }
 
-/* =========================================
-   Existing Domains List (Dark Mode)
-========================================= */
-
+/* Existing Domains List */
 .existing-domains-list {
   display: flex;
   flex-direction: column;
@@ -283,15 +254,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  background-color: #121A38;
-  border: 1px solid #2A3764;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .existing-domain-card:hover {
-  border-color: #00A3E0;
-  box-shadow: 0 2px 8px rgba(0, 163, 224, 0.15);
+  border-color: #0073bb;
+  box-shadow: 0 2px 8px rgba(0, 115, 187, 0.12);
 }
 
 .domain-info-left {
@@ -310,19 +281,19 @@
 .domain-name-link {
   font-size: 14.5px;
   font-weight: 600;
-  color: #00A3E0;
+  color: #0073bb;
   cursor: pointer;
 }
 
 .domain-name-link:hover {
-  color: #38BDF8;
+  color: #005a94;
   text-decoration: underline;
 }
 
 .inactive-badge {
-  background-color: #334155;
-  color: #94A3B8;
-  border: 1px solid #475569;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
   font-size: 11px;
   font-weight: 500;
   padding: 2px 8px;
@@ -331,7 +302,7 @@
 
 .domain-desc-text {
   font-size: 12.5px;
-  color: #94A3B8;
+  color: #4b5563;
   line-height: 1.4;
   margin: 0;
 }
@@ -355,24 +326,23 @@
 }
 
 .pill-completed {
-  background-color: rgba(34, 197, 94, 0.15);
-  color: #4ADE80;
+  background-color: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
   border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
 .pill-running {
-  background-color: rgba(59, 130, 246, 0.15);
-  color: #60A5FA;
+  background-color: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
   border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .pill-pending {
-  background-color: rgba(245, 158, 11, 0.15);
-  color: #FBBF24;
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #d97706;
   border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
-/* Domain Actions (Edit / View Workflows) */
 .domain-actions-right {
   display: flex;
   align-items: center;
@@ -385,15 +355,16 @@
   justify-content: center;
   width: 34px;
   height: 32px;
-  background-color: #182246;
-  border: 1.5px solid #F59E0B;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.15s ease;
 }
 
 .btn-edit-domain:hover {
-  background-color: rgba(245, 158, 11, 0.2);
+  background-color: #f3f4f6;
+  border-color: #0073bb;
 }
 
 .btn-view-workflows {
@@ -403,19 +374,19 @@
   gap: 6px;
   height: 32px;
   padding: 0 10px;
-  background-color: #182246;
-  border: 1.5px solid #00A3E0;
+  background-color: #ffffff;
+  border: 1px solid #0073bb;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.15s ease;
 }
 
 .btn-view-workflows:hover {
-  background-color: rgba(0, 163, 224, 0.2);
+  background-color: rgba(0, 115, 187, 0.08);
 }
 
 .view-count-number {
   font-size: 12px;
   font-weight: 700;
-  color: #00A3E0;
+  color: #0073bb;
 }

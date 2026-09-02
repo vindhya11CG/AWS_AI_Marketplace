@@ -1,5 +1,5 @@
-﻿/* ==========================================================================
-   Starter Pack Details Modal Styles (Sogeti Midnight Blue Dark Theme)
+/* ==========================================================================
+   Starter Pack Details Modal (Clean AWS Marketplace Style)
    ========================================================================== */
 
 .starter-pack-modal-backdrop {
@@ -8,8 +8,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(5, 10, 25, 0.82);
-  backdrop-filter: blur(6px);
+  background-color: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(4px);
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -20,25 +20,25 @@
 
 .starter-pack-modal-dialog {
   position: relative;
-  background-color: #182246; /* Sogeti elevated dark surface */
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #111827;
   width: 100%;
   max-width: 1180px;
   max-height: 90vh;
-  border-radius: 12px;
-  border: 1px solid #2a3764;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 163, 224, 0.15);
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  padding: 32px 36px;
-  animation: modalFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 30px 34px;
+  animation: modalFadeIn 0.2s ease-out;
 }
 
 @keyframes modalFadeIn {
   from {
     opacity: 0;
-    transform: scale(0.97) translateY(8px);
+    transform: scale(0.98) translateY(6px);
   }
   to {
     opacity: 1;
@@ -46,18 +46,18 @@
   }
 }
 
-/* Red Close Button Top Right */
+/* Close Button Top Right */
 .modal-close-red-btn {
   position: absolute;
   top: 18px;
   right: 18px;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   background-color: #ef4444;
   color: #ffffff;
   border: none;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   cursor: pointer;
   display: flex;
@@ -65,12 +65,11 @@
   justify-content: center;
   transition: all 0.15s ease;
   z-index: 10;
-  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
 }
 
 .modal-close-red-btn:hover {
   background-color: #dc2626;
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 /* Modal Header */
@@ -85,20 +84,19 @@
 .modal-header-text {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .modal-main-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #00a3e0; /* Vibrant Sogeti Cyan */
+  font-size: 23px;
+  font-weight: 800;
+  color: #111827;
   margin: 0;
-  letter-spacing: -0.01em;
 }
 
 .modal-subtitle-tagline {
-  font-size: 14px;
-  color: #cbd5e1;
+  font-size: 13.5px;
+  color: #4b5563;
   margin: 0;
 }
 
@@ -107,33 +105,28 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #0073bb 0%, #005a94 100%);
+  background-color: #0073bb;
   color: #ffffff;
-  border: 1px solid #00a3e0;
+  border: none;
   border-radius: 6px;
   padding: 8px 16px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
-  box-shadow: 0 2px 8px rgba(0, 115, 187, 0.35);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .btn-agentic-link:hover {
-  background: linear-gradient(135deg, #00a3e0 0%, #0073bb 100%);
+  background-color: #005a94;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 163, 224, 0.4);
 }
 
 .agentic-wave-icon {
-  font-size: 16px;
-  color: #00a3e0;
+  font-size: 15px;
 }
 
-/* ==========================================================================
-   Two Column Layout
-   ========================================================================== */
-
+/* Two Column Layout */
 .modal-body-columns {
   display: grid;
   grid-template-columns: 63% 35%;
@@ -147,24 +140,19 @@
   }
 }
 
-/* ==========================================================================
-   Left Column
-   ========================================================================== */
-
+/* Left Column */
 .modal-left-column {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Video Player Container */
 .modal-video-container {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #0d142c;
-  border: 1px solid #2a3764;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  background-color: #000000;
+  border: 1px solid #e5e7eb;
 }
 
 .video-mockup-wrapper {
@@ -181,31 +169,23 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: #000000;
 }
 
-.video-presenter-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Tabs Navigation */
+/* Tabs */
 .modal-tabs-nav {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 6px;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .tab-item-btn {
   background: transparent;
   border: 1px solid transparent;
-  color: #94a3b8;
+  color: #4b5563;
   font-size: 13.5px;
   font-weight: 600;
-  padding: 7px 16px;
+  padding: 6px 14px;
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.15s ease;
@@ -214,24 +194,21 @@
 .tab-item-btn.active {
   background-color: #0073bb;
   color: #ffffff;
-  border-color: #00a3e0;
-  box-shadow: 0 2px 8px rgba(0, 115, 187, 0.4);
 }
 
 .tab-item-btn:hover:not(.active) {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.05);
+  color: #0073bb;
+  background-color: rgba(0, 115, 187, 0.06);
 }
 
 .modal-tab-divider {
-  height: 1px;
-  background: linear-gradient(90deg, #0073bb 0%, #2a3764 100%);
+  height: 1.5px;
+  background: #0073bb;
   width: 100%;
   margin-top: -6px;
   margin-bottom: 8px;
 }
 
-/* Tab Content */
 .modal-tab-content-area {
   display: flex;
   flex-direction: column;
@@ -239,21 +216,21 @@
 }
 
 .overview-section-block {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .section-heading-blue {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
-  color: #00a3e0;
-  margin: 0 0 5px 0;
+  color: #0073bb;
+  margin: 0 0 4px 0;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .section-body-text {
   font-size: 13.5px;
-  color: #e2e8f0;
+  color: #374151;
   line-height: 1.6;
   margin: 0;
 }
@@ -280,33 +257,27 @@
 }
 
 .agent-pill-badge {
-  background: linear-gradient(135deg, #0073bb 0%, #005a94 100%);
-  border: 1px solid #00a3e0;
+  background-color: #0073bb;
   color: #ffffff;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
-  padding: 5px 14px;
-  border-radius: 14px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 4px 12px;
+  border-radius: 12px;
 }
 
 .agent-role-desc {
   font-size: 13px;
-  color: #cbd5e1;
+  color: #4b5563;
 }
 
 .agent-step-down-arrow {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  color: #00a3e0;
-  padding-left: 24px;
-  line-height: 1;
+  color: #0073bb;
+  padding-left: 20px;
 }
 
-/* ==========================================================================
-   Right Column (Widgets Stack)
-   ========================================================================== */
-
+/* Right Column Widgets */
 .modal-right-column {
   display: flex;
   flex-direction: column;
@@ -314,20 +285,19 @@
 }
 
 .modal-widget-card {
-  background-color: #121a38; /* Sogeti base dark container */
-  border: 1px solid #2a3764;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .widget-title {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
-  color: #00a3e0;
-  margin: 0 0 12px 0;
+  color: #0073bb;
+  margin: 0 0 10px 0;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 /* ROI Metrics Widget */
@@ -339,28 +309,28 @@
 }
 
 .roi-metric-box {
-  background-color: #182246;
-  border: 1px solid #2a3764;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
-  padding: 12px 10px;
+  padding: 10px;
   text-align: center;
 }
 
 .roi-value-large {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
-  color: #00a3e0;
+  color: #111827;
   margin-bottom: 2px;
 }
 
 .roi-label-small {
-  font-size: 11.5px;
-  color: #94a3b8;
+  font-size: 11px;
+  color: #6b7280;
 }
 
 .roi-summary-text {
   font-size: 12px;
-  color: #cbd5e1;
+  color: #4b5563;
   line-height: 1.5;
   margin: 0;
 }
@@ -379,19 +349,19 @@
 }
 
 .star-filled {
-  color: #00a3e0;
+  color: #f59e0b;
   font-size: 16px;
 }
 
 .rating-score-fraction {
   font-size: 13.5px;
   font-weight: 700;
-  color: #ffffff;
+  color: #111827;
 }
 
 .ratings-count-label {
   font-size: 11.5px;
-  color: #94a3b8;
+  color: #6b7280;
 }
 
 /* Quick Links Widget */
@@ -406,31 +376,26 @@
   align-items: center;
   gap: 10px;
   width: 100%;
-  background: linear-gradient(135deg, #0073bb 0%, #005a94 100%);
+  background-color: #0073bb;
   color: #ffffff;
-  border: 1px solid rgba(0, 163, 224, 0.3);
+  border: none;
   border-radius: 6px;
-  padding: 10px 14px;
-  font-size: 13px;
+  padding: 9px 12px;
+  font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
   text-align: left;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-quick-link:hover {
-  background: linear-gradient(135deg, #00a3e0 0%, #0073bb 100%);
-  border-color: #00a3e0;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 163, 224, 0.35);
+  background-color: #005a94;
 }
 
 .quick-link-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #93c5fd;
 }
 
 .quick-link-text {
@@ -439,13 +404,7 @@
 
 .quick-link-arrow {
   font-size: 13px;
-  opacity: 0.8;
-  transition: transform 0.15s ease;
-}
-
-.btn-quick-link:hover .quick-link-arrow {
-  transform: translate(2px, -2px);
-  opacity: 1;
+  opacity: 0.9;
 }
 
 /* Comments Widget */
@@ -454,51 +413,50 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  user-select: none;
 }
 
 .comments-collapse-toggle-btn {
-  background: #182246;
-  border: 1px solid #2a3764;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
   width: 22px;
   height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  color: #00a3e0;
+  color: #0073bb;
   cursor: pointer;
 }
 
 .comments-body-wrapper {
-  margin-top: 12px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .no-comments-placeholder {
   font-size: 12px;
-  color: #94a3b8;
+  color: #6b7280;
   text-align: center;
-  padding: 6px 0;
+  padding: 4px 0;
 }
 
 .comments-stream-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   max-height: 140px;
   overflow-y: auto;
 }
 
 .single-comment-item {
-  background-color: #182246;
-  border: 1px solid #2a3764;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
-  padding: 8px 12px;
+  padding: 8px 10px;
 }
 
 .comment-meta {
@@ -506,52 +464,48 @@
   justify-content: space-between;
   align-items: center;
   font-size: 11px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .comment-author {
   font-weight: 600;
-  color: #00a3e0;
+  color: #0073bb;
 }
 
 .comment-time {
-  color: #94a3b8;
+  color: #9ca3af;
 }
 
 .comment-text {
-  font-size: 12.5px;
-  color: #e2e8f0;
+  font-size: 12px;
+  color: #374151;
   margin: 0;
 }
 
 .comment-input-form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 6px;
+  gap: 6px;
+  margin-top: 4px;
 }
 
 .comment-textarea {
   width: 100%;
-  background-color: #182246;
-  border: 1px solid #2a3764;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 12.5px;
+  padding: 6px 10px;
+  font-size: 12px;
   font-family: inherit;
   outline: none;
   resize: vertical;
-  color: #ffffff;
+  color: #111827;
   box-sizing: border-box;
 }
 
 .comment-textarea:focus {
-  border-color: #00a3e0;
-  box-shadow: 0 0 0 1px #00a3e0;
-}
-
-.comment-textarea::placeholder {
-  color: #64748b;
+  border-color: #0073bb;
+  box-shadow: 0 0 0 2px rgba(0, 115, 187, 0.15);
 }
 
 .comment-submit-row {
@@ -560,17 +514,17 @@
 }
 
 .btn-post-comment {
-  background: linear-gradient(135deg, #0073bb 0%, #005a94 100%);
+  background-color: #0073bb;
   color: #ffffff;
-  border: 1px solid #00a3e0;
+  border: none;
   border-radius: 4px;
-  padding: 5px 14px;
-  font-size: 12.5px;
+  padding: 4px 12px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .btn-post-comment:hover {
-  background: linear-gradient(135deg, #00a3e0 0%, #0073bb 100%);
+  background-color: #005a94;
 }

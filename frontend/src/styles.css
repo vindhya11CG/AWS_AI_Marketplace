@@ -1,159 +1,173 @@
-﻿* {
-  box-sizing: border-box;
-}
-
-:root {
-  /* Sogeti Capgemini Midnight Blue Dark Mode Palette */
-  --sogeti-dark-bg: #121A38;
-  --sogeti-dark-nav: #0D142C;
-  --sogeti-surface-bg: #182246;
-  --sogeti-surface-hover: #222E58;
-  --sogeti-border: #2A3764;
-  --sogeti-text-primary: #FFFFFF;
-  --sogeti-text-secondary: #94A3B8;
-  --sogeti-text-muted: #64748B;
-  
-  --sogeti-accent-blue: #00A3E0;
-  --sogeti-primary-blue: #0073BB;
-  --sogeti-deep-blue: #005A9C;
-  --sogeti-orange: #FF7A00;
-  --sogeti-coral: #E05A47;
-  
-  /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 40px;
-
-  /* Typography */
-  --font-size-xs: 12px;
-  --font-size-sm: 13px;
-  --font-size-base: 14px;
-  --font-size-md: 16px;
-  --font-size-lg: 18px;
-  --font-size-xl: 24px;
-  --font-size-2xl: 32px;
-  --line-height-tight: 1.4;
-  --line-height-normal: 1.6;
-}
-
-body {
-  font-family: 'Amazon Ember', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--sogeti-dark-bg) !important;
-  color: var(--sogeti-text-primary) !important;
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-normal);
-}
-
-#root {
-  min-height: 100vh;
-  background-color: var(--sogeti-dark-bg) !important;
-}
-
 /* ==========================================================================
-   Cloudscape Dark Theme Tokens & Overrides (Sogeti Blue #121A38)
+   Clean & Organized AWS Marketplace Enterprise Theme
    ========================================================================== */
 
-.awsui-dark-mode,
-.awsui-root {
-  --color-background-layout-main: #121A38 !important;
-  --color-background-layout-mobile: #121A38 !important;
-  --color-background-container-content: #182246 !important;
-  --color-background-container-header: #182246 !important;
-  --color-border-container-top: #2A3764 !important;
-  --color-border-container-line: #2A3764 !important;
-  --color-border-item-default: #2A3764 !important;
-  --color-border-item-focused: #00A3E0 !important;
-  --color-background-home-header: #0D142C !important;
-  --color-text-body-default: #FFFFFF !important;
-  --color-text-heading-default: #FFFFFF !important;
-  --color-text-body-secondary: #94A3B8 !important;
-  --color-background-input-default: #121A38 !important;
-  --color-border-input-default: #2A3764 !important;
-  --color-background-dropdown-item-hover: #222E58 !important;
-  --color-background-dropdown-item-selected: #1E2D5A !important;
+:root {
+  --aws-canvas-bg: #f8f9fa;
+  --aws-card-bg: #ffffff;
+  --aws-border-color: #e5e7eb;
+  --aws-border-dark: #d1d5db;
+  
+  --aws-text-dark: #111827;
+  --aws-text-body: #374151;
+  --aws-text-muted: #6b7280;
+  
+  --aws-blue-primary: #0073bb;
+  --aws-blue-hover: #005a94;
+  --aws-cyan-accent: #00a3e0;
+  --aws-amber-accent: #e68a00;
+  
+  --aws-card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-/* App Layout & Main Canvas */
+/* Global Canvas Background */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--aws-text-body);
+  background-color: var(--aws-canvas-bg) !important;
+}
+
+/* Cloudscape Layout Resets */
 .awsui-app-layout,
-.awsui-app-layout__main,
-.awsui-app-layout__content,
-.awsui-app-layout__canvas {
-  background-color: var(--sogeti-dark-bg) !important;
+.awsui-app-layout__canvas,
+[class*='awsui_layout_'],
+[class*='awsui_canvas_'],
+[class*='awsui_app-layout_'],
+[class*='awsui_content_'],
+[class*='awsui_content-layout_'] {
+  background-color: var(--aws-canvas-bg) !important;
 }
 
 /* Top Navigation Bar */
-.awsui .awsui-top-navigation,
-.awsui-top-navigation {
-  background-color: var(--sogeti-dark-nav) !important;
-  border-bottom: 1px solid var(--sogeti-border) !important;
+[class*='awsui_top-navigation_'] {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid var(--aws-border-color) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
 }
 
-/* Side Navigation */
-.awsui-side-navigation {
-  background-color: var(--sogeti-dark-nav) !important;
+[class*='awsui_top-navigation_'] [class*='awsui_identity_'] a,
+[class*='awsui_top-navigation_'] a,
+[class*='awsui_top-navigation_'] span {
+  color: var(--aws-text-dark) !important;
+  font-weight: 700 !important;
+  font-size: 17px !important;
 }
 
-.awsui-side-navigation__link-active {
-  background-color: var(--sogeti-surface-bg) !important;
-  color: var(--sogeti-accent-blue) !important;
+/* Sidebar Navigation */
+[class*='awsui_navigation_'] {
+  background-color: #ffffff !important;
+  border-right: 1px solid var(--aws-border-color) !important;
 }
 
-/* Containers and Cards */
-.awsui-container,
-.awsui-cards-card {
-  background-color: var(--sogeti-surface-bg) !important;
-  border: 1px solid var(--sogeti-border) !important;
-  color: var(--sogeti-text-primary) !important;
+[class*='awsui_navigation_'] a {
+  color: var(--aws-text-body) !important;
+  font-size: 13.5px !important;
+}
+
+[class*='awsui_navigation_'] a:hover {
+  color: var(--aws-blue-primary) !important;
+}
+
+[class*='awsui_navigation_'] [class*='awsui_active_'] {
+  background-color: rgba(0, 115, 187, 0.08) !important;
+  color: var(--aws-blue-primary) !important;
+  font-weight: 700 !important;
+  border-left: 3px solid var(--aws-blue-primary) !important;
+}
+
+/* Top-level Containers & Cards */
+.awsui-cards-card,
+div[class*='awsui_card_']:not([class*='header']):not([class*='section']):not([class*='body']),
+div[class*='awsui_container_']:not([class*='header']):not([class*='content']):not([class*='footer']),
+[class*='awsui_expandable-section_'] {
+  background-color: #ffffff !important;
+  border: 1px solid var(--aws-border-color) !important;
   border-radius: 8px !important;
+  box-shadow: var(--aws-card-shadow) !important;
+  color: var(--aws-text-body) !important;
 }
 
-/* Table in Dark Mode */
-.awsui table,
-.awsui-table {
-  background-color: var(--sogeti-surface-bg) !important;
-  color: var(--sogeti-text-primary) !important;
+/* Remove nested borders / backgrounds / curves inside card headers & sections */
+[class*='awsui_card-header_'],
+[class*='awsui_card-section_'],
+[class*='awsui_container-header_'],
+[class*='awsui_container-content_'],
+[class*='awsui_card_'] [class*='awsui_header_'] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
-.awsui .awsui-table-cell,
-.awsui-table__cell {
-  background-color: var(--sogeti-surface-bg) !important;
-  border-bottom: 1px solid var(--sogeti-border) !important;
-  color: var(--sogeti-text-primary) !important;
+/* Container Inner Header */
+[class*='awsui_header_'],
+[class*='awsui_header-text_'],
+h1, h2, h3, h4 {
+  color: var(--aws-text-dark) !important;
+  font-weight: 700 !important;
 }
 
-.awsui-table__header {
-  background-color: var(--sogeti-surface-bg) !important;
-  border-bottom: 1px solid var(--sogeti-border) !important;
-  color: #FFFFFF !important;
+/* Paragraphs & Text */
+p, span, [class*='awsui_content_'] {
+  color: var(--aws-text-body);
 }
 
-/* Primary Button Styling */
-.awsui button.awsui-button--variant-primary {
-  background-color: var(--sogeti-primary-blue) !important;
-  border-color: var(--sogeti-primary-blue) !important;
-  color: #FFFFFF !important;
+/* Action Buttons */
+button[class*='awsui_variant-primary_'] {
+  background-color: var(--aws-blue-primary) !important;
+  border-color: var(--aws-blue-primary) !important;
+  color: #ffffff !important;
   font-weight: 600 !important;
-  border-radius: 16px !important;
-  padding: 6px 18px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: all 0.15s ease !important;
 }
 
-.awsui button.awsui-button--variant-primary:hover {
-  background-color: #005A94 !important;
+button[class*='awsui_variant-primary_']:hover {
+  background-color: var(--aws-blue-hover) !important;
+  border-color: var(--aws-blue-hover) !important;
+  transform: translateY(-1px);
 }
 
-/* Global Link styling */
-a,
-.awsui-link {
-  color: var(--sogeti-accent-blue) !important;
-  text-decoration: none;
+button[class*='awsui_variant-link_'] {
+  color: var(--aws-blue-primary) !important;
+  font-weight: 600 !important;
 }
 
-a:hover,
-.awsui-link:hover {
-  text-decoration: underline !important;
+/* Form Inputs & Search Fields */
+input[type='text'],
+input[type='search'],
+[class*='awsui_input_'] input {
+  background-color: #ffffff !important;
+  color: var(--aws-text-dark) !important;
+  border: 1px solid var(--aws-border-dark) !important;
+  border-radius: 6px !important;
+}
+
+input[type='text']:focus,
+[class*='awsui_input_'] input:focus {
+  border-color: var(--aws-blue-primary) !important;
+  box-shadow: 0 0 0 2px rgba(0, 115, 187, 0.2) !important;
+}
+
+/* Tables */
+[class*='awsui_table_'] table {
+  color: var(--aws-text-body) !important;
+}
+
+[class*='awsui_table_'] th {
+  color: var(--aws-text-dark) !important;
+  font-weight: 700 !important;
+  background-color: #f9fafb !important;
+  border-bottom: 1px solid var(--aws-border-color) !important;
+}
+
+[class*='awsui_table_'] td {
+  color: var(--aws-text-body) !important;
+  border-bottom: 1px solid var(--aws-border-color) !important;
 }

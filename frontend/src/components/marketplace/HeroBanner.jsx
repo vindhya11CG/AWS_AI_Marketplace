@@ -1,24 +1,69 @@
 import React from 'react'
-import { Box, Header, SpaceBetween } from '@cloudscape-design/components'
 
-/**
- * HeroBanner renders the marketplace introduction / hero area.
- * Explains what Starter Packs are and the value they provide.
- *
- * @returns {React.ReactElement} The hero banner.
- */
 export default function HeroBanner() {
   return (
-    <Box padding={{ vertical: 'l' }}>
-      <SpaceBetween size="s">
-        <Header variant="h1" description="Discover, explore, and launch industry-specific AI Starter Packs.">
-          AI Marketplace
-        </Header>
-        <Box variant="p" color="text-body-secondary" fontSize="body-m">
-          AI Starter Packs are prebuilt workflows with industry-specific trained orchestrated
-          agents. This helps your clients move from idea to production faster.
-        </Box>
-      </SpaceBetween>
-    </Box>
+    <div
+      style={{
+        backgroundColor: '#1f2937',
+        backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0)',
+        backgroundSize: '24px 24px',
+        borderRadius: 8,
+        padding: '36px 40px',
+        margin: '12px 0 20px 0',
+        color: '#ffffff',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.12)',
+      }}
+    >
+      <div style={{ maxWidth: '65%' }}>
+        <h1
+          style={{
+            fontSize: '28px',
+            fontWeight: 800,
+            margin: '0 0 10px 0',
+            color: '#ffffff',
+            letterSpacing: '-0.02em',
+          }}
+        >
+          Amplifier for Agentic AI - Discovery Portal
+        </h1>
+        <p
+          style={{
+            fontSize: '15px',
+            color: '#e68a00',
+            fontWeight: 600,
+            margin: '0 0 10px 0',
+          }}
+        >
+          Explore, deploy, and launch industry-specific AI Starter Packs for your enterprise.
+        </p>
+        <p
+          style={{
+            fontSize: '13.5px',
+            color: '#cbd5e1',
+            lineHeight: 1.5,
+            margin: 0,
+          }}
+        >
+          Prebuilt multi-agent workflows powered by industry-trained orchestrated models. Accelerate idea-to-production with zero friction.
+        </p>
+      </div>
+
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'rgba(255, 255, 255, 0.06)',
+          borderRadius: 12,
+          padding: '20px 24px',
+          border: '1px solid rgba(255, 255, 255, 0.12)',
+        }}
+      >
+        <span style={{ fontSize: '42px' }}>⚡</span>
+      </div>
+    </div>
   )
 }

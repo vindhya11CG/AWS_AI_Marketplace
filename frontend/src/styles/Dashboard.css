@@ -1,160 +1,280 @@
-﻿/* =========================================
-   Top Header Row: Title & Search Bar (Dark Mode)
-========================================= */
+/* ==========================================================================
+   Dashboard Styles (Clean & Organized AWS Marketplace Style)
+   ========================================================================== */
 
-.dashboard-top-row {
+/* Top Section (Title + Action Buttons + Search Bar) */
+.dashboard-top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2px;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 24px;
 }
 
-.dashboard-page-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #FFFFFF;
+.dashboard-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-main-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
   margin: 0;
-  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
-/* =========================================
-   AI Market Integrated Search Bar (Dark Mode)
-========================================= */
-
-.top-search-bar {
+.dashboard-action-buttons {
   display: flex;
   align-items: center;
-  width: 320px;
-  max-width: 100%;
-  height: 38px;
-  background-color: #182246;
-  border: 1px solid #2A3764;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  gap: 12px;
 }
 
-.top-search-input {
+/* Action Buttons (Directly below Dashboard Title) */
+.btn-create-domain {
+  background-color: #00a2e8;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.btn-create-domain:hover {
+  background-color: #008cc9;
+}
+
+.btn-create-workflow {
+  background-color: #005a9c;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.btn-create-workflow:hover {
+  background-color: #00467a;
+}
+
+/* AI Market Integrated Search Bar */
+.ai-market-search-box {
+  display: flex;
+  align-items: center;
+  width: 340px;
+  max-width: 100%;
+  height: 38px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ai-market-search-input {
   flex: 1;
   height: 100%;
   border: none;
   outline: none;
-  padding: 0 14px;
+  padding: 0 12px;
   font-size: 13.5px;
-  color: #FFFFFF;
+  color: #111827;
   background: transparent;
 }
 
-.top-search-input::placeholder {
-  color: #94A3B8;
+.ai-market-search-input::placeholder {
+  color: #9ca3af;
 }
 
-.top-search-button {
+.ai-market-search-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+  width: 42px;
   height: 100%;
-  background-color: #0073BB;
+  background-color: #0073bb;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.15s ease-in-out;
-}
-
-.top-search-button:hover {
-  background-color: #005A94;
-}
-
-/* =========================================
-   Action Buttons (Below Title)
-========================================= */
-
-.dashboard-action-buttons-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: -2px;
-  margin-bottom: 8px;
-}
-
-.btn-create-domain {
-  background-color: #00A3E0;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 18px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   transition: background-color 0.15s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.btn-create-domain:hover {
-  background-color: #008CC9;
+.ai-market-search-button:hover {
+  background-color: #005a94;
 }
 
-.btn-create-workflow {
-  background-color: #005A9C;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 18px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.15s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+/* Domains Section */
+.domains-container {
+  margin-bottom: 24px;
 }
 
-.btn-create-workflow:hover {
-  background-color: #00467A;
+.section-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 14px 0;
 }
 
-.domain-card-title-link {
-  color: #00A3E0;
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-  transition: color 0.15s ease;
-}
-
-.domain-card-title-link:hover {
-  color: #38BDF8;
-  text-decoration: underline;
-}
-
-.wf-name-clickable {
-  color: #00A3E0;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.wf-name-clickable:hover {
-  color: #38BDF8;
-  text-decoration: underline;
-}
-
-/* =========================================
-   Card Hover Effect (Dark Blue)
-========================================= */
-
+/* Clean Single-Border White Cards */
 .awsui-cards-card {
-  background-color: #182246 !important;
-  border: 1px solid #2A3764 !important;
-  color: #FFFFFF !important;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease !important;
 }
 
 .awsui-cards-card:hover {
-  transform: translateY(-2px);
-  border-color: #00A3E0 !important;
-  box-shadow: 0 4px 12px rgba(0, 163, 224, 0.15);
+  transform: translateY(-2px) !important;
+  border-color: #0073bb !important;
+  box-shadow: 0 4px 14px rgba(0, 115, 187, 0.12) !important;
+}
+
+.domain-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.domain-title-link,
+.domain-title-link a {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #0073bb !important;
+  text-decoration: none !important;
+}
+
+.domain-title-link:hover,
+.domain-title-link a:hover {
+  color: #005a94 !important;
+  text-decoration: underline !important;
+}
+
+.domain-count-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0073bb;
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 2px 8px;
+}
+
+.domain-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.domain-card-description {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.domain-recent-section {
+  margin-top: 4px;
+}
+
+.domain-recent-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0073bb;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.domain-recent-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.domain-recent-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+.domain-bullet {
+  color: #0073bb;
+  font-weight: 700;
+}
+
+.domain-wf-name {
+  color: #1f2937;
+}
+
+/* More Card */
+.more-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+}
+
+.more-card-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0073bb;
+}
+
+/* Status Badges */
+.custom-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.badge-completed {
+  background-color: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge-pending {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.3);
 }
