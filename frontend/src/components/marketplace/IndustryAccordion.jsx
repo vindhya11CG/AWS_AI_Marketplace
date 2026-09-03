@@ -1,38 +1,71 @@
-﻿import React from 'react'
-import { ExpandableSection, SpaceBetween } from '@cloudscape-design/components'
+import React, { useState } from 'react'
 import StarterPackCards from './StarterPackCard'
 
-/**
- * IndustryAccordion renders each industry as an expandable section
- * containing its starter pack cards.
- *
- * @param {Object} props - Component props.
- * @param {import('../../data/marketplaceData').Industry[]} props.industries - Industries to render.
- * @param {boolean} [props.defaultExpandFirst=true] - Expand the first industry by default.
- * @param {(pack: any) => void} [props.onViewDetails] - Callback when "View details" is clicked.
- * @returns {React.ReactElement} The industry catalog.
- */
 export default function IndustryAccordion({
   industries,
   defaultExpandFirst = true,
   onViewDetails,
 }) {
+  // Track open state for each industry
+  const [openMap, setOpenMap] = useState(() => {
+    const initial = {}
+    industries.forEach((ind, index) => {
+      initial[ind.id] = defaultExpandFirst && index === 0
+    })
+    return initial
+  })
+
+  const toggleIndustry = (id) => {
+    setOpenMap((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }))
+  }
+
   return (
-    <SpaceBetween size="s">
-      {industries.map((industry, index) => (
-        <ExpandableSection
-          key={industry.id}
-          variant="container"
-          defaultExpanded={defaultExpandFirst && index === 0}
-          headerText={industry.name}
-          headerCounter={`(${industry.starterPacks.length})`}
-        >
-          <StarterPackCards
-            starterPacks={industry.starterPacks}
-            onViewDetails={onViewDetails}
-          />
-        </ExpandableSection>
-      ))}
-    </SpaceBetween>
+    <div className="industry-accordion-clean-list">
+      {industries.map((industry) => {
+        const isOpen = !!openMap[industry.id]
+        return (
+          <div key={industry.id} className="industry-accordion-clean-item">
+            <button
+              type="button"
+              className="industry-accordion-clean-header"
+              onClick={() => toggleIndustry(industry.id)}
+              aria-expanded={isOpen}
+            >
+              <div className="industry-header-left">
+                <svg
+                  className={`industry-arrow-icon ${isOpen ? 'arrow-open' : ''}`}
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#0073bb"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+                <span className="industry-header-title">{industry.name}</span>
+                <span className="industry-header-count">
+                  ({industry.starterPacks.length})
+                </span>
+              </div>
+            </button>
+
+            {isOpen && (
+              <div className="industry-accordion-clean-body">
+                <StarterPackCards
+                  starterPacks={industry.starterPacks}
+                  onViewDetails={onViewDetails}
+                />
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
   )
 }

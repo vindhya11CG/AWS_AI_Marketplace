@@ -1,0 +1,4 @@
+src/declaration.d.ts
+src/images.d.ts
+src/index.ts
+src/types/pnp-presets.d.ts

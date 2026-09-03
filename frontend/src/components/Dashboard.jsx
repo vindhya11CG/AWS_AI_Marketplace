@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import {
   AppLayout,
-  Box,
-  Button,
   ButtonDropdown,
-  Cards,
   Container,
   Header,
-  Link,
   SpaceBetween,
   Table,
   Pagination,
@@ -173,69 +169,18 @@ export default function Dashboard({
     },
   ]
 
-  const domainCardDefinition = {
-    header: (item) => {
-      if (item.isMoreCard) {
-        return (
-          <div className="more-card-header">
-            <span className="more-card-label">More</span>
-            <div className="more-card-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0073bb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 16 16 12 12 8" />
-                <line x1="8" y1="12" x2="16" y2="12" />
-              </svg>
-            </div>
-          </div>
-        )
-      }
-      return (
-        <div className="domain-card-header">
-          <Link href="#" fontSize="heading-s" className="domain-title-link">
-            {item.title}
-          </Link>
-          <span className="domain-count-badge">{item.workflowCount}</span>
-        </div>
-      )
-    },
-    sections: [
-      {
-        id: 'content',
-        content: (item) => {
-          if (item.isMoreCard) return null
-          return (
-            <div className="domain-card-body">
-              <p className="domain-card-description">{item.description}</p>
-              <div className="domain-recent-section">
-                <span className="domain-recent-title">RECENT WORKFLOWS</span>
-                <ul className="domain-recent-list">
-                  {item.recentWorkflows?.map((wf, idx) => (
-                    <li key={idx} className="domain-recent-item">
-                      <span className="domain-bullet">•</span>
-                      <span className="domain-wf-name">{wf}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )
-        },
-      },
-    ],
-  }
-
   // Filter based on search query
-  const filteredDomains = mockDomains.filter((domain) => {
+  const filteredDomains = domains.filter((domain) => {
     if (domain.isMoreCard) return true
     const q = searchText.toLowerCase()
     return (
       domain.title.toLowerCase().includes(q) ||
-      domain.description.toLowerCase().includes(q) ||
+      domain.description?.toLowerCase().includes(q) ||
       domain.recentWorkflows?.some((wf) => wf.toLowerCase().includes(q))
     )
   })
 
-  const filteredWorkflows = mockWorkflows.filter((workflow) => {
+  const filteredWorkflows = workflows.filter((workflow) => {
     const q = searchText.toLowerCase()
     return (
       workflow.name.toLowerCase().includes(q) ||
@@ -307,24 +252,66 @@ export default function Dashboard({
           {/* My Domains Section */}
           <div className="domains-container">
             <h2 className="section-title">My Domains</h2>
-            <Cards
-              cardDefinition={domainCardDefinition}
-              cardsPerRow={[
-                { cards: 1 },
-                { minWidth: 600, cards: 2 },
-                { minWidth: 900, cards: 3 },
-                { minWidth: 1200, cards: 4 },
-              ]}
-              items={filteredDomains}
-              empty={
-                <Box textAlign="center" color="inherit">
-                  <b>No domains found</b>
-                  <Box variant="p" color="inherit">
-                    No domains match your search query.
-                  </Box>
-                </Box>
-              }
-            />
+            {filteredDomains.length === 0 ? (
+              <div className="domains-empty-msg">
+                <b>No domains found</b>
+                <p>No domains match your search query.</p>
+              </div>
+            ) : (
+              <div className="dashboard-domains-grid">
+                {filteredDomains.map((domain) => {
+                  if (domain.isMoreCard) {
+                    return (
+                      <div
+                        key="more-card"
+                        className="dashboard-domain-card more-card"
+                        onClick={() => onNavigate && onNavigate('#/domains')}
+                      >
+                        <div className="more-card-content">
+                          <span className="more-card-label">More</span>
+                          <div className="more-card-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0073bb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="12" cy="12" r="10" />
+                              <polyline points="12 16 16 12 12 8" />
+                              <line x1="8" y1="12" x2="16" y2="12" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  }
+
+                  return (
+                    <div
+                      key={domain.id || domain.title}
+                      className="dashboard-domain-card"
+                      onClick={() => onSelectDomain && onSelectDomain(domain)}
+                    >
+                      <div className="domain-card-header">
+                        <span className="domain-title-link">
+                          {domain.title}
+                        </span>
+                        <span className="domain-count-badge">{domain.workflowCount || 0}</span>
+                      </div>
+
+                      <p className="domain-card-description">{domain.description}</p>
+
+                      <div className="domain-recent-section">
+                        <span className="domain-recent-title">RECENT WORKFLOWS</span>
+                        <ul className="domain-recent-list">
+                          {domain.recentWorkflows?.map((wf, idx) => (
+                            <li key={idx} className="domain-recent-item">
+                              <span className="domain-bullet">•</span>
+                              <span className="domain-wf-name">{wf}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
           </div>
 
           {/* Recent Workflows Section */}

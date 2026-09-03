@@ -1,51 +1,38 @@
 import React from 'react'
-import {
-  Box,
-  Button,
-  Container,
-  Header,
-  Link,
-  SpaceBetween,
-} from '@cloudscape-design/components'
 
-/**
- * DemoEnvironment renders access points to the live demo environment,
- * guest login, and platform documentation.
- *
- * @param {Object} props - Component props.
- * @param {() => void} [props.onLaunchDemo] - Handler for launching the demo.
- * @param {() => void} [props.onGuestLogin] - Handler for guest login.
- * @returns {React.ReactElement} The demo environment section.
- */
 export default function DemoEnvironment({ onLaunchDemo, onGuestLogin }) {
   return (
-    <Container
-      header={
-        <Header
-          variant="h2"
-          description="Try the platform hands-on before you build."
-        >
-          Demo Environment
-        </Header>
-      }
-    >
-      <SpaceBetween size="m">
-        <Box variant="p" color="text-body-secondary">
-          Explore the Agentic Experience demo, sign in as a guest, and review the platform
-          guide to get started quickly.
-        </Box>
-        <SpaceBetween direction="horizontal" size="xs">
-          <Button variant="primary" iconName="external" onClick={onLaunchDemo}>
+    <div className="clean-section-card-box">
+      <div className="clean-card-box-header">
+        <h2 className="clean-card-box-title">Demo Environment</h2>
+        <p className="clean-card-box-desc">
+          Try the platform hands-on before you build.
+        </p>
+      </div>
+      <div className="clean-card-box-content">
+        <p className="clean-card-box-text">
+          Explore the Agentic Experience demo, sign in as a guest, and review the platform guide to get started quickly.
+        </p>
+        <div className="clean-card-box-actions">
+          <button
+            type="button"
+            className="btn-primary-blue-pill"
+            onClick={onLaunchDemo}
+          >
             Agentic Experience Demo
-          </Button>
-          <Button iconName="user-profile" onClick={onGuestLogin}>
+          </button>
+          <button
+            type="button"
+            className="btn-primary-blue-pill"
+            onClick={onGuestLogin}
+          >
             Guest Login
-          </Button>
-          <Link href="#/platform-guide" external>
-            Platform Guide / How-To
-          </Link>
-        </SpaceBetween>
-      </SpaceBetween>
-    </Container>
+          </button>
+          <a href="#/platform-guide" className="btn-link-blue">
+            Platform Guide / How-To ↗
+          </a>
+        </div>
+      </div>
+    </div>
   )
 }

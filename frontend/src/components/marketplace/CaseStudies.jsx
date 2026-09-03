@@ -1,60 +1,30 @@
 import React from 'react'
-import {
-  Badge,
-  Box,
-  Button,
-  Cards,
-  Container,
-  Header,
-  SpaceBetween,
-} from '@cloudscape-design/components'
 
-/**
- * Cloudscape card definition for a case study.
- */
-const caseStudyCardDefinition = {
-  header: (study) => study.title,
-  sections: [
-    {
-      id: 'industry',
-      content: (study) => <Badge color="blue">{study.industry}</Badge>,
-    },
-    {
-      id: 'description',
-      content: (study) => (
-        <Box variant="p" color="text-body-secondary">
-          {study.description}
-        </Box>
-      ),
-    },
-    {
-      id: 'actions',
-      content: () => <Button variant="link">Read case study</Button>,
-    },
-  ],
-}
-
-/**
- * CaseStudies renders a grid of customer case studies.
- *
- * @param {Object} props - Component props.
- * @param {{ id: string, title: string, industry: string, description: string }[]} props.caseStudies - Case studies.
- * @returns {React.ReactElement} The case studies section.
- */
 export default function CaseStudies({ caseStudies }) {
+  if (!caseStudies || caseStudies.length === 0) return null
+
   return (
-    <Container header={<Header variant="h2">Case Studies</Header>}>
-      <Cards
-        cardDefinition={caseStudyCardDefinition}
-        items={caseStudies}
-        trackBy="id"
-        cardsPerRow={[{ cards: 1 }, { minWidth: 640, cards: 2 }, { minWidth: 1100, cards: 3 }]}
-        empty={
-          <Box textAlign="center" color="inherit">
-            <b>No case studies</b>
-          </Box>
-        }
-      />
-    </Container>
+    <div className="case-studies-section-clean">
+      <h2 className="section-main-heading-clean">Case Studies</h2>
+      <div className="case-studies-grid-clean">
+        {caseStudies.map((study) => (
+          <div key={study.id} className="case-study-card-clean">
+            <div className="case-study-top">
+              <span className="case-study-client-clean">{study.client}</span>
+              <h3 className="case-study-usecase-clean">{study.useCase}</h3>
+            </div>
+            <div className="case-study-tag-wrap">
+              <span className="pack-tag-pill-blue">{study.tag}</span>
+            </div>
+            <p className="case-study-result-clean">{study.result}</p>
+            <div className="case-study-action">
+              <button type="button" className="btn-read-case-study">
+                Read case study →
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }

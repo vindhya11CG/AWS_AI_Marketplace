@@ -1,84 +1,62 @@
 import React from 'react'
-import {
-  Badge,
-  Box,
-  Button,
-  Cards,
-  SpaceBetween,
-} from '@cloudscape-design/components'
-
-const createStarterPackCardDefinition = (onViewDetails) => ({
-  header: (pack) => (
-    <span
-      style={{ cursor: 'pointer', color: '#0073bb', fontWeight: 700, fontSize: '16px' }}
-      onClick={() => onViewDetails && onViewDetails(pack)}
-    >
-      {pack.title}
-    </span>
-  ),
-  sections: [
-    {
-      id: 'description',
-      content: (pack) => (
-        <Box variant="p" color="text-body-secondary">
-          {pack.description}
-        </Box>
-      ),
-    },
-    {
-      id: 'benefits',
-      header: 'Business benefits',
-      content: (pack) => pack.benefits,
-    },
-    {
-      id: 'tags',
-      content: (pack) => (
-        <SpaceBetween direction="horizontal" size="xs">
-          <Badge color="blue">{pack.category}</Badge>
-          {pack.demoAvailable ? (
-            <Badge color="green">Demo available</Badge>
-          ) : (
-            <Badge color="grey">Demo on request</Badge>
-          )}
-        </SpaceBetween>
-      ),
-    },
-    {
-      id: 'actions',
-      content: (pack) => (
-        <SpaceBetween direction="horizontal" size="xs">
-          <Button variant="primary" disabled={!pack.demoAvailable}>
-            Launch
-          </Button>
-          <Button
-            variant="link"
-            onClick={() => onViewDetails && onViewDetails(pack)}
-          >
-            View details
-          </Button>
-        </SpaceBetween>
-      ),
-    },
-  ],
-})
 
 export default function StarterPackCards({ starterPacks, onViewDetails }) {
-  const cardDefinition = createStarterPackCardDefinition(onViewDetails)
+  if (!starterPacks || starterPacks.length === 0) {
+    return (
+      <div className="starter-packs-empty">
+        <p>No starter packs match the current filters.</p>
+      </div>
+    )
+  }
 
   return (
-    <Cards
-      cardDefinition={cardDefinition}
-      items={starterPacks}
-      trackBy="id"
-      cardsPerRow={[{ cards: 1 }, { minWidth: 640, cards: 2 }, { minWidth: 1100, cards: 3 }]}
-      empty={
-        <Box textAlign="center" color="inherit">
-          <b>No starter packs</b>
-          <Box variant="p" color="inherit">
-            No starter packs match the current filters.
-          </Box>
-        </Box>
-      }
-    />
+    <div className="starter-pack-grid-clean">
+      {starterPacks.map((pack) => (
+        <div key={pack.id} className="starter-pack-card-clean">
+          <div className="pack-card-header-clean">
+            <h3
+              className="pack-card-title-clean"
+              onClick={() => onViewDetails && onViewDetails(pack)}
+            >
+              {pack.title}
+            </h3>
+            <p className="pack-card-desc-clean">{pack.description}</p>
+          </div>
+
+          <div className="pack-card-benefits-clean">
+            <span className="pack-benefits-label-clean">Business benefits</span>
+            <p className="pack-benefits-text-clean">{pack.benefits}</p>
+          </div>
+
+          <div className="pack-card-tags-clean">
+            <span className="pack-tag-pill-blue">{pack.category}</span>
+            <span
+              className={`pack-tag-pill-demo ${
+                pack.demoAvailable ? 'demo-active' : 'demo-request'
+              }`}
+            >
+              {pack.demoAvailable ? 'Demo available' : 'Demo on request'}
+            </span>
+          </div>
+
+          <div className="pack-card-actions-clean">
+            <button
+              type="button"
+              className="btn-pack-launch-clean"
+              disabled={!pack.demoAvailable}
+            >
+              Launch
+            </button>
+            <button
+              type="button"
+              className="btn-pack-details-clean"
+              onClick={() => onViewDetails && onViewDetails(pack)}
+            >
+              View details
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
   )
 }

@@ -3,8 +3,6 @@ import {
   AppLayout,
   Button,
   ColumnLayout,
-  Container,
-  ContentLayout,
   Header,
   Select,
   SpaceBetween,
@@ -134,65 +132,76 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
       <AppLayout
         navigation={<Sidebar activeHref={activeHref} onNavigate={onNavigate} />}
         content={
-          <ContentLayout header={<HeroBanner />}>
-            <SpaceBetween size="l">
-              <Container>
-                <QuickActions />
-              </Container>
+          <div className="marketplace-main-content-flow">
+            {/* Hero Banner */}
+            <HeroBanner />
 
-              <Container header={<Header variant="h2">Starter Packs ({totalStarterPacks})</Header>}>
-                AI Starter Packs are prebuilt AI workflows powered by industry-trained orchestrated
-                agents. They accelerate the idea-to-production journey by turning proven use cases
-                into launch-ready solutions.
-              </Container>
+            {/* Quick Actions Row without box wrapper */}
+            <div className="marketplace-quickactions-row">
+              <QuickActions />
+            </div>
 
-              <Container
-                header={
-                  <Header
-                    variant="h2"
-                    actions={
-                      <Button
-                        variant="primary"
-                        iconName="upload"
-                        onClick={() => setIsImporterOpen(true)}
-                      >
-                        Sync SharePoint List
-                      </Button>
-                    }
-                  >
-                    Search & Filters
-                  </Header>
-                }
-              >
-                <ColumnLayout columns={2}>
+            {/* Search & Filter Single Clean Card */}
+            <div className="marketplace-search-filter-card">
+              <div className="marketplace-filter-header">
+                <div>
+                  <h2 className="marketplace-filter-title">Starter Packs ({totalStarterPacks})</h2>
+                  <p className="marketplace-filter-subtitle">
+                    Prebuilt multi-agent AI workflows designed to accelerate enterprise idea-to-production.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  className="btn-sync-sharepoint"
+                  onClick={() => setIsImporterOpen(true)}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="17 8 12 3 7 8" />
+                    <line x1="12" y1="3" x2="12" y2="15" />
+                  </svg>
+                  Sync SharePoint List
+                </button>
+              </div>
+
+              <div className="marketplace-filter-inputs-grid">
+                <div className="filter-select-wrapper">
                   <Select
                     selectedOption={selectedIndustry}
                     onChange={({ detail }) => setSelectedIndustry(detail.selectedOption)}
                     options={industryOptions}
                     ariaLabel="Filter by industry"
                   />
+                </div>
+                <div className="filter-search-wrapper">
                   <TextFilter
                     filteringText={searchText}
-                    filteringPlaceholder="Search starter packs"
+                    filteringPlaceholder="Search starter packs by name, industry, or benefit"
                     filteringAriaLabel="Search starter packs"
                     onChange={({ detail }) => setSearchText(detail.filteringText)}
                   />
-                </ColumnLayout>
-              </Container>
+                </div>
+              </div>
+            </div>
 
-              <SpaceBetween size="s">
-                <Header variant="h2">Industry Catalog</Header>
-                <IndustryAccordion
-                  industries={filteredIndustries}
-                  onViewDetails={handleOpenDetails}
-                />
-              </SpaceBetween>
+            {/* Industry Catalog */}
+            <div className="marketplace-catalog-section">
+              <h2 className="section-main-heading-clean">Industry Catalog</h2>
+              <IndustryAccordion
+                industries={filteredIndustries}
+                onViewDetails={handleOpenDetails}
+              />
+            </div>
 
-              <DemoEnvironment />
-              <CaseStudies caseStudies={CASE_STUDIES} />
-              <CreateStarterPackCTA />
-            </SpaceBetween>
-          </ContentLayout>
+            {/* Case Studies */}
+            <CaseStudies caseStudies={CASE_STUDIES} />
+
+            {/* Demo Environment */}
+            <DemoEnvironment />
+
+            {/* Build CTA */}
+            <CreateStarterPackCTA />
+          </div>
         }
         toolsHide={true}
       />
