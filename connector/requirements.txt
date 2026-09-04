@@ -1,0 +1,3 @@
+# Runtime: none required for the Lambda itself - boto3 is built into the
+# AWS Lambda Python runtime. Listed only for LOCAL testing of the transform.
+boto3>=1.34

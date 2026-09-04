@@ -1,0 +1,26 @@
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Python runtime artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# Build and deployment archives
+*.zip
+
+# Local test & debug JSON dumps (keep policy JSONs)
+sharepoint-list.json
+latest-run.json
+live-catalog.json
+raw-sp.json
+test-export.json
+test-verify.json
+verified.json

@@ -50,7 +50,37 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
   const [catalogIndustries, setCatalogIndustries] = useState(INDUSTRIES)
   const [isImporterOpen, setIsImporterOpen] = useState(false)
 
-  // Load any previously synchronized items from localStorage
+  // Load the live catalog published by the pipeline
+  // (SharePoint -> AppFlow -> S3 raw -> Lambda -> S3 curated -> CloudFront).
+  // Falls back to the bundled INDUSTRIES if the fetch fails, so the page
+  // never renders empty.
+  useEffect(() => {
+    const catalogUrl = import.meta.env.VITE_CATALOG_URL
+    if (!catalogUrl) {
+      return
+    }
+    let cancelled = false
+    fetch(catalogUrl, { cache: 'no-store' })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`)
+        }
+        return res.json()
+      })
+      .then((data) => {
+        if (!cancelled && Array.isArray(data) && data.length > 0) {
+          setCatalogIndustries(data)
+        }
+      })
+      .catch((e) => {
+        console.warn('Live catalog fetch failed, using bundled data.', e)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  // Load any previously synchronized items from localStorage (manual importer)
   useEffect(() => {
     try {
       const saved = localStorage.getItem('kn_custom_starter_packs')
