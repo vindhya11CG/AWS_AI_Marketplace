@@ -1,22 +1,22 @@
 import React from 'react'
-import StarterPackCards from './StarterPackCard'
+import AgentCards from './AgentCard'
 
-export default function IndustryAccordion({
-  industries,
+export default function DomainAccordion({
+  domains,
   openMap,
-  onToggleIndustry,
+  onToggleDomain,
   onViewDetails,
 }) {
   return (
     <div className="industry-accordion-clean-list">
-      {industries.map((industry) => {
-        const isOpen = !!openMap[industry.id]
+      {domains.map((dom) => {
+        const isOpen = !!openMap[dom.id]
         return (
-          <div key={industry.id} className="industry-accordion-clean-item">
+          <div key={dom.id} className="industry-accordion-clean-item">
             <button
               type="button"
               className="industry-accordion-clean-header"
-              onClick={() => onToggleIndustry(industry.id)}
+              onClick={() => onToggleDomain(dom.id)}
               aria-expanded={isOpen}
             >
               <div className="industry-header-left">
@@ -33,17 +33,17 @@ export default function IndustryAccordion({
                 >
                   <polyline points="6 9 12 15 18 9" />
                 </svg>
-                <span className="industry-header-title">{industry.name}</span>
+                <span className="industry-header-title">{dom.name}</span>
                 <span className="industry-header-count">
-                  ({industry.starterPacks.length})
+                  ({dom.agents.length})
                 </span>
               </div>
             </button>
 
             {isOpen && (
               <div className="industry-accordion-clean-body">
-                <StarterPackCards
-                  starterPacks={industry.starterPacks}
+                <AgentCards
+                  agents={dom.agents}
                   onViewDetails={onViewDetails}
                 />
               </div>
