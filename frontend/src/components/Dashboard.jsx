@@ -253,7 +253,7 @@ export default function Dashboard({
                 </div>
               </div>
 
-              {/* Modern Integrated Search Bar */}
+              {/* Search Bar - Centered below header */}
               <div className="dashboard-search-container">
                 <div className="dashboard-search-box">
                   <svg

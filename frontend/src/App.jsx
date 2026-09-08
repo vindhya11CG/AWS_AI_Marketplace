@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { TopNavigation } from '@cloudscape-design/components'
+import { TopNavigation, Toggle } from '@cloudscape-design/components'
 import { applyMode, Mode } from '@cloudscape-design/global-styles'
 import Dashboard from './components/Dashboard'
 import ManageDomains from './components/ManageDomains'
@@ -159,31 +159,27 @@ export default function App() {
 
   return (
     <div className={`theme-root ${theme === 'dark' ? 'theme-dark' : 'theme-light'}`}>
-      <TopNavigation
-        identity={{
-          title: 'Amplifier for Agentic AI',
-          href: '#/dashboard',
-          onFollow: () => handleNavigate('#/dashboard'),
-        }}
-        utilities={[
-          {
-            type: 'button',
-            id: 'theme-toggle',
-            text: theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode',
-            onClick: toggleTheme,
-            title: 'Toggle Light / Dark Mode',
-          },
-          {
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+        <TopNavigation
+          identity={{
+            title: 'Amplifier for Agentic AI',
+            href: '#/dashboard',
+            onFollow: () => handleNavigate('#/dashboard'),
+          }}
+          utilities={[{
             type: 'button',
             text: 'Log Out',
-          },
-        ]}
-        onUtilityClick={(event) => {
-          if (event.detail.id === 'theme-toggle') {
-            toggleTheme()
-          }
-        }}
-      />
+          }]} 
+        />
+        <Toggle
+          onChange={() => toggleTheme()}
+          checked={theme === 'dark'}
+        >
+          <span style={{ color: 'var(--color-text-body-default)' }}>
+            {theme === 'dark' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+          </span>
+        </Toggle>
+      </div>
       <SidebarProvider defaultOpen={true}>
         <div className="app-shell-container">
           <Sidebar activeHref={currentRoute} onNavigate={handleNavigate} />

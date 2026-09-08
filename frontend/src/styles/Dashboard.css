@@ -123,13 +123,15 @@
 /* Search Bar */
 .dashboard-search-container {
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .dashboard-search-box {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
   background-color: var(--aws-input-bg);
   border: 1px solid var(--aws-input-border);
   border-radius: 12px;
