@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react'
+import React, { useState } from 'react'
 import {
   AppLayout,
   Box,
@@ -8,7 +8,6 @@ import {
   SpaceBetween,
   Flashbar,
 } from '@cloudscape-design/components'
-import Sidebar from './Sidebar'
 import '../styles/WorkflowBuilder.css'
 
 const availableAgents = [
@@ -92,7 +91,8 @@ export default function WorkflowBuilder({
 
   return (
     <AppLayout
-      navigation={<Sidebar activeHref={activeHref} onNavigate={onNavigate} />}
+      navigationHide={true}
+      toolsHide={true}
       content={
         <div className="workflow-builder-page">
           {flashMessages.length > 0 && (
@@ -258,7 +258,6 @@ export default function WorkflowBuilder({
           </form>
         </div>
       }
-      toolsHide={true}
     />
   )
 }

@@ -1,10 +1,13 @@
-﻿import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { TopNavigation } from '@cloudscape-design/components'
+import { applyMode, Mode } from '@cloudscape-design/global-styles'
 import Dashboard from './components/Dashboard'
 import ManageDomains from './components/ManageDomains'
 import DomainDetails from './components/DomainDetails'
 import WorkflowBuilder from './components/WorkflowBuilder'
 import MarketplaceHome from './components/marketplace/MarketplaceHome'
+import { SidebarProvider } from './components/ui/sidebar'
+import Sidebar from './components/Sidebar'
 import { initialDomains, initialWorkflows } from './data/mockData'
 
 export default function App() {
@@ -12,6 +15,28 @@ export default function App() {
   const [workflows, setWorkflows] = useState(initialWorkflows)
   const [currentRoute, setCurrentRoute] = useState('#/dashboard')
   const [selectedDomain, setSelectedDomain] = useState(null)
+  
+  // Theme state: defaults to 'dark' mode as requested
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem('app_theme')
+    return saved || 'dark'
+  })
+
+  // Apply theme to DOM and Cloudscape
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    document.body.setAttribute('data-theme', theme)
+    localStorage.setItem('app_theme', theme)
+    try {
+      applyMode(theme === 'dark' ? Mode.Dark : Mode.Light)
+    } catch (e) {
+      console.warn('Error applying cloudscape mode:', e)
+    }
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
+  }
 
   // Listen to hash change for browser navigation
   useEffect(() => {
@@ -52,7 +77,6 @@ export default function App() {
 
   const handleAddWorkflow = (newWf) => {
     setWorkflows((prev) => [newWf, ...prev])
-    // Increment domain workflow count
     setDomains((prev) =>
       prev.map((d) => {
         if (d.id === newWf.domainId || d.title.toLowerCase() === newWf.domain.toLowerCase()) {
@@ -134,7 +158,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className={`theme-root ${theme === 'dark' ? 'theme-dark' : 'theme-light'}`}>
       <TopNavigation
         identity={{
           title: 'Amplifier for Agentic AI',
@@ -144,11 +168,30 @@ export default function App() {
         utilities={[
           {
             type: 'button',
+            id: 'theme-toggle',
+            text: theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode',
+            onClick: toggleTheme,
+            title: 'Toggle Light / Dark Mode',
+          },
+          {
+            type: 'button',
             text: 'Log Out',
           },
         ]}
+        onUtilityClick={(event) => {
+          if (event.detail.id === 'theme-toggle') {
+            toggleTheme()
+          }
+        }}
       />
-      {renderCurrentView()}
+      <SidebarProvider defaultOpen={true}>
+        <div className="app-shell-container">
+          <Sidebar activeHref={currentRoute} onNavigate={handleNavigate} />
+          <main className="app-main-viewport">
+            {renderCurrentView()}
+          </main>
+        </div>
+      </SidebarProvider>
     </div>
   )
 }

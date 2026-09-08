@@ -1,11 +1,10 @@
-﻿import React, { useState } from 'react'
+import React, { useState } from 'react'
 import {
   AppLayout,
   Box,
   SpaceBetween,
   Flashbar,
 } from '@cloudscape-design/components'
-import Sidebar from './Sidebar'
 import '../styles/ManageDomains.css'
 
 export default function ManageDomains({
@@ -106,7 +105,8 @@ export default function ManageDomains({
 
   return (
     <AppLayout
-      navigation={<Sidebar activeHref={activeHref} onNavigate={onNavigate} />}
+      navigationHide={true}
+      toolsHide={true}
       content={
         <div className="manage-domains-page">
           {flashMessages.length > 0 && (
@@ -317,7 +317,7 @@ export default function ManageDomains({
                             onClick={() => onSelectDomain(domain)}
                             title="View workflows in this domain"
                           >
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0073bb" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                               <circle cx="12" cy="12" r="3" />
                             </svg>
@@ -333,7 +333,6 @@ export default function ManageDomains({
           </SpaceBetween>
         </div>
       }
-      toolsHide={true}
     />
   )
 }

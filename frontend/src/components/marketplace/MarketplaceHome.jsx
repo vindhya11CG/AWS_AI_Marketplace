@@ -4,7 +4,6 @@ import {
   Select,
   TextFilter,
 } from '@cloudscape-design/components'
-import Sidebar from '../Sidebar'
 import HeroBanner from './HeroBanner'
 import IndustryAccordion from './IndustryAccordion'
 import DomainAccordion from './DomainAccordion'
@@ -145,7 +144,8 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
   return (
     <>
       <AppLayout
-        navigation={<Sidebar activeHref={activeHref} onNavigate={onNavigate} />}
+        navigationHide={true}
+        toolsHide={true}
         content={
           <div className="marketplace-main-content-flow">
             {/* Top Hero Banner */}
@@ -329,7 +329,6 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
             <CreateStarterPackCTA />
           </div>
         }
-        toolsHide={true}
       />
 
       <StarterPackDetailModal

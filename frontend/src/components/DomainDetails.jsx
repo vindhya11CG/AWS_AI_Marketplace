@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react'
+import React, { useState } from 'react'
 import {
   AppLayout,
   Box,
@@ -11,7 +11,6 @@ import {
   Pagination,
   Badge,
 } from '@cloudscape-design/components'
-import Sidebar from './Sidebar'
 import '../styles/DomainDetails.css'
 
 export default function DomainDetails({
@@ -26,7 +25,7 @@ export default function DomainDetails({
   if (!domain) {
     return (
       <AppLayout
-        navigation={<Sidebar activeHref={activeHref} onNavigate={onNavigate} />}
+        navigationHide={true}
         content={
           <div className="domain-details-page">
             <Button onClick={() => onNavigate('#/domains')}>← Back to Domains</Button>
@@ -113,7 +112,8 @@ export default function DomainDetails({
 
   return (
     <AppLayout
-      navigation={<Sidebar activeHref={activeHref} onNavigate={onNavigate} />}
+      navigationHide={true}
+      toolsHide={true}
       content={
         <div className="domain-details-page">
           {/* Breadcrumb / Top Bar */}
@@ -218,7 +218,6 @@ export default function DomainDetails({
           </SpaceBetween>
         </div>
       }
-      toolsHide={true}
     />
   )
 }

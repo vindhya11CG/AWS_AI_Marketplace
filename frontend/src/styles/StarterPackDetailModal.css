@@ -105,7 +105,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #0073bb;
+  background-color: var(--btn-primary-bg);
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -118,7 +118,7 @@
 }
 
 .btn-agentic-link:hover {
-  background-color: #005a94;
+  background-color: var(--btn-primary-hover);
   transform: translateY(-1px);
 }
 
@@ -192,18 +192,18 @@
 }
 
 .tab-item-btn.active {
-  background-color: #0073bb;
+  background-color: var(--btn-primary-bg);
   color: #ffffff;
 }
 
 .tab-item-btn:hover:not(.active) {
-  color: #0073bb;
-  background-color: rgba(0, 115, 187, 0.06);
+  color: var(--aws-blue-primary);
+  background-color: rgba(0, 112, 173, 0.08);
 }
 
 .modal-tab-divider {
   height: 1.5px;
-  background: #0073bb;
+  background: var(--aws-blue-primary);
   width: 100%;
   margin-top: -6px;
   margin-bottom: 8px;
@@ -222,7 +222,7 @@
 .section-heading-blue {
   font-size: 13.5px;
   font-weight: 700;
-  color: #0073bb;
+  color: var(--aws-blue-primary);
   margin: 0 0 4px 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -257,7 +257,7 @@
 }
 
 .agent-pill-badge {
-  background-color: #0073bb;
+  background-color: var(--btn-primary-bg);
   color: #ffffff;
   font-size: 12px;
   font-weight: 600;
@@ -273,7 +273,7 @@
 .agent-step-down-arrow {
   font-size: 15px;
   font-weight: 700;
-  color: #0073bb;
+  color: var(--aws-blue-primary);
   padding-left: 20px;
 }
 
@@ -294,7 +294,7 @@
 .widget-title {
   font-size: 13px;
   font-weight: 700;
-  color: #0073bb;
+  color: var(--aws-blue-primary);
   margin: 0 0 10px 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -376,7 +376,7 @@
   align-items: center;
   gap: 10px;
   width: 100%;
-  background-color: #0073bb;
+  background-color: var(--btn-primary-bg);
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -389,7 +389,7 @@
 }
 
 .btn-quick-link:hover {
-  background-color: #005a94;
+  background-color: var(--btn-primary-hover);
 }
 
 .quick-link-icon {
@@ -426,7 +426,7 @@
   justify-content: center;
   font-size: 13px;
   font-weight: 700;
-  color: #0073bb;
+  color: var(--aws-blue-primary);
   cursor: pointer;
 }
 
@@ -469,7 +469,7 @@
 
 .comment-author {
   font-weight: 600;
-  color: #0073bb;
+  color: var(--aws-blue-primary);
 }
 
 .comment-time {
@@ -504,8 +504,8 @@
 }
 
 .comment-textarea:focus {
-  border-color: #0073bb;
-  box-shadow: 0 0 0 2px rgba(0, 115, 187, 0.15);
+  border-color: var(--aws-border-hover);
+  box-shadow: 0 0 0 2px rgba(0, 112, 173, 0.20);
 }
 
 .comment-submit-row {
@@ -514,7 +514,7 @@
 }
 
 .btn-post-comment {
-  background-color: #0073bb;
+  background-color: var(--btn-primary-bg);
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -526,5 +526,5 @@
 }
 
 .btn-post-comment:hover {
-  background-color: #005a94;
+  background-color: var(--btn-primary-hover);
 }
