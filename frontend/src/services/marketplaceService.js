@@ -13,8 +13,11 @@
 
 import { INDUSTRIES, AGENT_DOMAINS } from '../data/marketplaceData'
 
-const CATALOG_URL = import.meta.env.VITE_CATALOG_URL || ''
-const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT || ''
+const rawCatalogUrl = import.meta.env.VITE_CATALOG_URL || ''
+const rawApiEndpoint = import.meta.env.VITE_API_ENDPOINT || ''
+
+const API_ENDPOINT = rawApiEndpoint.replace(/\/+$/, '')
+const CATALOG_URL = rawCatalogUrl.trim()
 
 export const marketplaceService = {
   /**

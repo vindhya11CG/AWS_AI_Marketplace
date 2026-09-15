@@ -658,11 +658,40 @@ def handle_transform_http(event):
 def handle_get_catalog(event):
     """GET /catalog - returns complete live catalog from S3."""
     catalog = read_s3_json(CURATED_BUCKET, CURATED_KEY_CATALOG)
-    if not catalog:
+    if not catalog or (not catalog.get("industries") and not catalog.get("domains")):
         # Check individual keys
         packs = read_s3_json(CURATED_BUCKET, CURATED_KEY_STARTER_PACKS, default=[])
         agents = read_s3_json(CURATED_BUCKET, CURATED_KEY_AGENTS, default=[])
-        catalog = {"industries": packs, "domains": agents}
+        if packs or agents:
+            catalog = {"industries": packs, "domains": agents}
+        else:
+            # Fallback/seed from bundled sample files if S3 is empty
+            try:
+                base_dir = os.path.dirname(os.path.abspath(__file__))
+                sample_p = os.path.join(base_dir, "sample-use-cases.json")
+                sample_a = os.path.join(base_dir, "sample-agents.json")
+                raw_items = []
+                if os.path.exists(sample_p):
+                    with open(sample_p, "r", encoding="utf-8-sig") as f:
+                        raw_items.extend(parse_raw_body(f.read()))
+                if os.path.exists(sample_a):
+                    with open(sample_a, "r", encoding="utf-8-sig") as f:
+                        raw_items.extend(parse_raw_body(f.read()))
+                if raw_items:
+                    industries, domains, _, _ = build_full_catalogs(raw_items)
+                    catalog = {"industries": industries, "domains": domains}
+                    # Attempt to write to S3
+                    try:
+                        write_s3_json(CURATED_BUCKET, CURATED_KEY_CATALOG, catalog)
+                        if industries:
+                            write_s3_json(CURATED_BUCKET, CURATED_KEY_STARTER_PACKS, industries)
+                        if domains:
+                            write_s3_json(CURATED_BUCKET, CURATED_KEY_AGENTS, domains)
+                    except Exception as s3_err:
+                        print(f"Notice: could not auto-seed S3: {s3_err}")
+            except Exception as load_err:
+                print(f"Notice: could not load fallback sample data: {load_err}")
+                catalog = {"industries": [], "domains": []}
 
     return cors_response(200, catalog)
 
