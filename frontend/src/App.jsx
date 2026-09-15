@@ -176,7 +176,7 @@ export default function App() {
           checked={theme === 'dark'}
         >
           <span style={{ color: 'var(--color-text-body-default)' }}>
-            {theme === 'dark' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+            {theme === 'dark' ? '☾ Dark Mode' : '☼ Light Mode'}
           </span>
         </Toggle>
       </div>

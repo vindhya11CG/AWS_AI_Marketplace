@@ -124,8 +124,12 @@
 /* DARK MODE VARIABLES (Derived from Deep Purple #2B0A3D, Vibrant Blue #12ABDB Accents) */
 [data-theme='dark'] {
   --aws-canvas-bg: #0E0617;
-  --aws-card-bg: #1B0F2E;
-  --aws-card-hover-bg: #24143D;
+  --aws-canvas-gradient: radial-gradient(circle at 14% 0%, rgba(18, 171, 219, 0.1), transparent 30%), radial-gradient(circle at 90% 12%, rgba(109, 100, 204, 0.08), transparent 28%), linear-gradient(135deg, #0E0617 0%, #10151F 48%, #0B1820 100%);
+  --aws-canvas-pattern: rgba(196, 231, 238, 0.028);
+  --aws-card-bg: #141923;
+  --aws-card-surface: linear-gradient(145deg, rgba(29, 34, 45, 0.94), rgba(16, 30, 38, 0.9));
+  --aws-card-hover-bg: #1E2630;
+  --aws-card-hover-surface: linear-gradient(145deg, rgba(39, 48, 59, 0.96), rgba(18, 42, 49, 0.94));
   --aws-border-color: #381E57;
   --aws-border-light: #2E1948;
   --aws-border-hover: #12ABDB;
@@ -195,14 +199,14 @@
   --accent-divider-subtle: rgba(109, 100, 204, 0.30);
 
   /* Override Cloudscape internal layout tokens for pure seamless canvas */
-  --color-background-layout-main: #0E0617 !important;
-  --color-background-layout-mobile-panel: #0E0617 !important;
-  --color-background-layout-panel-content: #0E0617 !important;
-  --color-background-layout-panel-hover: #0E0617 !important;
-  --color-background-layout-toggle-default: #0E0617 !important;
-  --color-background-main: #0E0617 !important;
-  --color-background-body: #0E0617 !important;
-  --color-background-view-wrapper: #0E0617 !important;
+  --color-background-layout-main: transparent !important;
+  --color-background-layout-mobile-panel: transparent !important;
+  --color-background-layout-panel-content: transparent !important;
+  --color-background-layout-panel-hover: transparent !important;
+  --color-background-layout-toggle-default: transparent !important;
+  --color-background-main: transparent !important;
+  --color-background-body: transparent !important;
+  --color-background-view-wrapper: transparent !important;
   --space-layout-content-horizontal: 0px !important;
 }
 
@@ -218,6 +222,36 @@ body,
   color: var(--aws-text-body);
   background-color: var(--aws-canvas-bg) !important;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-root {
+  position: relative;
+  isolation: isolate;
+  background-image: var(--aws-canvas-gradient, none) !important;
+  background-attachment: fixed;
+}
+
+[data-theme='dark'] .theme-root::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(var(--aws-canvas-pattern) 1px, transparent 1px),
+    linear-gradient(90deg, var(--aws-canvas-pattern) 1px, transparent 1px),
+    radial-gradient(circle, rgba(196, 231, 238, 0.04) 0 1px, transparent 1.5px);
+  background-position: center, center, 10px 10px;
+  background-size: 64px 64px, 64px 64px, 24px 24px;
+  content: '';
+  pointer-events: none;
+}
+
+[data-theme='dark'] .theme-root::after {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(3, 8, 14, 0.34) 100%);
+  content: '';
+  pointer-events: none;
 }
 
 /* ==========================================================================
@@ -239,7 +273,7 @@ body,
 main,
 main[class*='awsui_'] {
   background-color: var(--aws-canvas-bg) !important;
-  background: var(--aws-canvas-bg) !important;
+  background: var(--aws-canvas-gradient, var(--aws-canvas-bg)) !important;
   border-radius: 0 !important;
   border: none !important;
   box-shadow: none !important;
@@ -247,6 +281,38 @@ main[class*='awsui_'] {
   margin-left: 0 !important;
   padding-inline-start: 0 !important;
   padding-left: 0 !important;
+}
+
+[data-theme='dark'] .app-shell-container,
+[data-theme='dark'] .app-main-viewport,
+[data-theme='dark'] aside.sidebar,
+[data-theme='dark'] [class*='awsui_navigation_'],
+[data-theme='dark'] [class*='awsui_navigation-container_'],
+[data-theme='dark'] [class*='awsui_top-navigation_'] {
+  background: transparent !important;
+}
+
+[data-theme='dark'] .marketplace-toolbar-card,
+[data-theme='dark'] .dashboard-domain-card,
+[data-theme='dark'] .clean-table-container,
+[data-theme='dark'] .domain-header-card,
+[data-theme='dark'] .custom-accordion-card,
+[data-theme='dark'] .existing-domain-card,
+[data-theme='dark'] .starter-pack-card-clean,
+[data-theme='dark'] .case-study-card-clean,
+[data-theme='dark'] .clean-section-card-box,
+[data-theme='dark'] .sidebar-widget-card,
+[data-theme='dark'] .sidebar-user-card,
+[data-theme='dark'] .starter-modal-container,
+[data-theme='dark'] .capability-item-card {
+  background: var(--aws-card-surface) !important;
+}
+
+[data-theme='dark'] .marketplace-toolbar-card:hover,
+[data-theme='dark'] .dashboard-domain-card:hover,
+[data-theme='dark'] .existing-domain-card:hover,
+[data-theme='dark'] .starter-pack-card-clean:hover {
+  background: var(--aws-card-hover-surface) !important;
 }
 
 /* Navigation Drawer (Seamless shadcn/ui Sidebar Integration) */

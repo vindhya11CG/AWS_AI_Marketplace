@@ -4,7 +4,7 @@ import {
   Select,
   TextFilter,
 } from '@cloudscape-design/components'
-import HeroBanner from './HeroBanner'
+import MarketplaceAuroraHero from './MarketplaceAuroraHero'
 import IndustryAccordion from './IndustryAccordion'
 import DomainAccordion from './DomainAccordion'
 import DemoEnvironment from './DemoEnvironment'
@@ -12,6 +12,7 @@ import CaseStudies from './CaseStudies'
 import CreateStarterPackCTA from './CreateStarterPackCTA'
 import StarterPackDetailModal from './StarterPackDetailModal'
 import SharePointImporterModal from './SharePointImporterModal'
+import GooeySearchBar from '../ui/animated-search-bar'
 import {
   CASE_STUDIES,
   INDUSTRIES,
@@ -141,6 +142,20 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
     [catalogDomains]
   )
 
+  const searchSuggestions = useMemo(
+    () => [
+      ...catalogIndustries.flatMap((industry) => [
+        industry.title,
+        ...industry.starterPacks.map((pack) => pack.title),
+      ]),
+      ...catalogDomains.flatMap((domain) => [
+        domain.title,
+        ...domain.agents.map((agent) => agent.title),
+      ]),
+    ],
+    [catalogIndustries, catalogDomains]
+  )
+
   return (
     <>
       <AppLayout
@@ -149,7 +164,7 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
         content={
           <div className="marketplace-main-content-flow">
             {/* Top Hero Banner */}
-            <HeroBanner />
+            <MarketplaceAuroraHero />
 
             {/* Segmented Toggle + Search + Action Controls Bar */}
             <div className="marketplace-toolbar-card">
@@ -178,20 +193,12 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
                   </button>
                 </div>
 
-                {/* Integrated Search Input */}
-                <div className="toolbar-search-input-box">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7280" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="11" cy="11" r="8" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  </svg>
-                  <input
-                    type="text"
-                    placeholder="Search by any word..."
-                    value={searchText}
-                    onChange={(e) => setSearchText(e.target.value)}
-                    className="toolbar-search-field"
-                  />
-                </div>
+                {/* Integrated Animated Search */}
+                <GooeySearchBar
+                  value={searchText}
+                  onChange={setSearchText}
+                  suggestions={searchSuggestions}
+                />
 
                 {/* Action Buttons */}
                 <div className="toolbar-action-buttons">
