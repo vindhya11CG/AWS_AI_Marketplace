@@ -150,7 +150,20 @@ aws s3api put-bucket-notification-configuration `
     --notification-configuration file://$notificationFile 2>$null
 Remove-Item $notificationFile -ErrorAction SilentlyContinue
 
-# Configure Lambda Function URL for direct REST endpoints (with CORS)
+# Step 4: Configure S3 Bucket Policy (Curated Public Read) & S3 CORS
+Write-Host "`n[4/5] Applying S3 Bucket Policy & CORS Configuration..." -ForegroundColor Yellow
+Write-Host "  Applying S3 CORS policy on bucket $Bucket..."
+aws s3api put-bucket-cors `
+    --bucket $Bucket `
+    --cors-configuration file://s3-cors-policy.json 2>$null
+
+Write-Host "  Applying S3 Public Read Bucket Policy for curated/ prefix..."
+aws s3api put-bucket-policy `
+    --bucket $Bucket `
+    --policy file://s3-bucket-policy.json 2>$null
+
+# Step 5: Configure Lambda Function URL with public CORS
+Write-Host "`n[5/5] Configuring Lambda Function URL & Public Invocation Permissions..." -ForegroundColor Yellow
 Write-Host "  Configuring Lambda Function URL for HTTP REST endpoints..."
 $urlConfig = aws lambda create-function-url-config `
     --function-name $FunctionName `

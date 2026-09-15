@@ -774,7 +774,17 @@ def lambda_handler(event, context):
     if http_method == "OPTIONS":
         return cors_response(200, {"message": "CORS preflight OK"})
 
-    # Routing
+    # Route: /sync-graph (Direct Microsoft Graph pull) - Must come before generic /sync
+    if http_method == "POST" and "/sync-graph" in raw_path:
+        try:
+            sp_packs_raw = fetch_sharepoint_list_graph("Industrialized Use cases")
+            sp_agents_raw = fetch_sharepoint_list_graph("Operational Excellence Agents")
+            combined = {"starterPacks": sp_packs_raw, "agents": sp_agents_raw}
+            return handle_transform_http({"body": json.dumps(combined)})
+        except Exception as e:
+            return cors_response(500, {"error": f"Graph sync failed: {str(e)}"})
+
+    # Route: /transform or /sync (Ingestion endpoint for raw SharePoint list JSON)
     if (http_method == "POST" or http_method == "PUT") and ("/transform" in raw_path or "/sync" in raw_path):
         return handle_transform_http(event)
 
@@ -798,16 +808,6 @@ def lambda_handler(event, context):
     m_rating = re.search(r"/items/([^/]+)/ratings", raw_path)
     if m_rating and http_method == "POST":
         return handle_submit_rating(event, m_rating.group(1))
-
-    # Route: /sync-graph (Direct Microsoft Graph pull)
-    if http_method == "POST" and "/sync-graph" in raw_path:
-        try:
-            sp_packs_raw = fetch_sharepoint_list_graph("Industrialized Use cases")
-            sp_agents_raw = fetch_sharepoint_list_graph("Operational Excellence Agents")
-            combined = {"starterPacks": sp_packs_raw, "agents": sp_agents_raw}
-            return handle_transform_http({"body": json.dumps(combined)})
-        except Exception as e:
-            return cors_response(500, {"error": f"Graph sync failed: {str(e)}"})
 
     # Default fallback for direct JSON test invocations
     if isinstance(event, dict) and ("body" in event or "starterPacks" in event or "agents" in event):
