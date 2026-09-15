@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { marketplaceService } from '../../services/marketplaceService'
 
 export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
   const [activeTab, setActiveTab] = useState('overview')
@@ -16,15 +17,24 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
   const ratings = pack.ratings || { score: 4.8, count: 12 }
   const availability = pack.availability || ['Amplifier for Agentic Experience', 'AWS Bedrock Agentic Core']
 
+  const handleRatingClick = (star) => {
+    setUserRating(star)
+    if (pack.id) {
+      marketplaceService.submitRating(pack.id, star).catch((e) => console.warn('Could not post rating', e))
+    }
+  }
+
   const handleAddComment = (e) => {
     e.preventDefault()
     if (!newComment.trim()) return
-    setComments([
-      { text: newComment.trim(), author: 'You (Current User)', created: 'Just now' },
-      ...comments,
-    ])
+    const commentObj = { text: newComment.trim(), author: 'You (Current User)', created: 'Just now' }
+    setComments([commentObj, ...comments])
+    if (pack.id) {
+      marketplaceService.submitComment(pack.id, newComment.trim(), 'You (Current User)').catch((err) => console.warn('Could not post comment', err))
+    }
     setNewComment('')
   }
+
 
   return (
     <div className="starter-modal-overlay" onClick={onClose}>
@@ -195,7 +205,7 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
                     key={star}
                     type="button"
                     className={`star-btn ${userRating >= star ? 'star-active' : ''}`}
-                    onClick={() => setUserRating(star)}
+                    onClick={() => handleRatingClick(star)}
                   >
                     ★
                   </button>

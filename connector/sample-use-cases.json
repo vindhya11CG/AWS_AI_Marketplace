@@ -1,0 +1,39 @@
+[
+  {
+    "Id": 101,
+    "Title": "Smart Loan Origination & KYC Pipeline",
+    "Agent_x0020_Name": "Smart Loan Origination",
+    "Industry": "Banking & Financial Services (BFSI)",
+    "Solution_x0020_Summary": "End-to-end multi-agent loan application processing and underwriting automation.",
+    "Tagline": "Automates verification, risk assessment, and KYC.",
+    "Problem_x0020_Solved": "Loan processing is slowed by manual checks of identity, eligibility, and documents, causing delays and errors. Loan officers manually review KYC, income proofs, and bank statements for each applicant.",
+    "SolutionDescription": "A fast, AI-driven loan automation engine that verifies identities, checks eligibility, and validates documents instantly calculating optimal loan terms.",
+    "Agents_x0020_Involved": "KYC Verifier [Checks customer identity] \n Eligibility Assessor [Evaluates credit score and debt-to-income ratio] \n Document Validator [Verifies authenticity of bank statements] \n Loan Calculator [Computes maximum loan amount and interest rates]",
+    "Availability": ["Amplifier for Agentic Experience", "AWS Bedrock Agentic Core", "Azure AI Foundry"],
+    "Expected_x0020_ROI_x0020_Metrics": "60% time-to-approval, 35% cost reduction",
+    "Rating_x0020__x0028_0_x002d_5_x0029_": 5.0,
+    "Number_x0020_of_x0020_Ratings": 14,
+    "Status": "Published",
+    "Click_x0020_Through_x0020_Demo": "https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0",
+    "Demo_x0020_Video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "Agentic_x0020_Link": "https://agenticexperience.azurewebsites.net/login"
+  },
+  {
+    "Id": 102,
+    "Title": "Clinical Documentation & EHR Copilot",
+    "Agent_x0020_Name": "Clinical Documentation & EHR Copilot",
+    "Industry": "Healthcare & Life Sciences",
+    "Solution_x0020_Summary": "Ambient clinician consultation summarization and automated ICD-10 medical coding assistant.",
+    "Tagline": "Ambient clinical listening and EHR summarization.",
+    "Problem_x0020_Solved": "Doctors spend up to 45% of consultation time typing notes into EHRs rather than focusing on patient care.",
+    "SolutionDescription": "HIPAA-compliant speech-to-structured clinical notes extractor with auto-mapping to SNOMED and ICD-10 codes.",
+    "Agents_x0020_Involved": "Ambient Scribe Agent [Converts doctor-patient audio dialogues into SOAP notes] \n ICD-10 Coding Agent [Suggests billing codes with precision cross-referencing]",
+    "Availability": ["Amplifier for Agentic Experience", "AWS Bedrock Agentic Core"],
+    "Expected_x0020_ROI_x0020_Metrics": "2.5 hrs/day physician charting, 28% claim denial reduction",
+    "Rating_x0020__x0028_0_x002d_5_x0029_": 4.9,
+    "Number_x0020_of_x0020_Ratings": 22,
+    "Status": "Published",
+    "Click_x0020_Through_x0020_Demo": "https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0",
+    "Demo_x0020_Video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "Id": 201,
+    "Title": "RFx & Proposal Intelligence Agent",
+    "Agent_x0020_Name": "RFx & Proposal Intelligence Agent",
+    "Domain": "Consultancy",
+    "Description": "Parses massive government and enterprise RFPs, auto-maps capabilities, extracts compliance matrices, and drafts proposal win-themes.",
+    "Key_x0020_Benefits": "Cuts proposal turnaround from 3 weeks to 3 days while boosting compliance coverage to 100%.",
+    "Capabilities": ["Compliance Matrix Extraction", "Capability Gap Analysis", "Executive Summary Synthesis"],
+    "Rating_x0020__x0028_0_x002d_5_x0029_": 4.9,
+    "Number_x0020_of_x0020_Ratings": 15,
+    "Status": "Published",
+    "Availability": ["Amplifier for Agentic Experience", "AWS Bedrock Agentic Core"]
+  },
+  {
+    "Id": 202,
+    "Title": "Omnichannel Customer Experience Agent",
+    "Agent_x0020_Name": "Omnichannel Customer Experience Agent",
+    "Domain": "Customer Service",
+    "Description": "Autonomous resolution agent for complex tier-1 and tier-2 customer support inquiries across chat, email, and voice.",
+    "Key_x0020_Benefits": "Resolves 68% of inquiries end-to-end without agent intervention, maintaining a CSAT of 4.8/5.",
+    "Capabilities": ["Multi-turn Intent Resolution", "CRM Action Execution", "Sentiment-Adaptive Tone"],
+    "Rating_x0020__x0028_0_x002d_5_x0029_": 5.0,
+    "Number_x0020_of_x0020_Ratings": 28,
+    "Status": "Published",
+    "Availability": ["Amplifier for Agentic Experience", "AWS Bedrock Agentic Core"]
+  }
+]

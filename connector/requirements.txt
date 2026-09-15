@@ -1,0 +1,4 @@
+# Runtime: boto3 and standard libraries are built into the AWS Lambda Python runtime.
+# Listed for local execution, testing, and mock verification.
+boto3>=1.34.0
+urllib3>=2.0.0

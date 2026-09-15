@@ -20,6 +20,8 @@ import {
   buildIndustryFilterOptions,
   buildDomainFilterOptions,
 } from '../../data/marketplaceData'
+import { marketplaceService } from '../../services/marketplaceService'
+
 
 function filterIndustries(industries, industryId, searchText) {
   const normalizedQuery = searchText.trim().toLowerCase()
@@ -97,6 +99,121 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
   const toggleDomain = (id) => {
     setDomainOpenMap((prev) => ({ ...prev, [id]: !prev[id] }))
   }
+
+  // Fetch live curated catalog from AWS S3 / CloudFront or API Gateway
+  useEffect(() => {
+    let cancelled = false
+    marketplaceService
+      .fetchCatalog()
+      .then(({ industries, domains }) => {
+        if (!cancelled) {
+          if (Array.isArray(industries) && industries.length > 0) {
+            setCatalogIndustries(industries)
+          }
+          if (Array.isArray(domains) && domains.length > 0) {
+            setCatalogDomains(domains)
+          }
+        }
+      })
+      .catch((err) => {
+        console.warn('Live catalog fetch failed, using fallback dataset:', err)
+      })
+
+    // Load any locally cached custom packs
+    try {
+      const savedPacks = localStorage.getItem('kn_custom_starter_packs')
+      if (savedPacks) {
+        const parsed = JSON.parse(savedPacks)
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          mergeCustomItems(parsed, 'starterPacks')
+        }
+      }
+      const savedAgents = localStorage.getItem('kn_custom_agents')
+      if (savedAgents) {
+        const parsed = JSON.parse(savedAgents)
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          mergeCustomItems(parsed, 'agents')
+        }
+      }
+    } catch (e) {
+      console.warn('Could not read cached custom items', e)
+    }
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const mergeCustomItems = (items, targetType = 'starterPacks') => {
+    if (targetType === 'starterPacks') {
+      setCatalogIndustries((prev) => {
+        const indMap = {}
+        prev.forEach((ind) => {
+          indMap[ind.name] = { ...ind, starterPacks: [...ind.starterPacks] }
+        })
+        items.forEach((pack) => {
+          const indName = pack.industry || 'General / Other'
+          if (!indMap[indName]) {
+            indMap[indName] = {
+              id: indName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+              name: indName,
+              starterPacks: [],
+            }
+          }
+          const idx = indMap[indName].starterPacks.findIndex((p) => p.id === pack.id || p.title === pack.title)
+          if (idx >= 0) {
+            indMap[indName].starterPacks[idx] = pack
+          } else {
+            indMap[indName].starterPacks.push(pack)
+          }
+        })
+        return Object.values(indMap)
+      })
+    } else {
+      setCatalogDomains((prev) => {
+        const domMap = {}
+        prev.forEach((dom) => {
+          domMap[dom.name] = { ...dom, agents: [...dom.agents] }
+        })
+        items.forEach((agent) => {
+          const domName = agent.domain || 'Consultancy'
+          if (!domMap[domName]) {
+            domMap[domName] = {
+              id: domName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+              name: domName,
+              agents: [],
+            }
+          }
+          const idx = domMap[domName].agents.findIndex((a) => a.id === agent.id || a.title === agent.title)
+          if (idx >= 0) {
+            domMap[domName].agents[idx] = agent
+          } else {
+            domMap[domName].agents.push(agent)
+          }
+        })
+        return Object.values(domMap)
+      })
+    }
+  }
+
+  const handleImportItems = async (rawData, normalizedItems, targetType = 'starterPacks') => {
+    // 1. Sync to AWS backend pipeline (S3 raw archive & curated catalog update)
+    try {
+      await marketplaceService.syncSharePointData(rawData)
+    } catch (e) {
+      console.warn('Backend sync failed, continuing local update:', e)
+    }
+
+    // 2. Update UI state and cache
+    mergeCustomItems(normalizedItems, targetType)
+    try {
+      const storageKey = targetType === 'starterPacks' ? 'kn_custom_starter_packs' : 'kn_custom_agents'
+      localStorage.setItem(storageKey, JSON.stringify(normalizedItems))
+    } catch (e) {
+      console.warn('Could not cache items to localStorage', e)
+    }
+  }
+
 
   // Expand / Collapse All
   const handleToggleExpandAll = () => {
@@ -213,10 +330,19 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
                   <button
                     type="button"
                     className="btn-toolbar-blue"
+                    onClick={() => setIsImporterOpen(true)}
+                  >
+                    🔄 Sync SharePoint List
+                  </button>
+
+                  <button
+                    type="button"
+                    className="btn-toolbar-blue"
                     onClick={() => onNavigate && onNavigate('#/workflows')}
                   >
                     Create your own Starter Pack
                   </button>
+
 
                   <button
                     type="button"
@@ -347,8 +473,9 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
       <SharePointImporterModal
         isOpen={isImporterOpen}
         onClose={() => setIsImporterOpen(false)}
-        onImportItems={() => {}}
+        onImportItems={handleImportItems}
       />
+
     </>
   )
 }
