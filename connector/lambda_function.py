@@ -56,12 +56,19 @@ except ImportError:
     boto3 = None
     s3 = None
 
-CURATED_BUCKET = os.environ.get("CURATED_BUCKET", "ai-marketplace-624807913752-us-east-1-an")
-CURATED_KEY_STARTER_PACKS = os.environ.get("CURATED_KEY_STARTER_PACKS", "curated/starter-packs.json")
+CURATED_BUCKET = os.environ.get("CURATED_BUCKET") or os.environ.get("S3_BUCKET", "ai-marketplace-624807913752-us-east-1-an")
+CURATED_KEY = os.environ.get("CURATED_KEY", "curated/starter-packs.json")
+CURATED_KEY_STARTER_PACKS = os.environ.get("CURATED_KEY_STARTER_PACKS", CURATED_KEY)
 CURATED_KEY_AGENTS = os.environ.get("CURATED_KEY_AGENTS", "curated/agents.json")
 CURATED_KEY_CATALOG = os.environ.get("CURATED_KEY_CATALOG", "curated/marketplace-catalog.json")
 RAW_PREFIX = os.environ.get("RAW_PREFIX", "raw/")
 RESOURCE_TAG = os.environ.get("RESOURCE_TAG", "aep_aws")
+
+# SharePoint Site and List details
+SP_HOSTNAME = os.environ.get("SP_HOSTNAME", "capgemini.sharepoint.com")
+SP_SITE_PATH = os.environ.get("SP_SITE_PATH", "/sites/KnowNow/AIMarketplace")
+SP_LIST_NAME = os.environ.get("SP_LIST_NAME", "Industrialized Use cases")
+INGESTION_API_URL = os.environ.get("INGESTION_API_URL", "https://yymryxj4se.execute-api.us-east-1.amazonaws.com/prod/transform")
 
 # Optional Microsoft Graph credentials for direct polling
 MS_GRAPH_TENANT_ID = os.environ.get("MS_GRAPH_TENANT_ID")
