@@ -12,6 +12,7 @@
  */
 
 import { INDUSTRIES, AGENT_DOMAINS } from '../data/marketplaceData'
+import localStarterPacks from '../../starter-packs.json'
 
 const rawCatalogUrl = import.meta.env.VITE_CATALOG_URL || ''
 const rawApiEndpoint = import.meta.env.VITE_API_ENDPOINT || ''
@@ -69,9 +70,9 @@ export const marketplaceService = {
       }
     }
 
-    // 3. Fallback to bundled dataset
+    // 3. Fallback to bundled dataset (explicit local JSON to ensure full starter packs)
     return {
-      industries: INDUSTRIES,
+      industries: Array.isArray(localStarterPacks) && localStarterPacks.length > 0 ? localStarterPacks : INDUSTRIES,
       domains: AGENT_DOMAINS,
     }
   },
