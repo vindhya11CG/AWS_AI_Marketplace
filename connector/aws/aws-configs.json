@@ -1,0 +1,70 @@
+{
+  "cloudfrontDistributionConfig": {
+    "CallerReference": "create-2026-09-16-ai-marketplace-1",
+    "Comment": "ai-marketplace CloudFront using OAC EOZ78FMGQJKO5",
+    "Enabled": true,
+    "Origins": {
+      "Quantity": 1,
+      "Items": [
+        {
+          "Id": "S3-ai-marketplace",
+          "DomainName": "ai-marketplace-624807913752-us-east-1-an.s3.amazonaws.com",
+          "OriginPath": "",
+          "OriginAccessControlId": "EOZ78FMGQJKO5",
+          "S3OriginConfig": {
+            "OriginAccessIdentity": ""
+          }
+        }
+      ]
+    },
+    "DefaultRootObject": "website/index.html",
+    "DefaultCacheBehavior": {
+      "TargetOriginId": "S3-ai-marketplace",
+      "ViewerProtocolPolicy": "redirect-to-https",
+      "AllowedMethods": {
+        "Quantity": 2,
+        "Items": ["GET", "HEAD"],
+        "CachedMethods": { "Quantity": 2, "Items": ["GET", "HEAD"] }
+      },
+      "ForwardedValues": {
+        "QueryString": false,
+        "Cookies": { "Forward": "none" },
+        "Headers": { "Quantity": 0 }
+      },
+      "MinTTL": 0,
+      "DefaultTTL": 86400,
+      "MaxTTL": 31536000
+    },
+    "PriceClass": "PriceClass_100",
+    "ViewerCertificate": { "CloudFrontDefaultCertificate": true },
+    "HttpVersion": "http2",
+    "IsIPV6Enabled": true
+  },
+  "s3BucketPolicy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "AllowCloudFrontServicePrincipalReadOnly",
+        "Effect": "Allow",
+        "Principal": { "Service": "cloudfront.amazonaws.com" },
+        "Action": "s3:GetObject",
+        "Resource": "arn:aws:s3:::ai-marketplace-624807913752-us-east-1-an/*",
+        "Condition": {
+          "StringEquals": {
+            "AWS:SourceArn": "arn:aws:cloudfront::624807913752:distribution/E2GLSEMGFW1O80"
+          },
+          "StringEqualsIfExists": {
+            "AWS:SourceAccount": "624807913752"
+          }
+        }
+      }
+    ]
+  },
+  "oacConfig": {
+    "Name": "ai-marketplace-oac",
+    "Description": "OAC for ai marketplace S3 origin",
+    "SigningProtocol": "sigv4",
+    "SigningBehavior": "always",
+    "OriginAccessControlOriginType": "s3"
+  }
+}

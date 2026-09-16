@@ -9,24 +9,22 @@ Step 0 — prerequisites
 
 Step 1 — create distribution
 
-Run:
+The CloudFront and S3 policy templates are consolidated into `connector/aws/aws-configs.json` as separate keys. To create the distribution, extract the CloudFront config and pass it to the CLI:
 
 ```powershell
-aws cloudfront create-distribution --distribution-config file://connector/aws/cloudfront-distribution-config.json > cf-create.json
-```
-
-After that, inspect output (or use `jq`) to get the Distribution Id and ARN:
-
-```powershell
-cat cf-create.json | jq -r '.Distribution.Id'
-cat cf-create.json | jq -r '.Distribution.ARN // .Distribution.ARN'
-cat cf-create.json | jq -r '.Distribution.DomainName'
+# extract CloudFront config to a temp file and create the distribution
+cat connector/aws/aws-configs.json | jq '.cloudfrontDistributionConfig' > /tmp/cf-config.json
+aws cloudfront create-distribution --distribution-config file:///tmp/cf-config.json > /tmp/cf-create.json
+# inspect output
+cat /tmp/cf-create.json | jq -r '.Distribution.Id'
+cat /tmp/cf-create.json | jq -r '.Distribution.ARN // .Distribution.ARN'
+cat /tmp/cf-create.json | jq -r '.Distribution.DomainName'
 ```
 
 Step 2 — tag distribution (option A: tag key `team` = `aep_aws`)
 
 ```powershell
-DIST_ID=$(cat cf-create.json | jq -r '.Distribution.Id')
+DIST_ID=$(cat /tmp/cf-create.json | jq -r '.Distribution.Id')
 DIST_ARN=arn:aws:cloudfront::624807913752:distribution/$DIST_ID
 aws cloudfront tag-resource --resource $DIST_ARN --tags 'Items=[{Key=team,Value=aep_aws}]'
 ```
@@ -39,11 +37,13 @@ aws cloudfront tag-resource --resource $DIST_ARN --tags 'Items=[{Key=aep_aws,Val
 
 Step 3 — update S3 bucket policy
 
-- Open `connector/aws/s3-bucket-policy-for-cloudfront.json` and replace `<DISTRIBUTION_ID>` with the actual distribution id from Step 1.
-- Then run:
+Extract the `s3BucketPolicy` from the consolidated file, update the `AWS:SourceArn`/Distribution ID if needed, then apply it:
 
 ```powershell
-aws s3api put-bucket-policy --bucket ai-marketplace-624807913752-us-east-1-an --policy file://connector/aws/s3-bucket-policy-for-cloudfront.json
+# write policy to temp file
+cat connector/aws/aws-configs.json | jq '.s3BucketPolicy' > /tmp/s3-policy.json
+# (optional) edit /tmp/s3-policy.json to replace the distribution id if you created a different one
+aws s3api put-bucket-policy --bucket ai-marketplace-624807913752-us-east-1-an --policy file:///tmp/s3-policy.json
 ```
 
 Step 4 — configure frontend env and build

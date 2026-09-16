@@ -40,3 +40,10 @@ release/
 .vscode/
 *.log
 *.DS_Store
+
+# Local debug snapshots and temporary CloudFront files
+cf-*.json
+connector/cf-*.json
+frontend/cf-*.json
+frontend/cf-*.js
+frontend/cf-*.css
