@@ -1,0 +1,2733 @@
+[
+  {
+    "@odata.etag": "\"48\"",
+    "ItemInternalId": "2",
+    "ID": 2,
+    "Title": "Clinical Documentation Assistants",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Healthcare"
+    },
+    "BusinessLine1#Id": 1,
+    "field_4": "An AI-driven patient intake and triage assistant that captures symptoms, prioritizes cases, and routes patients efficiently reducing wait times and freeing clinicians to focus on care.",
+    "field_2": "Patient onboarding and triage are slowed by manual data entry and documentation, leading to errors and longer wait times. In healthcare settings, staff manually capture patient history, symptoms, and vitals, causing bottlenecks. This diverts clinical time away from care and increases safety risks.\n",
+    "field_3": "Automates intake, symptom analysis, and smart routing to doctors.",
+    "field_8": "Streamlines clinical documentation, improving accuracy",
+    "field_6": "<div class=\"ExternalClassF43BAD9897C64163988BAE420F109C44\"><div>​Data Collector [Captures clinician–patient conversation and retrieves patient history]</div><div>Data Processor [Transcribes audio, tags PHI, and extracts clinical entities]</div><div>Note Generator [Summarises interaction into structured notes and generates patient-friendly summaries]</div><div>Compliance Checker [Suggests codes, validates documentation, and prepares EHR integration]</div></div>",
+    "field_7": "['approx -50% admin time', 'approx +22% faster triage']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Clinical_Documentation_Assistants.mp4?CT=1772605617789&OR=OWA-NT-Mail&CID=27662c5b-baf6-22b5-faa9-cfaed3006a7b",
+    "ClickThroughDemo": "https://sogeti.navattic.com/clinicaldocumentation",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Healthcare_Starter%20Pack%20(1).pptx?d=w70e4fd7234ed4eb1ab69a51e8026e7a4&csf=1&web=1&e=osNgqV",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "5,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-fx433b49uaf",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:x:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Healthcare/Clinical%20Documentation%20Assistant/Clinical%20Sample%20data.csv?d=wffbcec58168047d3ac8b2c61e15c565e&csf=1&web=1&e=cfcTcv",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Clinical%20Document_setup.mp4?csf=1&web=1&e=ASavqP",
+    "Modified": "2026-07-24T08:49:05Z",
+    "Created": "2025-10-03T03:46:50Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f2_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=2&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Clinical Documentation Assistants",
+    "{FilenameWithExtension}": "Clinical Documentation Assistants",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/2_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "37.0"
+  },
+  {
+    "@odata.etag": "\"128\"",
+    "ItemInternalId": "4",
+    "ID": 4,
+    "Title": "Smart Loan Origination",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 0,
+      "Value": "Banking and Financial Services (BFSI)"
+    },
+    "BusinessLine1#Id": 0,
+    "field_4": "A fast, AI‑driven loan automation engine that verifies identities, checks eligibility, and validates documents instantly calculating optimal loan terms while boosting accuracy, compliance, and processing speed.",
+    "field_2": "Loan processing is slowed by manual checks of identity, eligibility, and documents, causing delays and errors. In BFSI, loan officers still manually review KYC, income proofs, and bank statements for each applicant, which extends turnaround time. This leads to inconsistent assessments and increases the operational burden on processing teams.",
+    "field_3": "Automates verification, risk assessment, and KYC.",
+    "field_8": "Speeds approvals, reduces errors, and boosts customer experience.",
+    "field_6": "<div class=\"ExternalClass99100E59CD494414B8B59E716F30201E\"><div><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"></div></div></div><div>KYC Verifier [Checks the customer's identity using official documents]</div><div>Eligibility Assessor [Looks at customer data to decide if they qualify for a loan]</div><div>Document Validator [Verifies the authenticity and completeness of submitted documents]</div><div>Loan Calculator [Figures out the maximum loan amount and interest rate]</div><div class=\"ExternalClass99100E59CD494414B8B59E716F30201E\"><div class=\"ExternalClass68B3CD10BD62462182771B8FEB5DF975\"><span><div></div></span></div></div>",
+    "field_7": "['approx -60% time-to-approval', 'approx -35% cost']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Loan_Origination.mp4?CT=1772605356150&OR=OWA-NT-Mail&CID=f3d572c0-5ba1-3cf7-c644-983dfc8e12f7",
+    "ClickThroughDemo": "https://sogeti.navattic.com/LoanOrigination",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/BFSI%20Starter%20Packs.pptx?d=w27f4cde555114e679bba36d761870b8f&csf=1&web=1&e=IcJ2yk",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|bhavesh.b.patel@capgemini.com",
+        "DisplayName": "Patel, Bhavesh",
+        "Email": "bhavesh.b.patel@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=bhavesh.b.patel@capgemini.com",
+        "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+        "JobTitle": "Manager"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|chandrika.b-r@capgemini.com",
+        "DisplayName": "B R, Chandrika",
+        "Email": "chandrika.b-r@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chandrika.b-r@capgemini.com",
+        "Department": "SOG-IN-QET-AUTO",
+        "JobTitle": "Senior Manager"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+        "DisplayName": "Kudupudi, Jaya Sri Padmini",
+        "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Analyst / Software Engineer"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|shwetank.chaudhary@capgemini.com",
+        "DisplayName": "Chaudhary, Shwetank",
+        "Email": "shwetank.chaudhary@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=shwetank.chaudhary@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Sr Analyst"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|sasikala.b.k@capgemini.com",
+        "DisplayName": "Madhaiyan, Sasikala",
+        "Email": "sasikala.b.k@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=sasikala.b.k@capgemini.com",
+        "Department": "SOG-IN-QET-INDDOM",
+        "JobTitle": "Consultant"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mangesh.datta-gajakosh@capgemini.com",
+        "DisplayName": "Datta Gajakosh, Mangesh",
+        "Email": "mangesh.datta-gajakosh@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mangesh.datta-gajakosh@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Software Engineer"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|charlotte.hildebrand@sogeti.com",
+        "DisplayName": "Hildebrand, Charlotte",
+        "Email": "charlotte.hildebrand@sogeti.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=charlotte.hildebrand@sogeti.com",
+        "Department": "Germany",
+        "JobTitle": "*Solution Architect"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+        "DisplayName": "Das, Natasha",
+        "Email": "natasha.das@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+        "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+        "JobTitle": "Consultant"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|bhavesh.b.patel@capgemini.com",
+      "i:0#.f|membership|chandrika.b-r@capgemini.com",
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+      "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "i:0#.f|membership|shwetank.chaudhary@capgemini.com",
+      "i:0#.f|membership|sasikala.b.k@capgemini.com",
+      "i:0#.f|membership|mangesh.datta-gajakosh@capgemini.com",
+      "i:0#.f|membership|charlotte.hildebrand@sogeti.com",
+      "i:0#.f|membership|natasha.das@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "5,3,3,1,5,1,4,5,5,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-dbs51di16w7",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:w:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/BFSI/Loan%20origination%20Agent/loan_origination_output.doc?d=w45368893249247eb9f012619d5543c18&csf=1&web=1&e=WHeAeH",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Smart%20Loan%20Origination_setup.mp4?csf=1&web=1&e=vHY9g3",
+    "Modified": "2026-07-24T05:47:21Z",
+    "Created": "2025-10-03T03:46:50Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f4_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=4&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Smart Loan Origination",
+    "{FilenameWithExtension}": "Smart Loan Origination",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/4_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "62.0"
+  },
+  {
+    "@odata.etag": "\"51\"",
+    "ItemInternalId": "5",
+    "ID": 5,
+    "Title": "Predictive Maintenance",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 2,
+      "Value": "Manufacturing"
+    },
+    "BusinessLine1#Id": 2,
+    "field_4": "An AI-based equipment health monitoring system that predicts failures early, triggers smart alerts, and optimizes maintenance schedules to reduce downtime and extend asset life.",
+    "field_2": "Unplanned machine downtime occurs due to reactive maintenance and manual equipment monitoring. In manufacturing plants, technicians manually inspect vibration, temperature, and runtime logs, missing early failure indicators. This results in sudden breakdowns, production loss, and high repair costs.\n",
+    "field_3": "AI-driven predictive maintenance minimizes downtime, lowers repair costs, and improves operational efficiency by preventing failures before they happen.",
+    "field_8": "Enables proactive maintenance",
+    "field_6": "<div class=\"ExternalClassE8D4826E4D314FE9BD3C751FCD870065\"><div>Data Collector [Gathers sensor data and maintenance history]</div><div>Data Analyzer [Spots patterns and anomalies]</div><div>Predictive Model Developer [Builds AI models to forecast failures]</div><div>Condition Monitor [Monitors machines and sends alerts]</div><div>Maintenance Scheduler [Plans optimal repair times]</div></div>",
+    "field_7": "['approx -40% downtime', 'approx +17% asset life']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Predictive%20Maintenance-%20Avatar%20Demo%201.mp4?CT=1772605468345&OR=OWA-NT-Mail&CID=cf9b740d-0d5e-9de6-7257-a92e6bb5b7dc",
+    "ClickThroughDemo": "https://sogeti.navattic.com/predictivemaintenance",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7BB7CA29F9-4DCA-4B6F-BC67-155FEB346AF7%7D&file=Manufacturing%20Starter%20Pack.pptx&action=edit&mobileredirect=true",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+        "DisplayName": "Kudupudi, Jaya Sri Padmini",
+        "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Analyst / Software Engineer"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|swatirani.rauta@capgemini.com",
+        "DisplayName": "Rauta, Swatirani",
+        "Email": "swatirani.rauta@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=swatirani.rauta@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Associate Consultant"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mangesh.datta-gajakosh@capgemini.com",
+        "DisplayName": "Datta Gajakosh, Mangesh",
+        "Email": "mangesh.datta-gajakosh@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mangesh.datta-gajakosh@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Software Engineer"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "i:0#.f|membership|swatirani.rauta@capgemini.com",
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+      "i:0#.f|membership|mangesh.datta-gajakosh@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "4,1,5,4,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-xmlpa7ilyhf&jobid=7",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Manufacturing/Predictive%20Maintenance%20Agents/instruction_criteria.txt?csf=1&web=1&e=xi1Kfp",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Predictive%20Maintenance_setup.mp4?csf=1&web=1&e=6Y8KYO",
+    "Modified": "2026-07-24T09:01:11Z",
+    "Created": "2025-10-03T03:46:50Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f5_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=5&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Predictive Maintenance",
+    "{FilenameWithExtension}": "Predictive Maintenance",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/5_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "43.0"
+  },
+  {
+    "@odata.etag": "\"58\"",
+    "ItemInternalId": "16",
+    "ID": 16,
+    "Title": "Intelligent Fraud Detector",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 0,
+      "Value": "Banking and Financial Services (BFSI)"
+    },
+    "BusinessLine1#Id": 0,
+    "field_4": "An AI-powered fraud defense system that monitors transactions in real time, detects anomalies, and automates AML/KYC workflows to reduce financial loss and compliance exposure.",
+    "field_2": "Fraud prevention is weakened by manual checks and evolving fraud patterns that remain undetected. In BFSI, fraud teams review transactions, behavioral anomalies, and compliance flags manually, delaying intervention. This leads to revenue leakage and heightened regulatory risk.",
+    "field_3": "Reduces undetected fraud, minimizes human effort, and adapts to evolving schemes through automated detection and compliance enforcement",
+    "field_8": "Improves detection accuracy, reduces investigation time, and cuts financial losses",
+    "field_6": "<div class=\"ExternalClass44040B33FE8148A0AAED5F82AD6B3B30\"><div>​Data Retrieval Agent [Fetches and aggregates raw transactional, customer, and reference data]</div><div>Data Validator [Verifies the accuracy, completeness, and integrity of the retrieved data]</div><div>Fraud Detector [Identifies potential fraudulent transactions using rules and anomaly detection]</div><div>Compliance Validator [Ensures transactions comply with regulatory and internal policies]</div><div>Risk Scoring Agent [Assigns a risk score to each transaction]</div><div>Audit Trail Agent [Documents all actions, decisions, and data changes for traceability]</div></div>",
+    "field_7": "['approx +35% faster fraud response', 'approx -50% fraud losses']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Intelligent_Fraud_Detector.mp4?CT=1772605197801&OR=OWA-NT-Mail&CID=e9e81897-e1fa-9852-aff8-1da84f888410",
+    "ClickThroughDemo": "https://sogeti.navattic.com/frauddetection",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/BFSI%20Starter%20Packs.pptx?d=w27f4cde555114e679bba36d761870b8f&csf=1&web=1&e=IcJ2yk",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "2,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-1x11pukxakm",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:x:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/BFSI/Intelligent%20Fraud%20Detector/finance_sector_transactions_sample.csv?d=wfeed832228d947d6942210cbf9735c2e&csf=1&web=1&e=IOGP8Y",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Intelligent%20Fraud%20Detector_setup.mp4?csf=1&web=1&e=L33Lnr",
+    "Modified": "2026-07-24T05:55:45Z",
+    "Created": "2025-10-03T03:46:51Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f16_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=16&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Intelligent Fraud Detector",
+    "{FilenameWithExtension}": "Intelligent Fraud Detector",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/16_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "52.0"
+  },
+  {
+    "@odata.etag": "\"32\"",
+    "ItemInternalId": "22",
+    "ID": 22,
+    "Title": "Claims Processing Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 0,
+      "Value": "Banking and Financial Services (BFSI)"
+    },
+    "BusinessLine1#Id": 0,
+    "field_4": "An automated claims validation engine that checks eligibility, enforces regulatory compliance, and accelerates payouts while reducing errors and manual effort.",
+    "field_2": "Claims processing is delayed due to manual validation and compliance checks, increasing inefficiency and exposure to errors. In insurance operations, teams manually verify policy details, medical documents, and claim eligibility, slowing payouts. This leads to compliance risks and customer dissatisfaction.",
+    "field_3": "Automates compliance, protects patient data, and prevents breaches delivering security, audit readiness, and reduced risk.",
+    "field_8": "Minimizes risk exposure, reduces compliance workload, and enhances data security.",
+    "field_7": "Enforces healthcare regulations autonomously, detects threats and automates corrective actions, protects patient data, and ensures audit readiness.",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Compliance_Security_Healthcare.mp4?CT=1768569513027&OR=OWA-NT-Mail&CID=49c0ab41-6dd5-709f-c874-285fe0aa5c13",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/BFSI%20Starter%20Packs.pptx?d=w27f4cde555114e679bba36d761870b8f&csf=1&web=1&e=IcJ2yk",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Compliance%20Security%20Healthcare_setup.mp4?csf=1&web=1&e=WBBeow",
+    "Modified": "2026-07-24T08:46:41Z",
+    "Created": "2025-11-09T11:41:10Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f22_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=22&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Claims Processing Agent",
+    "{FilenameWithExtension}": "Claims Processing Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/22_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "32.0"
+  },
+  {
+    "@odata.etag": "\"53\"",
+    "ItemInternalId": "23",
+    "ID": 23,
+    "Title": "Intelligent Underwriter (Insurance) Advisor",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 0,
+      "Value": "Banking and Financial Services (BFSI)"
+    },
+    "BusinessLine1#Id": 0,
+    "field_4": "A smart underwriting engine that analyzes risk factors and disclosures to recommend coverage, premiums, and decisions with transparency, accuracy, and regulatory compliance.",
+    "field_2": "Underwriting decisions are slowed by manual data review, risk scoring, and document checks, creating errors and bottlenecks. In insurance, underwriters manually examine medical records, past claims, and financial disclosures, slowing policy issuance. This increases inconsistency and impacts compliance.",
+    "field_3": "Automates policy customization and premium calculation, speeds up insurance decision-making, and improves accuracy and consistency across underwriting.",
+    "field_8": "Accelerates approvals, reduces workload, and enhances compliance.",
+    "field_6": "<div class=\"ExternalClassD375579F100D4E5D923DDC5C4469BE8C\"><div>Risk Assessor [Collects and analyses customer data to determine insurability and risk levels]</div><div>Policy Customizer [Customises insurance policies based on risk assessment]</div><div>Premium Calculator [Calculates premiums, coverage limits, and deductibles]</div><div>Fraud Detector [Detects potential fraud and ensures compliance]</div></div>",
+    "field_7": "[approx 15% time saved in underwriting]",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Intelligent_Underwriter_Advisor.mp4?CT=1772605495065&OR=OWA-NT-Mail&CID=76335369-d707-a258-c607-255d4ec6f8af",
+    "ClickThroughDemo": "https://sogeti.navattic.com/IntelligentUnderwriteradvisor",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/BFSI%20Starter%20Packs.pptx?d=w27f4cde555114e679bba36d761870b8f&csf=1&web=1&e=IcJ2yk",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|tummala.srivani@capgemini.com",
+        "DisplayName": "Srivani, Tummala",
+        "Email": "tummala.srivani@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=tummala.srivani@capgemini.com",
+        "Department": "ERD-IN-ESE-EES_60BSMS_IN71",
+        "JobTitle": "Software Engineer"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|tummala.srivani@capgemini.com",
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "3,1,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-hhh5zdkuxdb",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/BFSI/Intelligent%20Underwriter(Insurance)%20Advisor/Underwrite_Property_Data.txt?csf=1&web=1&e=6mK6cu",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Intelligent%20Underwriter_setup.mp4?csf=1&web=1&e=YNinNo",
+    "Modified": "2026-07-24T08:37:04Z",
+    "Created": "2025-11-09T11:42:19Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f23_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=23&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Intelligent Underwriter (Insurance) Advisor",
+    "{FilenameWithExtension}": "Intelligent Underwriter (Insurance) Advisor",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/23_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "40.0"
+  },
+  {
+    "@odata.etag": "\"47\"",
+    "ItemInternalId": "24",
+    "ID": 24,
+    "Title": "Quality Inspection Agents",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 2,
+      "Value": "Manufacturing"
+    },
+    "BusinessLine1#Id": 2,
+    "field_4": "An intelligent inspection engine that analyzes sensor and visual data in real time to detect defects early and enforce consistent, data‑driven quality control.",
+    "field_2": "Product inspections become inconsistent and slow when done manually, allowing defects to slip through. On manufacturing lines, inspectors visually check dimensions, surface flaws, and tolerances, resulting in variable outcomes. This increases rework, compliance issues, and impacts customer trust.",
+    "field_3": "AI-powered inspection eliminates subjectivity, accelerates defect detection, and streamlines compliance, reducing costs and improving customer satisfaction.",
+    "field_8": "Enhances product quality and compliance",
+    "field_6": "<div class=\"ExternalClass1A27F46353A343A3BABE19E5C103750E\"><div>Data Retrieval Specialist [Extracts structured data from text files using RAG queries]</div><div>Specification Compliance Auditor [Performs pass/fail analysis comparing measured values against targets]</div><div>Statistical Process Analyst [Calculates process capability and recommends corrective actions]</div><div>Executive Summary Generator [Synthesises agent outputs into a concise business report]</div><div>Regulatory Compliance Certifier [Verifies regulatory compliance and issues final batch authorisation]</div></div>",
+    "field_7": "['approx +15% faster product quality reporting']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Quality%20Inspection%20%5bDemo%5d.mp4?CT=1772605435251&OR=OWA-NT-Mail&CID=50a53177-3525-5600-68b2-6d10158fa680",
+    "ClickThroughDemo": "https://sogeti.navattic.com/qualityinspection",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7BB7CA29F9-4DCA-4B6F-BC67-155FEB346AF7%7D&file=Manufacturing%20Starter%20Pack.pptx&action=edit&mobileredirect=true",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|swatirani.rauta@capgemini.com",
+        "DisplayName": "Rauta, Swatirani",
+        "Email": "swatirani.rauta@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=swatirani.rauta@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Associate Consultant"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+        "DisplayName": "Kudupudi, Jaya Sri Padmini",
+        "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Analyst / Software Engineer"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|swatirani.rauta@capgemini.com",
+      "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "2,4,4,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-lhejk4z1ej",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Manufacturing/Quality%20Inspection%20Agents/sample_reference_specifications.txt?csf=1&web=1&e=kzFAal",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Quality%20Inspection%20Agents_setup.mp4?csf=1&web=1&e=AdIHbo",
+    "Modified": "2026-07-24T09:02:29Z",
+    "Created": "2025-11-09T11:44:29Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f24_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=24&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Quality Inspection Agents",
+    "{FilenameWithExtension}": "Quality Inspection Agents",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/24_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "42.0"
+  },
+  {
+    "@odata.etag": "\"52\"",
+    "ItemInternalId": "25",
+    "ID": 25,
+    "Title": "Design Document Quality Check",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 2,
+      "Value": "Manufacturing"
+    },
+    "BusinessLine1#Id": 2,
+    "field_4": "An AI solution that validates engineering documents for accuracy, consistency, and compliance across drawings, BOMs, and specifications",
+    "field_2": "Engineering documentation often contains unnoticed errors because manual validation is slow and unreliable. In manufacturing projects, teams manually review drawings, specifications, and change logs, leading to missed discrepancies. This causes downstream rework, delays, and higher QA costs.",
+    "field_3": "Automates document validation, detects inconsistencies, accelerates timelines, improves audit readiness, and reduces errors. ",
+    "field_8": "Improves drawing validation and compliance",
+    "field_6": "<div class=\"ExternalClass562D42A8EE1C497D985AE83E080B7CB4\"><div>TOCA Validator [Validates the Table of Contents by ensuring drawing names and numbers match actual drawing pages]</div><div>Scope Letter Tag Validator [Extracts tags from the scope letter and confirms their presence in drawings]</div><div>Note Validator [Extracts all note numbers and confirms the presence of Note 6]</div><div>Drawing Notes Comparator [Compares the number of HEXAGON-shaped notes with 'Drawing Notes' and ensures counts match]</div><div>Ethical and Compliance Agent [Analyses outputs for ethical concerns, regulatory compliance, and industry best practices]</div></div>",
+    "field_7": "['approx -25% errors in documents']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Design_Document_Quality_Check.mp4?CT=1772605554067&OR=OWA-NT-Mail&CID=9fef5ef8-9543-d561-5913-2b0dec0bc309",
+    "ClickThroughDemo": "https://sogeti.navattic.com/designdocument",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7BB7CA29F9-4DCA-4B6F-BC67-155FEB346AF7%7D&file=Manufacturing%20Starter%20Pack.pptx&action=edit&mobileredirect=true",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|pranav.duggal@capgemini.com",
+        "DisplayName": "Duggal, Pranav",
+        "Email": "pranav.duggal@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=pranav.duggal@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Consultant"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+        "DisplayName": "Kudupudi, Jaya Sri Padmini",
+        "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Analyst / Software Engineer"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|pranav.duggal@capgemini.com",
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+      "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "5,4,4,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-ljr9m2gn6ep&jobid=2",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Manufacturing/Design%20Document%20QC%20Check/Design_Document_QC_Check_Prompt.txt?csf=1&web=1&e=mNMhFz",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Design%20Document%20QC_setup.mp4?csf=1&web=1&e=nMqvEO",
+    "Modified": "2026-07-24T09:04:13Z",
+    "Created": "2025-11-09T11:44:46Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f25_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=25&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Design Document Quality Check",
+    "{FilenameWithExtension}": "Design Document Quality Check",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/25_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "40.0"
+  },
+  {
+    "@odata.etag": "\"49\"",
+    "ItemInternalId": "26",
+    "ID": 26,
+    "Title": "Self-Optimizing Production Line Agents (SOPLA)",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 2,
+      "Value": "Manufacturing"
+    },
+    "BusinessLine1#Id": 2,
+    "field_4": "A multi‑agent production optimization system that monitors telemetry, enforces compliance, and continuously improves throughput and operational stability.",
+    "field_2": "Production lines face delays and inefficiencies due to manual monitoring and slow process adjustments. Operators manually track throughput, variances, and machine conditions, resulting in delayed corrections. This leads to downtime, scrap, and compliance risks.",
+    "field_3": "Adjusts throughput, energy, and process parameters, enforces safety and compliance, and drives continuous improvements through anomaly detection and actionable insights.",
+    "field_8": "Reduces manual intervention, improves compliance, and boosts operational efficiency.",
+    "field_6": "<div class=\"ExternalClassCEE94B54A28949D59818A08824300C85\"><div>OpsMon Agent [Tracks machine and line status, throughput rates, and operational efficiency]</div><div>SafeOps Agent [Ensures safety protocols are followed and compliance is maintained]</div><div>EnviroSense Agent [Ensures optimal environmental conditions for battery production]</div><div>EnergyEye Agent [Monitors and analyses energy usage across the production line]</div><div>OptiCore Agent [Executes and evaluates optimisation actions across the line]</div></div>",
+    "field_7": "[approx +20% Faster reporting']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 2,
+        "Value": "Azure AI Foundry"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 1,
+        "Value": "Amplifier for Foundations"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0,
+      2,
+      1
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Self-Optimizing_Production_Line_Agents.mp4?CT=1772605384153&OR=OWA-NT-Mail&CID=82ae1c19-446e-fe69-c9c0-1d907fac959f",
+    "ClickThroughDemo": "https://sogeti.navattic.com/sopla",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7BB7CA29F9-4DCA-4B6F-BC67-155FEB346AF7%7D&file=Manufacturing%20Starter%20Pack.pptx&action=edit&mobileredirect=true",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|sourav.i.kumar@capgemini.com",
+        "DisplayName": "Kumar, Sourav",
+        "Email": "sourav.i.kumar@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=sourav.i.kumar@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Sr Analyst"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+        "DisplayName": "Kudupudi, Jaya Sri Padmini",
+        "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Analyst / Software Engineer"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|sourav.i.kumar@capgemini.com",
+      "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "5,3,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-55rkwybadd",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:x:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Manufacturing/Self-Optimizing%20Production%20Line%20Agents%20(SOPLA)/ev_battery_telemetry_data.xlsx?d=w179215d3ba7d45798808cb68e9e5b753&csf=1&web=1&e=csI5wr",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/SOPLA_setup.mp4?csf=1&web=1&e=cE1tRT",
+    "Modified": "2026-07-24T09:05:46Z",
+    "Created": "2025-11-09T11:46:07Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+      "DisplayName": "Paralikar, Aniruddh",
+      "Email": "aniruddh.paralikar@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=aniruddh.paralikar@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Data Administrator - D"
+    },
+    "Author#Claims": "i:0#.f|membership|aniruddh.paralikar@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f26_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=26&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Self-Optimizing Production Line Agents (SOPLA)",
+    "{FilenameWithExtension}": "Self-Optimizing Production Line Agents (SOPLA)",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/26_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "45.0"
+  },
+  {
+    "@odata.etag": "\"17\"",
+    "ItemInternalId": "27",
+    "ID": 27,
+    "Title": "360 Degree Sales Assistant",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Horizontal"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "A smart sales assistant that manages context, updates documents, and refines profiles on demand keeping interactions focused, clean, and efficient.",
+    "field_2": "Sales cycles slow down due to repetitive documentation and fragmented customer context. Reps manually compile profiles, history, and deal details, reducing productivity and slowing engagements.",
+    "field_3": "Delivers seamless integration by resetting chats, enabling dynamic updates, translating documents accurately, and refining CVs across formats.",
+    "field_8": "Cuts manual effort, saves time, and boosts productivity.",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Horizontal%20Starter%20Pack.pptx?d=w97794c2ebcaf49a78658b644f5c624ef&csf=1&web=1&e=VTWF0e",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "Modified": "2026-07-08T07:45:48Z",
+    "Created": "2025-11-27T11:39:04Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f27_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=27&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "360 Degree Sales Assistant",
+    "{FilenameWithExtension}": "360 Degree Sales Assistant",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/27_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "17.0"
+  },
+  {
+    "@odata.etag": "\"26\"",
+    "ItemInternalId": "28",
+    "ID": 28,
+    "Title": "Autonomous Procurement Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Horizontal"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "An end‑to‑end procurement automation engine that handles sourcing, vendor matching, and coordination accelerating cycles and improving compliance.",
+    "field_2": "Procurement is reactive and inefficient due to manual coordination and tracking. Teams manually compare vendor quotes and validate documents, causing delays and missed opportunities.",
+    "field_3": "Transforms procurement from reactive to proactive, captures opportunities efficiently using AI, and minimizes coordination overhead.",
+    "field_8": "Improves tender detection, boosts efficiency, and increases win rates and revenue.",
+    "field_6": "<div class=\"ExternalClass86686DB730D14F5E99E63E4A32A0BE5B\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>\n\nAuto Procurement [Oversees the entire procurement process, ensuring alignment with organizational goals]<br>Scouting Agent [Scans global markets and supplier databases to identify potential suppliers.]&#160; Matching Agent [Matches procurement requirements with the most suitable suppliers.]<br>Orch Agent [Orchestrates order placement, tracks deliveries, and manages supplier communications.]<br>Content Agent [Manages procurement-related documentation, contracts, and compliance records.]</span><br></div></div>",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Autonomous_Procurement_Agent.mp4?CT=1772605658762&OR=OWA-NT-Mail&CID=d640d40f-c8cf-a92b-5fc8-2966ace5720b",
+    "ClickThroughDemo": "https://sogeti.navattic.com/AutonomousProcurementAgent",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Horizontal_Starter%20Pack%20(1).pptx?d=wb596702927e2420bbcc2b7ac135b42b1&csf=1&web=1&e=XZYpS2",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "5,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-uveimejau6",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:x:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Horizontals/Autonomous%20procurement%20agent/procurement_requirements_sample.csv?d=wa5d82386c3924e6e8df06a69ab4278ca&csf=1&web=1&e=806txb",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Autonomous%20Procurement_setup.mp4?csf=1&web=1&e=wq2K3z",
+    "Modified": "2026-07-24T08:54:39Z",
+    "Created": "2025-11-28T06:14:36Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f28_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=28&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Autonomous Procurement Agent",
+    "{FilenameWithExtension}": "Autonomous Procurement Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/28_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "25.0"
+  },
+  {
+    "@odata.etag": "\"20\"",
+    "ItemInternalId": "29",
+    "ID": 29,
+    "Title": "Smart Talent Advisor",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Horizontal"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "An AI talent engine that matches skills to roles, assesses readiness, supports interviews, and builds personalized growth paths.",
+    "field_2": "Talent deployment is slowed by manual role matching and unclear readiness assessments. Recruiters compare profiles and job requirements manually, delaying placements and increasing bench time.",
+    "field_3": "Minimizes bench time through AI-driven skill-to-role matching, boosts confidence via realistic interview simulations using AI avatars, and accelerates deployment while improving engagement.",
+    "field_8": "Cuts bench duration, improves client readiness, and saves time for managers.",
+    "field_6": "<div class=\"ExternalClass817C92F8C27F471E96447F26BA2B35D1\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Profile Analyzer [Analyzes candidate profiles, resumes, and skills to assess qualifications and gaps.]<br>Opportunity Matcher [Matches candidates to suitable job opportunities based on skills and experience.]<br>Interview Coach [Suggests candidates for interviews with mock sessions and feedback.]&#160;<br>Progress Track [Monitors candidate and employee progress, tracks skill development, and provides insights.]</span><br></div></div>",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Talent_Advisor.mp4?CT=1772605314515&OR=OWA-NT-Mail&CID=d765bc1b-504b-df1d-7bce-5ecf49f92e52",
+    "ClickThroughDemo": "https://sogeti.navattic.com/smarttalentadvisor",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Horizontal_Starter%20Pack%20(1).pptx?d=wb596702927e2420bbcc2b7ac135b42b1&csf=1&web=1&e=XZYpS2",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-cjhwwhti1r9",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Horizontals/Smart%20Talent%20Advisor/alex_carter_hrms_profile.txt?csf=1&web=1&e=gWd4z8",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Smart%20Talent%20Advisor_setup.mp4?csf=1&web=1&e=1j3ntf",
+    "Modified": "2026-07-24T08:56:33Z",
+    "Created": "2025-11-28T06:34:02Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f29_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=29&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Smart Talent Advisor",
+    "{FilenameWithExtension}": "Smart Talent Advisor",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/29_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "20.0"
+  },
+  {
+    "@odata.etag": "\"35\"",
+    "ItemInternalId": "30",
+    "ID": 30,
+    "Title": "Contract Legal Analyzer & Advisor",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Horizontal"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "An AI-powered contract review assistant that identifies risks, checks compliance, and recommends fallback clauses across legal and regulatory requirements.",
+    "field_2": "Contract review is slow and error‑prone due to manual clause analysis and compliance checks. Legal teams manually scan lengthy agreements for risks and deviations, increasing turnaround time and reliance on external counsel.",
+    "field_3": "Delivers scalable legal support by automating document analysis and legal research, providing actionable recommendations, and using specialized AI agents trained on legal reasoning.",
+    "field_8": "Cuts legal costs, accelerates turnaround, and improves compliance accuracy.",
+    "field_6": "<div class=\"ExternalClass4F104C75E47E4C7BB28BA57E139DACB9\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Con Analyst [Analyzes contracts for clauses, risks, and compliance gaps]<br> Legal Research [Conducts legal research to support contract validity and risk assessment.]<br>Legal Strategist [Develops legal strategies and recommendations based on analysis and research.]<br>Nego Advisor [Provides negotiation insights and tactics to secure favorable terms.]&#160; Ethical/Compliance Agent [Identify potential biases, misinformation, legal risks, or ethical violations.]</span><br></div></div>",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Contract_Legal_Analyzer%26Advisor%20.mp4?CT=1772605590929&OR=OWA-NT-Mail&CID=7fe80644-a4c3-58e4-4f6a-6f34ddc1d905",
+    "ClickThroughDemo": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Horizontal_Starter%20Pack%20(1).pptx?d=wb596702927e2420bbcc2b7ac135b42b1&csf=1&web=1&e=XZYpS2",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Horizontal%20Starter%20Pack.pptx?d=w97794c2ebcaf49a78658b644f5c624ef&csf=1&web=1&e=VTWF0e",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/blob/main/BFSI/README.md",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+        "DisplayName": "Sanjay Borgave, Mugdha",
+        "Email": "mugdha.sanjay-borgave@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=mugdha.sanjay-borgave@capgemini.com",
+        "Department": "Sogeti-Testing",
+        "JobTitle": "Senior Consultant"
+      },
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+        "DisplayName": "Kudupudi, Jaya Sri Padmini",
+        "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+        "Department": "SOG-IN-AAA-AAA_AAA_IN",
+        "JobTitle": "Analyst / Software Engineer"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|mugdha.sanjay-borgave@capgemini.com",
+      "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "3,2,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-dvz43jkmv3m",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Horizontals/Contract%20Legal%20Analyser%20%26%20Advisor/sample%20contract.txt?csf=1&web=1&e=YbTlqW",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Contract%20Legal%20Analyzer_setup.mp4?csf=1&web=1&e=U7zI5i",
+    "Modified": "2026-07-24T08:59:30Z",
+    "Created": "2025-11-28T06:42:08Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f30_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=30&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Contract Legal Analyzer & Advisor",
+    "{FilenameWithExtension}": "Contract Legal Analyzer & Advisor",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/30_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "22.0"
+  },
+  {
+    "@odata.etag": "\"19\"",
+    "ItemInternalId": "31",
+    "ID": 31,
+    "Title": "Smart Municipal Complaint Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Public Sector"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "It is an AI-driven system that automatically interprets citizen service reports, removes duplicates, classifies issues, and generates routed work orders in real time—streamlining the entire intake‑to‑resolution process for city operations.",
+    "field_2": "Manual interpretation of photo complaints leads to slow routing, duplicate work orders, repeated site visits, and SLA breaches.",
+    "field_3": "Auto‑classifies photo complaints, detects duplicates, sets priority/SLA, and routes tasks to the right team.",
+    "field_8": "Faster response to public issues, fewer duplicate and incorrect dispatches, improved SLA performance, and higher citizen satisfaction.",
+    "field_6": "<div class=\"ExternalClass6A5D95C10A2D4EAC9436F4C9A8DA6F87\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><div><table width=\"115\" style=\"border-collapse&#58;collapse;width&#58;86pt;font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><colgroup><col width=\"115\" style=\"width&#58;86pt;\" /></colgroup></table><span>Intake_&amp;_Normalization [Ingest &amp; normalize submission data.]<br></span><div>Image_Classifier [Classify issue photo &amp; extract attributes.]<br></div><div>Location_Validator [Validate &amp; normalize coordinates.]<br></div><div>Duplicate_Checker [Detect duplicates &amp; link tickets.]<br></div><div>Work_Order_Creator [Create validated CMMS/311 work order.]<br></div><div>Citizen_Communicator [Send updates via preferred channel.]<br></div><span>Ethical_and_Compliance_Agent [Review for fairness, privacy, compliance.]</span><table width=\"115\" style=\"border-collapse&#58;collapse;width&#58;86pt;\"><tbody><tr height=\"22\" style=\"height&#58;16.5pt;\"><td width=\"115\" height=\"22\" style=\"padding-top&#58;1px;padding-right&#58;1px;padding-left&#58;1px;color&#58;black;font-size&#58;11pt;font-family&#58;&quot;Aptos Narrow&quot;, sans-serif;vertical-align&#58;bottom;border&#58;none;vertical-align&#58;top;width&#58;86pt;height&#58;16.5pt;\"></td></tr></tbody></table></div><br></div></div>",
+    "field_7": "['40–70% faster triage‑to‑dispatch', '20–40% reduction in duplicate work orders']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart%20Municipal%20Complaint%20Agent_Public%20Sector.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/7yr056i",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Public%20Sector_Starter%20Pack%20%20%20(1).pptx?d=wf458e994c0ae44ebbeb6c79d86daf90b&csf=1&web=1&e=5QyYvC",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Public%20Sector/Complaint%20with%20photo",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-034ipp1dajw",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Public%20Sector/Complaint%20with%20photo/Complaint%20with%20Photo.txt?csf=1&web=1&e=DTVWI8",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Smart%20Municipal%20Compliant%20Agent_setup.mp4?csf=1&web=1&e=BNe1qs",
+    "Modified": "2026-07-24T09:09:04Z",
+    "Created": "2026-04-14T11:18:10Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f31_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=31&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Smart Municipal Complaint Agent",
+    "{FilenameWithExtension}": "Smart Municipal Complaint Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/31_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "19.0"
+  },
+  {
+    "@odata.etag": "\"16\"",
+    "ItemInternalId": "32",
+    "ID": 32,
+    "Title": "Citizen Data Access Compliance Solution",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Public Sector"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "It is an AI‑enabled system that manages end‑to‑end Data Subject Access Requests by automating intake, verification, data retrieval, redaction, and response delivery—ensuring public bodies stay fully compliant, consistent, and timely in meeting GDPR obligations.\n",
+    "field_2": "DSAR handling is highly manual and cross‑departmental, creating risks of missed requests, incomplete data retrieval, inconsistent processing, delayed responses, and accidental disclosure of third‑party data during redaction leading to compliance exposure and loss of public trust.",
+    "field_3": "Automates DSAR intake tracking, workflow orchestration, evidence collection, redaction support, compliance checks, and audit-ready packaging with human approvals at key stages.",
+    "field_8": "Faster DSAR completion,  improved consistency and reduced manual coordination.",
+    "field_6": "<div class=\"ExternalClassC85B1B2C80734E3D9B1A9BAE3A311CFD\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Intake_Validator [Log DSARs, check completeness, flag informal‑request risks.]<br></span><div>Identity_Verifier [Verify identity docs; start compliance countdown.]<br></div><div>Request_Dispatcher [Assign data‑search tasks; notify all departments.]<br></div><div>Data_Searcher [Retrieve required data across systems; avoid over‑collection.]<br></div><span>Ethical_and_Compliance_Agent [Review aggregation/redaction for legal &amp; ethical compliance.]</span><br></div></div>",
+    "field_7": "['30–50% faster DSAR turnaround time', '20–40% reduction in manual coordination/assignment effort']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/GDPR_Public%20Sector.mp4",
+    "ClickThroughDemo": "https://app.navattic.com/preview/project/cmnyajcf7000a04jv7wu059mf?g=cmnylninx000000illu4qhl5h&s=0",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Public%20Sector_Starter%20Pack%20%20%20(1).pptx?d=wf458e994c0ae44ebbeb6c79d86daf90b&csf=1&web=1&e=56xgpa",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Public%20Sector/GDPR",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-x6hlds35a8i",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:b:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Public%20Sector/GDPR/DSAR_Simple_Input_Document.pdf?csf=1&web=1&e=gscCYN",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/GDPR_setup.mp4?csf=1&web=1&e=UNhjMC",
+    "Modified": "2026-07-24T09:10:59Z",
+    "Created": "2026-04-14T11:52:10Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f32_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=32&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Citizen Data Access Compliance Solution",
+    "{FilenameWithExtension}": "Citizen Data Access Compliance Solution",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/32_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "16.0"
+  },
+  {
+    "@odata.etag": "\"18\"",
+    "ItemInternalId": "33",
+    "ID": 33,
+    "Title": "Intelligent Tender Review Assistant",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Public Sector"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "It is an AI‑enabled screening system that automatically checks tender submissions for administrative completeness, legal eligibility, and compliance with procurement rules. It ensures consistent, audit‑ready validation by detecting missing documents, improper signatures, and exclusion‑ground issues—while routing ambiguous cases for controlled human review. ",
+    "field_2": "Manual validation of tender submissions is slow, inconsistent, and legally risky, leading to missed defects, wrongful exclusions or inclusions, audit findings, and increased exposure to bid challenges \nespecially in multi‑jurisdiction procurement contexts.",
+    "field_3": "Applies deterministic rule packs to validate mandatory requirements, signatures, declarations, certificates, and integrity checks, producing clear eligibility outcomes with evidence‑linked explanations and controlled human review for ambiguous cases.",
+    "field_8": "Faster and legally consistent tender screening, reduced risk of wrongful exclusion, improved audit defensibility, lower administrative burden, and smoother handoff to detailed evaluation stages.",
+    "field_6": "<div class=\"ExternalClass021FE7B34663445D950EBB0E4A3EEF34\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>TenderDoc_Agent [Receive tender files &amp; metadata.]<br></span><div>Tender_Extractor [Extract &amp; normalize key fields; run file quality checks.]<br></div><div>Compliance_Validator [Validate dossier against mandatory rules; flag issues with evidence.]<br></div><div>Integrity_Checker [Run integrity screenings; produce structured status with evidence.]<br></div><div>Results_Compiler [Combine results; apply decision matrix; generate audit-ready outcome.]<br></div><span>Ethical_and_Compliance_Agent [Review outcomes for ethical/regulatory risks; flag and advise.]</span><br></div></div>",
+    "field_7": "['50–70% reduction in administrative validation effort', '40–60% reduction in rework due to missed or late‑detected compliance issues']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Tender%20Review_Public%20Sector.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/101c0rez",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Public%20Sector_Starter%20Pack%20%20%20(1).pptx?d=wf458e994c0ae44ebbeb6c79d86daf90b&csf=1&web=1&e=56xgpa",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Public%20Sector/Tender%20Review",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-tjop29df82",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:b:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Public%20Sector/Tender%20Review/Tender_Form_TND-1201.pdf?csf=1&web=1&e=TwEyey",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Tender%20Review_setup.mp4?csf=1&web=1&e=3Hl9y0",
+    "Modified": "2026-07-24T09:12:24Z",
+    "Created": "2026-04-14T11:55:47Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f33_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=33&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Intelligent Tender Review Assistant",
+    "{FilenameWithExtension}": "Intelligent Tender Review Assistant",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/33_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "18.0"
+  },
+  {
+    "@odata.etag": "\"35\"",
+    "ItemInternalId": "34",
+    "ID": 34,
+    "Title": "Action Logement Intake & Eligibility Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Public Sector"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "An AI‑driven intake and eligibility validation agent for social housing (HLM) applications that captures structured data, validates documents, applies national eligibility rules, detects duplicates, and ensures full auditability before dossiers enter allocation workflows.\n",
+    "field_2": "Social housing intake is slowed by incomplete or inconsistent applications, outdated or unreadable documents, duplicate dossiers, and manual eligibility checks. Eligibility officers spend significant time chasing missing proofs, correcting data, and re‑validating rules, causing delays downstream in prioritization and allocation while increasing operational workload and compliance risk.\n",
+    "field_3": "Automates data capture, document quality checks, eligibility validation, and duplicate detection at the point of intake, creating complete, compliant, and traceable dossiers ready for downstream processing.",
+    "field_8": "Faster dossier readiness, reduced rework for eligibility officers, improved data quality and compliance, and smoother downstream allocation processes.",
+    "field_6": "<div class=\"ExternalClassBE569C7A712B426E9F2FC9F56797CD0E\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Intake_Manager [Capture initial data &amp; required documents; validate presence/quality; log actions.]<br></span><div>Document_Checker [Verify document completeness/quality; detect issues; ensure GDPR‑safe redaction.]<br></div><div>Eligibility_Rules_Validator [Apply national rules; compute eligibility with explanations.]<br></div><div>Priority_Flag_Confirmer [Identify potential priority flags; cite evidence; escalate for review.]<br></div><div>Ethical_and_Compliance_Agent [Check fairness, privacy, and compliance risks.]<br></div><div>Communicator [Deliver clear status updates &amp; instructions.]<br></div><br></div></div>",
+    "field_7": "['approx 60–150% Year‑1 ROI', '6–12 months payback', 'approx 50–70% reduction in manual intake effort']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Action%20Logement_Public%20Sector.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/z3w0ls4?g=cmnyils01000000iliujppzft&s=4",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Public%20Sector_Starter%20Pack%20%20%20(1).pptx?d=wf458e994c0ae44ebbeb6c79d86daf90b&csf=1&web=1&e=56xgpa",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Public%20Sector/Action%20Logement",
+    "RatedBy": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+        "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+        "DisplayName": "Das, Natasha",
+        "Email": "natasha.das@capgemini.com",
+        "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+        "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+        "JobTitle": "Consultant"
+      }
+    ],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [
+      "i:0#.f|membership|natasha.das@capgemini.com"
+    ],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "Ratings": "5,",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-51yia5xxfu",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:b:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Public%20Sector/Action%20Logement/sample_application.pdf?csf=1&web=1&e=uvnp4w",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Action%20Logement_setup.mp4?csf=1&web=1&e=Tr0Whi",
+    "Modified": "2026-07-24T09:18:06Z",
+    "Created": "2026-04-14T11:59:50Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f34_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=34&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Action Logement Intake & Eligibility Agent",
+    "{FilenameWithExtension}": "Action Logement Intake & Eligibility Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/34_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "22.0"
+  },
+  {
+    "@odata.etag": "\"19\"",
+    "ItemInternalId": "35",
+    "ID": 35,
+    "Title": "Property Listing Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Real Estate"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "It is an AI‑driven system that automates how property details are captured, checked, and prepared for listing. It validates mandatory information, ensures data consistency, enriches records, and routes them into CRM/ERP systems creating accurate, compliant, and ready‑to‑publish property listings with minimal manual effort.",
+    "field_2": "Manual listing creation relies on spreadsheets, emails, and inconsistent rules, leading to incomplete or inaccurate property data, compliance gaps, delayed listings, rework across teams, and poor downstream usability for marketing, valuation, and reporting.",
+    "field_3": "Automates structured property data capture, validates mandatory fields and documents, enforces workflow guardrails, and creates marketing‑ready listings directly in CRM/ERP systems.",
+    "field_8": "Faster listing onboarding, higher data accuracy and consistency, reduced rework between agents and back office teams, improved compliance visibility, and quicker handoff to marketing and publication channels.",
+    "field_6": "<div class=\"ExternalClassB88E2876EBB8411B847687549295E0DF\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Property_Information_Capturer [Collects &amp; validates property data.]<br></span><div>Exception_Resolver [Flags &amp; routes data issues.]<br></div><div>CRM_ERP_Integrator [Syncs data to CRM/ERP.]<br></div><div>Ethical_and_Compliance_Agent [Checks ethics/compliance.]<br></div><span>Marketing_Coordinator [Prepares &amp; publishes marketing assets.]</span><br></div></div>",
+    "field_7": "['40–60% reduction in manual data entry and correction effort', '30–50% faster time from property intake to listing readiness']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Property%20Listing%20-%20Real%20Estate%20-%20%5BFinal%5D.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/jyr0mry",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Real%20Estate_Starter%20Pack%20(1).pptx?d=wb9cfef54b3fc4956a200913c4a8dae59&csf=1&web=1&e=raqxAs",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Real%20Estate/Property%20listing",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-gtz8cbfflrp",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:b:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Real%20Estate/Property%20listing/sample_property_input.pdf?csf=1&web=1&e=rdL68C",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Property%20Listing_setup.mp4?csf=1&web=1&e=P0fHNU",
+    "Modified": "2026-07-24T09:19:36Z",
+    "Created": "2026-04-14T12:07:43Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f35_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=35&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Property Listing Agent",
+    "{FilenameWithExtension}": "Property Listing Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/35_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "19.0"
+  },
+  {
+    "@odata.etag": "\"17\"",
+    "ItemInternalId": "36",
+    "ID": 36,
+    "Title": "Fashion Retrieval Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Retail"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "It is an AI‑powered system that interprets shopper inputs images, style prompts, or both, and instantly returns visually similar, style‑matched products. It eliminates keyword‑based guesswork by understanding patterns, colors, silhouettes, and intent, giving customers accurate, personalized results in seconds.\n",
+    "field_2": "Keyword/tag-based search fails to understand “style intent” (e.g., vintage, boho, minimalist), struggles with screenshot/influencer-led discovery, and returns visually similar but stylistically wrong items—driving poor relevance, higher bounce/zero-results, and missed conversion opportunities across millions of SKUs.\n",
+    "field_3": "Fuses image similarity + semantic style prompts to retrieve and rank catalog items that match both appearance and aesthetic intent, enabling “shop-the-look” and inspiration-driven discovery without relying on manual tagging.",
+    "field_8": "More relevant search results for intent-led shopping, higher engagement on visual search journeys, fewer failed searches/zero-result sessions, and improved conversion on high-intent discovery flows (occasion wear, trends, inspiration).",
+    "field_6": "<div class=\"ExternalClassA71E2F65781C48E69380EF54F1DCC101\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Requirements_And_UseCase_Designer [Convert concept into detailed product and technical requirements]<br></span><div>CLIP_Retrieval_Architect [Design scalable fashion‑specific retrieval architecture]<br></div><div>Python_Coder [Implement CLIP‑based retrieval and fusion pipeline]<br></div><div>Python_Executor [Run, test, and validate end‑to‑end implementation]<br></div><span>Ethical_and_Compliance_Agent [Assess fairness, bias, privacy, and responsible AI risks]</span><br></div></div>",
+    "field_7": "['10–25% uplift in search-to-product click-through rate (CTR)', '5–15% reduction in zero-results / failed-search sessions']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Fashion%20Retrieval%20Agent%20-%20Retail%20%5BFinal%5D.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/exr0dr5",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Retail_Starter%20Pack%20%20(1).pptx?d=w4016b00406bb44dda018594ba6091097&csf=1&web=1&e=uquaMb",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Retail/fashion%20retrieval",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-ck4qj9org3c",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Retail/fashion%20retrieval/requirements_fashion_agent.txt?csf=1&web=1&e=tK7yz8",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Fashion%20Retrieval_setup.mp4?csf=1&web=1&e=YthdHl",
+    "Modified": "2026-07-24T09:23:00Z",
+    "Created": "2026-04-14T12:23:30Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f36_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=36&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Fashion Retrieval Agent",
+    "{FilenameWithExtension}": "Fashion Retrieval Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/36_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "17.0"
+  },
+  {
+    "@odata.etag": "\"17\"",
+    "ItemInternalId": "37",
+    "ID": 37,
+    "Title": "In Store Return Authorization ",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Retail"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "An AI‑driven agent that validates and authorizes in‑store returns by enforcing policy rules, screening for fraud signals, computing refund entitlements, and orchestrating POS/ERP updates with full audit logging and controlled manager escalation.",
+    "field_2": "Manual return handling leads to inconsistent policy enforcement, return fraud, refund errors, operational delays during peak hours, and weak audit trails—resulting in financial leakage, staff frustration, and compliance risk.",
+    "field_3": "Automates policy eligibility checks, fraud screening, refund calculation, authorization decisions, and POS/ERP updates, while keeping staff and managers in the loop for physical inspection and exceptions.",
+    "field_8": "Faster and more consistent returns processing, reduced fraud and financial leakage, lower staff workload, improved customer experience, and stronger audit and loss‑prevention controls.",
+    "field_6": "<div class=\"ExternalClassC7D3929B195D4AEB957AF90D9FDBE920\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Flow_Initiator [Validate &amp; normalize input; produce precheck &amp; keys.]<br></span><div>Eligibility_Evaluator [Apply policy/EU rules; detect fraud; output eligibility.]<br></div><div>Decision_Processor [Compute refund &amp; tender; set disposition; generate authorization.]<br></div><div>Exception_Manager [Queue exceptions with SLA &amp; audit.]<br></div><span>Ethical_and_Compliance_Agent [Check policy/ethical risks; output structured verdict.]</span><br></div></div>",
+    "field_7": "['30–50% reduction in staff time per return transaction', '15–35% reduction in return‑related fraud losses']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Return%20Authorisation%20and%20Processing.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/p6r01dt",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Retail_Starter%20Pack%20%20(1).pptx?d=w4016b00406bb44dda018594ba6091097&csf=1&web=1&e=uquaMb",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Retail/Order%20Returns%20Management",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-swn2g89to2",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:b:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Retail/Order%20Returns%20Management/Initiator_Text_Input.pdf?csf=1&web=1&e=QXlhyb",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/In%20Store%20Return%20Authorization_setup.mp4?csf=1&web=1&e=eYx5qQ",
+    "Modified": "2026-07-24T09:26:27Z",
+    "Created": "2026-04-14T12:26:27Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f37_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=37&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "In Store Return Authorization ",
+    "{FilenameWithExtension}": "In Store Return Authorization ",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/37_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "17.0"
+  },
+  {
+    "@odata.etag": "\"18\"",
+    "ItemInternalId": "38",
+    "ID": 38,
+    "Title": "Import Export Compliance Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Retail"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": " A policy‑driven agent that governs end‑to‑end customs and cross‑border compliance by validating shipment dossiers, applying EU and member‑state rule packs, orchestrating submissions, tracking authority interactions, and synchronizing outcomes with ERP/EMR and logistics systems.",
+    "field_2": "Fragmented customs workflows lead to missing or inconsistent documents, late regulatory changes going unnoticed, repeated clearance issues, manual coordination with brokers, and avoidable border delays creating financial risk, delivery slippage, and audit exposure.",
+    "field_3": "Continuously validates shipment data and documents against jurisdictional rules, coordinates submissions and revalidations, manages exceptions, and synchronizes customs outcomes with logistics and finance systems.",
+    "field_8": "Faster and more predictable customs clearance, fewer last‑minute holds, reduced compliance risk, improved visibility across shipments, and lower operational effort for trade and logistics teams.",
+    "field_6": "<div class=\"ExternalClass9583225077D043B6B4EE1EEBD9711DA0\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Document_Integrator [Collect &amp; normalize shipment documents; verify completeness.]<br></span><div>Regulatory_Checker [Validate documents against customs rules; log issues.]<br></div><div>Compliance_Notifier [Submit to customs; track approvals &amp; border events; alert stakeholders.]<br></div><div>Audit_Synchronizer [Write all compliance events back to ERP/EMR.]<br></div><span>Ethical_and_Compliance_Agent [Review for ethical, privacy, and compliance risks.]</span><br></div></div>",
+    "field_7": "['20–40% reduction in issues with customs clearance']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Export%20Import%20Compliance%20-%20Retail%20%5BFinal%5D.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/wxr0scr",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Retail_Starter%20Pack%20%20(1).pptx?d=w4016b00406bb44dda018594ba6091097&csf=1&web=1&e=uquaMb",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Retail/Logistics",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-3wleoxhhafu",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:b:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Retail/Export%20Import%20Compliance/commercial_invoice.pdf?csf=1&web=1&e=hPcUZt",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Import%20Export%20Compliance_setup.mp4?csf=1&web=1&e=kgLW9v",
+    "Modified": "2026-08-04T14:15:42Z",
+    "Created": "2026-04-14T12:30:32Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f38_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=38&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Import Export Compliance Agent",
+    "{FilenameWithExtension}": "Import Export Compliance Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/38_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "18.0"
+  },
+  {
+    "@odata.etag": "\"16\"",
+    "ItemInternalId": "39",
+    "ID": 39,
+    "Title": "Prior Authorization in Healthcare Insurance",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Healthcare"
+    },
+    "BusinessLine1#Id": 1,
+    "field_4": "It is an autonomous solution that streamlines clinical review by digitizing provider requests, validating eligibility, and summarizing medical documentation. It continuously monitors care plans, detects issues in real time, and orchestrates autonomous agents to reduce manual effort and improve care outcomes.",
+    "field_2": "Manual prior authorization is slow and fragmented, requiring staff to cross‑check policies, diagnoses, and limits across systems leading to treatment delays, high administrative burden, frequent denials, and poor communication with patients and providers.",
+    "field_3": "Automates eligibility checks, diagnosis validation, coverage‑limit retrieval, and decision generation using a RAG‑enabled knowledge base, with clear explanations and audit logs.",
+    "field_8": "Faster authorization decisions, reduced administrative workload for providers and payers, fewer unnecessary denials, clearer communication to patients, and improved adherence to coverage rules.",
+    "field_6": "<div class=\"ExternalClass9E769AF93EB346CEB67957A6B74C449E\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Request_Validator [Validate input fields for presence &amp; format.]<br></span><div>RAG_Extractor [Fetch user, diagnosis, and coverage data; return structured JSON.]<br></div><div>Approval_Decisioner [Check eligibility; compare requested vs. max coverage; decide outcome.]<br></div><div>Decision_Logger [Record decision details for traceability.]<br></div><span>Report_Generation [Create detailed request report for the insurer.]</span><br></div></div>",
+    "field_7": "['40–70% reduction in prior‑authorization turnaround time']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Prior%20Authorization_Healthcare.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/tvr0sxw",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Healthcare_Starter%20Pack%20(1).pptx?d=w70e4fd7234ed4eb1ab69a51e8026e7a4&csf=1&web=1&e=osNgqV",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Healthcare/Prior%20Authorization",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-ixh8ckklouh",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:x:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Healthcare/Prior%20Authorization/insurance_kb_sample.xlsx?d=w796204f6b071420f846424e2da0915d4&csf=1&web=1&e=of7bhn",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Prior%20Authorization_setup.mp4?csf=1&web=1&e=219GND",
+    "Modified": "2026-07-24T08:50:10Z",
+    "Created": "2026-04-14T12:33:43Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f39_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=39&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Prior Authorization in Healthcare Insurance",
+    "{FilenameWithExtension}": "Prior Authorization in Healthcare Insurance",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/39_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "16.0"
+  },
+  {
+    "@odata.etag": "\"10\"",
+    "ItemInternalId": "40",
+    "ID": 40,
+    "Title": "Tender Comparison Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Public Sector"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "A deterministic, rules-driven workflow that ingests government requirement PDFs and bidder submissions, extracts and normalizes content into comparable structures, applies version-controlled compliance rules, produces reproducible scoring, and generates an audit-ready evaluation report with evidence references and full trace logs.",
+    "field_2": "Manual tender evaluation is slow and error-prone: evaluators compare requirements vs bidder PDFs by hand, leading to bottlenecks, inconsistent interpretation, version mismatches, incomplete checks, and weak audit defensibility—risking non-compliance with transparency and equal-treatment expectations.",
+    "field_3": "Parses and normalizes all tender documents, runs deterministic rule checks and scoring uniformly across bidders, and outputs an evidence-backed compliance matrix + final report with complete auditability.",
+    "field_8": "Faster evaluation cycles, consistent and repeatable scoring across bidders, reduced administrative overhead, stronger audit readiness with evidence traceability, and lower risk of disputes due to clear rule-hit explanations.",
+    "field_6": "<div class=\"ExternalClass85B2420E74314EBBA51E2D18BFEC6D75\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>listInput_Upload_Agent [Validate &amp; standardize PDFs]<br></span><div>Workflow_Architect [Design automated workflow]<br></div><div>Document_Parsing_Specialist [Extract structured content]<br></div><div>Compliance_Rules_Designer [Evaluate requirement compliance]<br></div><span>Ethical_and_Compliance_Agent [Audit fairness &amp; ethics]</span><br></div></div>",
+    "field_7": "['30–60% reduction in evaluator effort/time spent', '25–50% faster evaluation-to-report cycle time']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Tender%20Comparision_Public%20Sector.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/syr0szw",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Public%20Sector_Starter%20Pack%20%20%20(1).pptx?d=wf458e994c0ae44ebbeb6c79d86daf90b&csf=1&web=1&e=56xgpa",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Public%20Sector/Tender%20Comparision",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-1m2u8y612ps",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:b:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Public%20Sector/Tender%20Comparison/government_requirements.pdf?csf=1&web=1&e=3mymrx",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Tender%20Comparision_setup.mp4?csf=1&web=1&e=KlavUz",
+    "Modified": "2026-07-24T09:14:57Z",
+    "Created": "2026-04-22T05:25:21Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f40_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=40&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Tender Comparison Agent",
+    "{FilenameWithExtension}": "Tender Comparison Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/40_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "10.0"
+  },
+  {
+    "@odata.etag": "\"12\"",
+    "ItemInternalId": "41",
+    "ID": 41,
+    "Title": "Invoice Processing Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Retail"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "It is an AI‑powered solution that streamlines invoice validation by automating data checks, simplifying workflows, and reducing manual effort. It helps organizations improve accuracy, enhance compliance, and accelerate processing through secure, scalable automation.",
+    "field_2": "Invoice processing is manual and fragmented, requiring teams to validate invoice data, match it with POs and contracts, and handle exceptions leading to delays, errors, compliance risks, and high processing costs.",
+    "field_3": "Automates invoice ingestion, data extraction, validation, PO/contract matching, and exception handling using AI‑driven workflows with secure integrations and full audit logging.",
+    "field_8": "Accelerated invoice processing, reduced manual effort, fewer errors and duplicate payments, improved compliance, and better vendor experience through timely payments.",
+    "field_6": "<div class=\"ExternalClassD90E5689A33C46B692766E2FBB1B1227\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Invoice Uploader Agent [Ingest &amp; register invoice]<br></span><div>Invoice Workflow Designer [Design invoice workflow]<br></div><div>Rule Engine Architect [Define validation rules]<br></div><div>Invoice Automation Solution Architect [Architect end‑to‑end system]<br></div><span>Ethical and Compliance Agent [Review ethics &amp; compliance]</span><br></div></div>",
+    "field_7": "['40–60% reduction in manual AP effort']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Invoice%20Processing%20-%20Retail%20%5BFinal%5D.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/hbs02dv",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Retail_Starter%20Pack%20%20(1).pptx?d=w4016b00406bb44dda018594ba6091097&csf=1&web=1&e=uquaMb",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Retail/Invoice%20Validation",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-ep0we1acmas&jobid=7",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:w:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Retail/Invoice%20Validation/Invoice_Validation_Rules_Document.docx?d=wc66ed6da8a56413796e60badbcf4c31d&csf=1&web=1&e=ZgIZ3U",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Invoice%20Processing_setup.mp4?csf=1&web=1&e=gveiNS",
+    "Modified": "2026-08-04T16:41:48Z",
+    "Created": "2026-04-22T05:29:31Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f41_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=41&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Invoice Processing Agent",
+    "{FilenameWithExtension}": "Invoice Processing Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/41_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "12.0"
+  },
+  {
+    "@odata.etag": "\"11\"",
+    "ItemInternalId": "42",
+    "ID": 42,
+    "Title": "PII Redaction Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Healthcare"
+    },
+    "BusinessLine1#Id": 1,
+    "field_4": "An AI-powered system that automatically detects and protects sensitive personal data across documents and workflows, using specialized agents for PII classification, redaction, masking, and policy enforcement ensuring privacy compliance, reducing risk, and maintaining data integrity at scale.",
+    "field_2": "Manual and semi‑automated PII redaction is slow, inconsistent, and error‑prone, creating high risk of accidental data exposure, audit findings, and regulatory non‑compliance as healthcare data reuse scales.\n",
+    "field_3": "Applies version‑controlled, deterministic redaction rules with optional human review, producing sanitized outputs and complete audit trails suitable for GDPR and health‑data compliance.",
+    "field_8": "Faster preparation of compliant datasets, reduced privacy breach risk, consistent redaction outcomes, lower manual review burden, and stronger confidence for DPO and auditor approval.",
+    "field_6": "<div class=\"ExternalClass3F4A0186181146B1B24DADB62E919D09\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>File_Ingestion_and_Preprocessing Agent [Ingest &amp; normalize records]<br></span><div>Healthcare_Process_Architect Agent [Design healthcare integration]<br></div><div>Compliance_and_Privacy_Strategist Agent [Define PII &amp; rules]<br></div><div>Redaction_Rules_Engineer Agent [Build PII masking rules]<br></div><span>Ethical_and_Compliance_Agent [Review privacy &amp; ethics]</span><br></div></div>",
+    "field_7": "['40–70% reduction in manual redaction effort','50–80% reduction in residual PII exposure risk']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/PII%20Redaction_Healthcare.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/wpt0ez8",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Healthcare_Starter%20Pack%20(1).pptx?d=w70e4fd7234ed4eb1ab69a51e8026e7a4&csf=1&web=1&e=osNgqV",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Healthcare/PII%20Redaction",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-vzjrjlehn2p",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:b:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Healthcare/PII%20Redaction/sample_patient_record.pdf?csf=1&web=1&e=iIRk7p",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/PII%20Redaction_setup.mp4?csf=1&web=1&e=OKzUq4",
+    "Modified": "2026-07-24T08:51:45Z",
+    "Created": "2026-04-22T05:33:54Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f42_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=42&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "PII Redaction Agent",
+    "{FilenameWithExtension}": "PII Redaction Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/42_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "11.0"
+  },
+  {
+    "@odata.etag": "\"9\"",
+    "ItemInternalId": "43",
+    "ID": 43,
+    "Title": "Construction Underwriting Agent",
+    "BusinessLine1": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": -1,
+      "Value": "Real Estate"
+    },
+    "BusinessLine1#Id": -1,
+    "field_4": "An agentic underwriting workflow that validates submission documents, structures risk data, analyzes construction and environmental hazards, applies underwriting rules, and produces a clear underwriting decision with conditional premium adjustments.",
+    "field_2": "Commercial property underwriting is manual and fragmented, requiring underwriters to review large document sets, assess multiple risk factors, and ensure regulatory compliance leading to slow turnaround, inconsistent decisions, and higher operational effort.",
+    "field_3": "Automates document validation, hazard analysis, risk scoring, and policy‑premium calculations using multi‑agent orchestration, delivering structured underwriting summaries with clear decision rationale and auditability.",
+    "field_8": "Faster and more consistent underwriting decisions, reduced manual effort for underwriters, improved regulatory compliance, and clearer visibility into risk drivers and premium adjustments.",
+    "field_6": "<div class=\"ExternalClass804E56E7057A47B0A79D1F69B012DCE4\"><div style=\"font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(50, 49, 48);background-color&#58;transparent;\"><span>Rule_Gatherer [Extract underwriting rules]<br></span><div>Hazard_data_formatter [Structure hazard data]<br></div><div>Risk_Analyst [Assess risk &amp; gaps]<br></div><span>Policy_Premium_Calculator [Calculate premium &amp; score]</span><br></div></div>",
+    "field_7": "['35–60% reduction in underwriting turnaround time', '30–45% reduction in manual underwriting effort']",
+    "Availability": [
+      {
+        "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+        "Id": 0,
+        "Value": "Amplifier for Agentic Experience"
+      }
+    ],
+    "Availability@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference)",
+    "Availability#Id": [
+      0
+    ],
+    "Availability#Id@odata.type": "#Collection(Int64)",
+    "DemoVideo": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Construction%20Underwriting%20-%20Real%20Estate%20%5BFinal%5D%20-%20Copy.mp4",
+    "ClickThroughDemo": "https://sogeti.navattic.com/tp1q0mgl",
+    "PitchDeck": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Real%20Estate_Starter%20Pack%20(1).pptx?d=wb9cfef54b3fc4956a200913c4a8dae59&csf=1&web=1&e=raqxAs",
+    "RepositoryLink": "https://github.com/CG-Sogeti/Industrialized-Usecases/tree/main/Real%20Estate/Construction%20Underwriting",
+    "RatedBy": [],
+    "RatedBy@odata.type": "#Collection(Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser)",
+    "RatedBy#Claims": [],
+    "RatedBy#Claims@odata.type": "#Collection(String)",
+    "AgenticLink": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-xsu4o87ma7&jobid=9",
+    "SampleInputFile": "https://capgemini.sharepoint.com/:t:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Real%20Estate/Construction%20Underwriting/Underwrite_Property_Data.txt?csf=1&web=1&e=GOwbjx",
+    "Status": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+      "Id": 1,
+      "Value": "Published"
+    },
+    "Status#Id": 1,
+    "WorkflowSetupInstructions": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Construction%20Underwriting_setup.mp4?csf=1&web=1&e=PIcauo",
+    "Modified": "2026-07-24T09:21:16Z",
+    "Created": "2026-04-22T06:06:04Z",
+    "Author": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+      "DisplayName": "Das, Natasha",
+      "Email": "natasha.das@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=natasha.das@capgemini.com",
+      "Department": "SOG-IN-ACT-OTHER_OTHER_IN",
+      "JobTitle": "Consultant"
+    },
+    "Author#Claims": "i:0#.f|membership|natasha.das@capgemini.com",
+    "Editor": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+      "Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+      "DisplayName": "Kudupudi, Jaya Sri Padmini",
+      "Email": "jaya-sri-padmini.kudupudi@capgemini.com",
+      "Picture": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/UserPhoto.aspx?Size=L&AccountName=jaya-sri-padmini.kudupudi@capgemini.com",
+      "Department": "SOG-IN-AAA-AAA_AAA_IN",
+      "JobTitle": "Analyst / Software Engineer"
+    },
+    "Editor#Claims": "i:0#.f|membership|jaya-sri-padmini.kudupudi@capgemini.com",
+    "{Identifier}": "Lists%252fIndustrialized%2bUse%2bcases%252f43_.000",
+    "{IsFolder}": false,
+    "{Thumbnail}": {
+      "Large": null,
+      "Medium": null,
+      "Small": null
+    },
+    "{Link}": "https://capgemini.sharepoint.com/sites/KnowNow/AIMarketplace/_layouts/15/listform.aspx?PageType=4&ListId=ba3ec8d7%2D488f%2D4f9e%2D93f7%2Dd565647881df&ID=43&ContentTypeID=0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{Name}": "Construction Underwriting Agent",
+    "{FilenameWithExtension}": "Construction Underwriting Agent",
+    "{Path}": "Lists/Industrialized Use cases/",
+    "{FullPath}": "Lists/Industrialized Use cases/43_.000",
+    "{ContentType}": {
+      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+      "Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+      "Name": "Item"
+    },
+    "{ContentType}#Id": "0x0100A820A445076BAA469B9967681D9DC3D8",
+    "{HasAttachments}": false,
+    "{VersionNumber}": "9.0"
+  }
+]

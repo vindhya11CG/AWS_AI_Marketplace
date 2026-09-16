@@ -11,7 +11,6 @@ import DemoEnvironment from './DemoEnvironment'
 import CaseStudies from './CaseStudies'
 import CreateStarterPackCTA from './CreateStarterPackCTA'
 import StarterPackDetailModal from './StarterPackDetailModal'
-import SharePointImporterModal from './SharePointImporterModal'
 import GooeySearchBar from '../ui/animated-search-bar'
 import {
   CASE_STUDIES,
@@ -67,7 +66,7 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
   const [activeList, setActiveList] = useState('Starter Pack')
   const [catalogIndustries, setCatalogIndustries] = useState(INDUSTRIES)
   const [catalogDomains, setCatalogDomains] = useState(AGENT_DOMAINS)
-  const [isImporterOpen, setIsImporterOpen] = useState(false)
+  
 
   // Accordion Expand/Collapse Map
   const [industryOpenMap, setIndustryOpenMap] = useState(() => ({ bfsi: true }))
@@ -196,23 +195,7 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
     }
   }
 
-  const handleImportItems = async (rawData, normalizedItems, targetType = 'starterPacks') => {
-    // 1. Sync to AWS backend pipeline (S3 raw archive & curated catalog update)
-    try {
-      await marketplaceService.syncSharePointData(rawData)
-    } catch (e) {
-      console.warn('Backend sync failed, continuing local update:', e)
-    }
-
-    // 2. Update UI state and cache
-    mergeCustomItems(normalizedItems, targetType)
-    try {
-      const storageKey = targetType === 'starterPacks' ? 'kn_custom_starter_packs' : 'kn_custom_agents'
-      localStorage.setItem(storageKey, JSON.stringify(normalizedItems))
-    } catch (e) {
-      console.warn('Could not cache items to localStorage', e)
-    }
-  }
+  
 
 
   // Expand / Collapse All
@@ -327,13 +310,7 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
                     {isAllExpanded ? 'Collapse All' : 'Expand All'}
                   </button>
 
-                  <button
-                    type="button"
-                    className="btn-toolbar-blue"
-                    onClick={() => setIsImporterOpen(true)}
-                  >
-                    🔄 Sync SharePoint List
-                  </button>
+                  
 
                   <button
                     type="button"
@@ -470,11 +447,7 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
         onClose={handleCloseDetails}
       />
 
-      <SharePointImporterModal
-        isOpen={isImporterOpen}
-        onClose={() => setIsImporterOpen(false)}
-        onImportItems={handleImportItems}
-      />
+      
 
     </>
   )

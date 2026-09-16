@@ -1,0 +1,12 @@
+﻿[
+  {
+    "Agent Name": "Smart Loan Underwriter",
+    "Industry": "Banking and Financial Services (BFSI)",
+    "Problem Solved": "Manual loan checks take up to 4 days.",
+    "Solution Summary": "AI engine that automates KYC, risk assessment, and document validation.",
+    "Expected ROI Metrics": "60% time savings, 35% cost reduction",
+    "Availability": "AWS Bedrock, Azure AI Foundry",
+    "Rating (0-5)": "5",
+    "Status": "Published"
+  }
+]

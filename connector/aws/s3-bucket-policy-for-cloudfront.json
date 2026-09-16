@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowCloudFrontServicePrincipalReadOnly",
+      "Effect": "Allow",
+      "Principal": { "Service": "cloudfront.amazonaws.com" },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::ai-marketplace-624807913752-us-east-1-an/*",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceArn": "arn:aws:cloudfront::624807913752:distribution/E2GLSEMGFW1O80"
+        },
+        "StringEqualsIfExists": {
+          "AWS:SourceAccount": "624807913752"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "ai-marketplace-oac",
+  "Description": "OAC for ai marketplace S3 origin",
+  "SigningProtocol": "sigv4",
+  "SigningBehavior": "always",
+  "OriginAccessControlOriginType": "s3"
+}

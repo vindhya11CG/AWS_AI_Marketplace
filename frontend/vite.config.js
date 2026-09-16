@@ -6,4 +6,8 @@ export default defineConfig({
   server: {
     port: 5173
   }
+  ,
+  // Ensure built assets reference the S3 website prefix so CloudFront requests
+  // /website/assets/... which map to objects under the 'website/' key.
+  base: '/website/'
 })
