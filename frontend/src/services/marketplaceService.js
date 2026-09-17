@@ -37,10 +37,10 @@ export const marketplaceService = {
         if (res.ok) {
           const data = await res.json()
           if (data && (data.industries || data.domains)) {
-            return {
-              industries: Array.isArray(data.industries) && data.industries.length > 0 ? data.industries : INDUSTRIES,
-              domains: Array.isArray(data.domains) && data.domains.length > 0 ? data.domains : AGENT_DOMAINS,
-            }
+            const industries = Array.isArray(data.industries) && data.industries.length > 0 ? data.industries : INDUSTRIES
+            const domains = Array.isArray(data.domains) && data.domains.length > 0 ? data.domains : AGENT_DOMAINS
+            console.info('[marketplaceService] fetchCatalog: using API_ENDPOINT, industries:', industries.length, 'domains:', domains.length)
+            return { industries, domains }
           }
         }
       } catch (err) {
@@ -56,13 +56,14 @@ export const marketplaceService = {
           const data = await res.json()
           if (Array.isArray(data)) {
             // S3 curated starter-packs.json
+            console.info('[marketplaceService] fetchCatalog: using CATALOG_URL (array), industries:', data.length)
             return { industries: data, domains: AGENT_DOMAINS }
           }
           if (data && typeof data === 'object') {
-            return {
-              industries: Array.isArray(data.industries) ? data.industries : INDUSTRIES,
-              domains: Array.isArray(data.domains) ? data.domains : AGENT_DOMAINS,
-            }
+            const industries = Array.isArray(data.industries) ? data.industries : INDUSTRIES
+            const domains = Array.isArray(data.domains) ? data.domains : AGENT_DOMAINS
+            console.info('[marketplaceService] fetchCatalog: using CATALOG_URL (object), industries:', industries.length, 'domains:', domains.length)
+            return { industries, domains }
           }
         }
       } catch (err) {
@@ -71,10 +72,9 @@ export const marketplaceService = {
     }
 
     // 3. Fallback to bundled dataset (explicit local JSON to ensure full starter packs)
-    return {
-      industries: Array.isArray(localStarterPacks) && localStarterPacks.length > 0 ? localStarterPacks : INDUSTRIES,
-      domains: AGENT_DOMAINS,
-    }
+    const industries = Array.isArray(localStarterPacks) && localStarterPacks.length > 0 ? localStarterPacks : INDUSTRIES
+    console.info('[marketplaceService] fetchCatalog: falling back to bundled localStarterPacks, industries:', industries.length)
+    return { industries, domains: AGENT_DOMAINS }
   },
 
   /**
