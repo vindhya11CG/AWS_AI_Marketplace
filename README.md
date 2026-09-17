@@ -1,5 +1,13 @@
 # spfx-list-demo
 
+## Current Repo Note
+
+This repository is in migration from the legacy SPFx implementation to an AWS-backed frontend and connector flow.
+
+- Current gap log: [MIGRATION_GAPS.md](c:\Users\vsreesam\Downloads\Knownow-marketplace-dev\MIGRATION_GAPS.md)
+- AWS operational commands: [connector/aws/README-cloudfront-commands.md](c:\Users\vsreesam\Downloads\Knownow-marketplace-dev\connector\aws\README-cloudfront-commands.md)
+- New frontend runtime: [frontend/README.md](c:\Users\vsreesam\Downloads\Knownow-marketplace-dev\frontend\README.md)
+
 ## Summary
 
 Short summary on functionality and used technologies.
