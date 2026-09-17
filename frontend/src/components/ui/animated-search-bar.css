@@ -1,7 +1,9 @@
 .gooey-search-wrapper {
   position: relative;
-  width: min(100%, 320px);
+  width: auto;
   min-width: 112px;
+  flex-shrink: 0;
+  display: inline-flex;
   z-index: 5;
 }
 

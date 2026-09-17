@@ -71,7 +71,7 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
               className={`modal-tab-btn ${activeTab === 'technical' ? 'tab-active' : ''}`}
               onClick={() => setActiveTab('technical')}
             >
-              Technical & Integration
+              Technical Integration
             </button>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
 
               {pack.agentPipeline && (
                 <div className="modal-section">
-                  <h4 className="modal-section-title">Agent Pipeline Architecture</h4>
+                  <h4 className="modal-section-title">Agentic Workflow</h4>
                   <div className="pipeline-steps-list">
                     {pack.agentPipeline.map((agent, i) => (
                       <div key={i} className="pipeline-step-item">

@@ -269,48 +269,48 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
             {/* Segmented Toggle + Search + Action Controls Bar */}
             <div className="marketplace-toolbar-card">
               <div className="toolbar-top-row">
-                {/* Segmented Toggle (Starter Pack / Agents) */}
-                <div className="segmented-toggle-group" role="tablist">
-                  <button
-                    type="button"
-                    className={`btn-segment ${activeList === 'Starter Pack' ? 'segment-active' : ''}`}
-                    onClick={() => {
-                      setActiveList('Starter Pack')
-                      setSearchText('')
-                    }}
-                  >
-                    Starter Pack
-                  </button>
-                  <button
-                    type="button"
-                    className={`btn-segment ${activeList === 'Agents' ? 'segment-active' : ''}`}
-                    onClick={() => {
-                      setActiveList('Agents')
-                      setSearchText('')
-                    }}
-                  >
-                    Agents
-                  </button>
-                </div>
+                <div className="toolbar-left-controls">
+                  {/* Segmented Toggle (Starter Pack / Agents) */}
+                  <div className="segmented-toggle-group" role="tablist">
+                    <button
+                      type="button"
+                      className={`btn-segment ${activeList === 'Starter Pack' ? 'segment-active' : ''}`}
+                      onClick={() => {
+                        setActiveList('Starter Pack')
+                        setSearchText('')
+                      }}
+                    >
+                      Starter Pack
+                    </button>
+                    <button
+                      type="button"
+                      className={`btn-segment ${activeList === 'Agents' ? 'segment-active' : ''}`}
+                      onClick={() => {
+                        setActiveList('Agents')
+                        setSearchText('')
+                      }}
+                    >
+                      Agents
+                    </button>
+                  </div>
 
-                {/* Integrated Animated Search */}
-                <GooeySearchBar
-                  value={searchText}
-                  onChange={setSearchText}
-                  suggestions={searchSuggestions}
-                />
+                  {/* Integrated Animated Search */}
+                  <GooeySearchBar
+                    value={searchText}
+                    onChange={setSearchText}
+                    suggestions={searchSuggestions}
+                  />
+                </div>
 
                 {/* Action Buttons */}
                 <div className="toolbar-action-buttons">
                   <button
                     type="button"
-                    className="btn-toolbar-blue"
+                    className="btn-toolbar-blue btn-toolbar-expand-toggle"
                     onClick={handleToggleExpandAll}
                   >
                     {isAllExpanded ? 'Collapse All' : 'Expand All'}
                   </button>
-
-                  
 
                   <button
                     type="button"
@@ -319,7 +319,6 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
                   >
                     Create your own Starter Pack
                   </button>
-
 
                   <button
                     type="button"
