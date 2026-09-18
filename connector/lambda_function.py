@@ -76,7 +76,9 @@ MS_GRAPH_CLIENT_ID = os.environ.get("MS_GRAPH_CLIENT_ID")
 MS_GRAPH_CLIENT_SECRET = os.environ.get("MS_GRAPH_CLIENT_SECRET")
 MS_GRAPH_SITE_ID = os.environ.get("MS_GRAPH_SITE_ID")
 
-DEFAULT_VIDEO = "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Loan_Origination.mp4?CT=1772605356150&OR=OWA-NT-Mail&CID=f3d572c0-5ba1-3cf7-c644-983dfc8e12f7"
+# Removed hardcoded SharePoint demo video path to avoid embedding tenant-protected URLs
+# Default is intentionally empty so that downstream code must explicitly set public video URLs
+DEFAULT_VIDEO = ""
 DEFAULT_DEMO = "https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0"
 
 
