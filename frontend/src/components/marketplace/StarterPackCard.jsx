@@ -44,6 +44,7 @@ export default function StarterPackCards({ starterPacks, onViewDetails }) {
               type="button"
               className="btn-pack-launch-clean"
               disabled={!pack.demoAvailable}
+              onClick={() => onViewDetails && onViewDetails(pack, { openVideo: true })}
             >
               Launch
             </button>

@@ -1329,6 +1329,16 @@ div[class*='awsui_container_'] {
   border-radius: 16px !important;
   color: var(--aws-text-body) !important;
 }
+/* Video modal player styles */
+.modal-video-container{position:relative;margin:16px 0 24px;border-radius:10px;overflow:hidden;background:#000}
+.modal-video{width:100%;height:360px;object-fit:cover;background:#000}
+.video-overlay-bottom{position:absolute;right:12px;bottom:12px;left:12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.video-play-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);color:#fff;padding:6px 12px;border-radius:8px;cursor:pointer}
+.video-menu{position:relative}
+.video-menu-btn{background:rgba(0,0,0,0.45);color:#fff;border:none;padding:6px 10px;border-radius:6px;cursor:pointer}
+.video-menu-popover{position:absolute;right:0;bottom:36px;background:#fff;color:#111;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.12);display:flex;flex-direction:column}
+.video-menu-popover button{background:transparent;border:none;padding:8px 12px;cursor:pointer;text-align:left}
+.video-menu-popover button:hover{background:#f3f4f6}
 
 [class*='awsui_header-text_'],
 [class*='awsui_header_'] h1,

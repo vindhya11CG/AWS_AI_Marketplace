@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { marketplaceService } from '../../services/marketplaceService'
 
-export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
+export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay = false }) {
   const [activeTab, setActiveTab] = useState('overview')
   const [userRating, setUserRating] = useState(0)
   const [comments, setComments] = useState([])
   const [newComment, setNewComment] = useState('')
+  const videoRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [videoError, setVideoError] = useState(false)
 
   if (!isOpen || !pack) return null
 
@@ -35,10 +39,52 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
     setNewComment('')
   }
 
+  useEffect(() => {
+    if (!isOpen) {
+      // pause video when modal closed
+      if (videoRef.current) {
+        try { videoRef.current.pause() } catch (e) {}
+        setIsPlaying(false)
+      }
+      return
+    }
+    if (isOpen && autoplay && videoRef.current) {
+      const v = videoRef.current
+      v.play().then(() => setIsPlaying(true)).catch(() => {})
+    }
+  }, [isOpen, autoplay])
 
-  return (
-    <div className="starter-modal-overlay" onClick={onClose}>
-      <div className="starter-modal-container" onClick={(e) => e.stopPropagation()}>
+  const handleTogglePlay = () => {
+    if (!videoRef.current) return
+    if (isPlaying) {
+      videoRef.current.pause(); setIsPlaying(false)
+    } else {
+      videoRef.current.play().then(() => setIsPlaying(true)).catch(() => {})
+    }
+  }
+
+  const handleFullscreen = async () => {
+    const v = videoRef.current
+    if (!v) return
+    if (v.requestFullscreen) await v.requestFullscreen()
+    else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen()
+  }
+
+  const handleDownload = () => {
+    if (!pack || !pack.videoUrl) return
+    const a = document.createElement('a')
+    a.href = pack.videoUrl
+    a.download = ''
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+  }
+
+
+  try {
+    return (
+      <div className="starter-modal-overlay" onClick={onClose}>
+        <div className="starter-modal-container" onClick={(e) => e.stopPropagation()}>
         {/* Modal Header */}
         <div className="starter-modal-header">
           <div className="modal-header-top">
@@ -80,6 +126,41 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
         <div className="starter-modal-body">
           {activeTab === 'overview' && (
             <div className="modal-tab-content">
+              {/* Video player area (if available) */}
+              {pack.videoUrl && (
+                <div className="modal-video-container">
+                  {!videoError ? (
+                    <video
+                      ref={videoRef}
+                      className="modal-video"
+                      src={pack.videoUrl}
+                      controls
+                      playsInline
+                      onError={() => setVideoError(true)}
+                    />
+                  ) : (
+                    <div className="modal-video-error" style={{padding:24,color:'#fff'}}>
+                      <p>Unable to play this demo video in-browser (likely access or CORS restriction).</p>
+                      <div style={{marginTop:12}}>
+                        <a href={pack.videoUrl} target="_blank" rel="noopener noreferrer" className="btn-pack-launch-clean">Open video in new tab</a>
+                      </div>
+                    </div>
+                  )}
+                  <div className="video-overlay-bottom">
+                    <button className="video-play-btn" onClick={handleTogglePlay}>{isPlaying ? 'Pause' : 'Play'}</button>
+                    <div className="video-menu">
+                      <button className="video-menu-btn" onClick={() => setMenuOpen((s) => !s)}>⋯</button>
+                      {menuOpen && (
+                        <div className="video-menu-popover">
+                          <button type="button" onClick={handleFullscreen}>Fullscreen</button>
+                          <button type="button" onClick={handleDownload}>Download</button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               <div className="modal-section">
                 <h4 className="modal-section-title">Description</h4>
                 <p className="modal-text">{description}</p>
@@ -245,19 +326,45 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose }) {
         </div>
 
         {/* Modal Footer */}
-        <div className="starter-modal-footer">
-          <button type="button" className="btn-modal-close" onClick={onClose}>
-            Close
-          </button>
-          <button
-            type="button"
-            className="btn-modal-launch"
-            disabled={!pack.demoAvailable}
-          >
-            Launch in Workspace ↗
-          </button>
+          <div className="starter-modal-footer">
+            <button type="button" className="btn-modal-close" onClick={onClose}>
+              Close
+            </button>
+            <button
+              type="button"
+              className="btn-modal-launch"
+              disabled={!pack.demoAvailable}
+              onClick={() => {
+                // play the embedded demo video inside modal
+                try {
+                  if (videoRef.current) {
+                    videoRef.current.play().then(() => setIsPlaying(true)).catch(() => {})
+                  }
+                } catch (e) {
+                  console.warn('Could not autoplay video in modal', e)
+                }
+              }}
+            >
+              Launch in Workspace ↗
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  } catch (err) {
+    console.error('StarterPackDetailModal render error', err)
+    return (
+      <div className="starter-modal-overlay" onClick={onClose}>
+        <div className="starter-modal-container" onClick={(e) => e.stopPropagation()}>
+          <div style={{ padding: 24 }}>
+            <h3>Unable to load starter pack details</h3>
+            <p>See console for error details.</p>
+            <div style={{ marginTop: 12 }}>
+              <button type="button" onClick={onClose}>Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }

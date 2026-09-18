@@ -80,15 +80,18 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
   // Modal State
   const [selectedItem, setSelectedItem] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [playVideoOnOpen, setPlayVideoOnOpen] = useState(false)
 
-  const handleOpenDetails = (item) => {
+  const handleOpenDetails = (item, opts = {}) => {
     setSelectedItem(item)
     setIsModalOpen(true)
+    setPlayVideoOnOpen(!!(opts && opts.openVideo))
   }
 
   const handleCloseDetails = () => {
     setIsModalOpen(false)
     setSelectedItem(null)
+    setPlayVideoOnOpen(false)
   }
 
   const toggleIndustry = (id) => {
@@ -445,6 +448,7 @@ export default function MarketplaceHome({ activeHref = '#/marketplace', onNaviga
         isOpen={isModalOpen}
         pack={selectedItem}
         onClose={handleCloseDetails}
+        autoplay={playVideoOnOpen}
       />
 
       
