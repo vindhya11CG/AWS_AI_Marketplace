@@ -1,15 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { marketplaceService } from '../../services/marketplaceService'
+import SimpleVideoPlayer from './SimpleVideoPlayer'
 
 export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay = false }) {
   const [activeTab, setActiveTab] = useState('overview')
   const [userRating, setUserRating] = useState(0)
   const [comments, setComments] = useState([])
   const [newComment, setNewComment] = useState('')
-  const videoRef = useRef(null)
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [videoError, setVideoError] = useState(false)
+
+  useEffect(() => {
+    if (!isOpen || !pack) {
+      return
+    }
+    setActiveTab('overview')
+  }, [isOpen, pack])
 
   if (!isOpen || !pack) return null
 
@@ -20,6 +24,7 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
   const benefits = pack.benefits || ''
   const ratings = pack.ratings || { score: 4.8, count: 12 }
   const availability = pack.availability || ['Amplifier for Agentic Experience', 'AWS Bedrock Agentic Core']
+  const videoSrc = pack.videoUrl || (pack.demoAvailable ? 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' : null)
 
   const handleRatingClick = (star) => {
     setUserRating(star)
@@ -39,46 +44,6 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
     setNewComment('')
   }
 
-  useEffect(() => {
-    if (!isOpen) {
-      // pause video when modal closed
-      if (videoRef.current) {
-        try { videoRef.current.pause() } catch (e) {}
-        setIsPlaying(false)
-      }
-      return
-    }
-    if (isOpen && autoplay && videoRef.current) {
-      const v = videoRef.current
-      v.play().then(() => setIsPlaying(true)).catch(() => {})
-    }
-  }, [isOpen, autoplay])
-
-  const handleTogglePlay = () => {
-    if (!videoRef.current) return
-    if (isPlaying) {
-      videoRef.current.pause(); setIsPlaying(false)
-    } else {
-      videoRef.current.play().then(() => setIsPlaying(true)).catch(() => {})
-    }
-  }
-
-  const handleFullscreen = async () => {
-    const v = videoRef.current
-    if (!v) return
-    if (v.requestFullscreen) await v.requestFullscreen()
-    else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen()
-  }
-
-  const handleDownload = () => {
-    if (!pack || !pack.videoUrl) return
-    const a = document.createElement('a')
-    a.href = pack.videoUrl
-    a.download = ''
-    document.body.appendChild(a)
-    a.click()
-    a.remove()
-  }
 
 
   try {
@@ -126,38 +91,15 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
         <div className="starter-modal-body">
           {activeTab === 'overview' && (
             <div className="modal-tab-content">
-              {/* Video player area (if available) */}
-              {pack.videoUrl && (
-                <div className="modal-video-container">
-                  {!videoError ? (
-                    <video
-                      ref={videoRef}
-                      className="modal-video"
-                      src={pack.videoUrl}
-                      controls
-                      playsInline
-                      onError={() => setVideoError(true)}
-                    />
-                  ) : (
-                    <div className="modal-video-error" style={{padding:24,color:'#fff'}}>
-                      <p>Unable to play this demo video in-browser (likely access or CORS restriction).</p>
-                      <div style={{marginTop:12}}>
-                        <a href={pack.videoUrl} target="_blank" rel="noopener noreferrer" className="btn-pack-launch-clean">Open video in new tab</a>
-                      </div>
-                    </div>
-                  )}
-                  <div className="video-overlay-bottom">
-                    <button className="video-play-btn" onClick={handleTogglePlay}>{isPlaying ? 'Pause' : 'Play'}</button>
-                    <div className="video-menu">
-                      <button className="video-menu-btn" onClick={() => setMenuOpen((s) => !s)}>⋯</button>
-                      {menuOpen && (
-                        <div className="video-menu-popover">
-                          <button type="button" onClick={handleFullscreen}>Fullscreen</button>
-                          <button type="button" onClick={handleDownload}>Download</button>
-                        </div>
-                      )}
-                    </div>
-                  </div>
+              {/* Simple Video Player component window on the same page - no redirection */}
+              {videoSrc && (
+                <div className="modal-video-section-wrapper">
+                  <SimpleVideoPlayer
+                    videoUrl={videoSrc}
+                    title={title}
+                    duration={pack.duration || '1:45'}
+                    autoplay={autoplay}
+                  />
                 </div>
               )}
 
@@ -214,6 +156,27 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
                   ))}
                 </div>
               </div>
+
+              {Array.isArray(pack.quickLinks) && pack.quickLinks.length > 0 && (
+                <div className="modal-section">
+                  <h4 className="modal-section-title">Artifacts & Quick Links</h4>
+                  <div className="modal-quick-links-grid">
+                    {pack.quickLinks.map((link) => (
+                      <a
+                        key={link.id || link.label}
+                        href={link.url || '#'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="quick-link-card"
+                      >
+                        <span>{link.icon === 'video' ? '🎬' : link.icon === 'deck' ? '📊' : link.icon === 'workflow' ? '⚙️' : '📄'}</span>
+                        <span>{link.label}</span>
+                        <span style={{ marginLeft: 'auto' }}>↗</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
@@ -333,16 +296,8 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
             <button
               type="button"
               className="btn-modal-launch"
-              disabled={!pack.demoAvailable}
               onClick={() => {
-                // play the embedded demo video inside modal
-                try {
-                  if (videoRef.current) {
-                    videoRef.current.play().then(() => setIsPlaying(true)).catch(() => {})
-                  }
-                } catch (e) {
-                  console.warn('Could not autoplay video in modal', e)
-                }
+                // Future: Workflow link redirect to external platform
               }}
             >
               Launch in Workspace ↗

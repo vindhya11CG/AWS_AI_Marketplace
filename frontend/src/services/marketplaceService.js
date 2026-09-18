@@ -20,6 +20,46 @@ const rawApiEndpoint = import.meta.env.VITE_API_ENDPOINT || ''
 const API_ENDPOINT = rawApiEndpoint.replace(/\/+$/, '')
 const CATALOG_URL = rawCatalogUrl.trim()
 
+function enrichStarterPacksWithVideoUrls(industries) {
+  if (!Array.isArray(industries)) return industries
+
+  // Build lookup map from localStarterPacks
+  const videoMap = {}
+  if (Array.isArray(localStarterPacks)) {
+    localStarterPacks.forEach((ind) => {
+      if (Array.isArray(ind.starterPacks)) {
+        ind.starterPacks.forEach((p) => {
+          if (p.videoUrl && !p.videoUrl.includes('BigBuckBunny')) {
+            const key = (p.title || '').toLowerCase().replace(/[^a-z0-9]/g, '')
+            videoMap[key] = p.videoUrl
+          }
+        })
+      }
+    })
+  }
+
+  const defaultSharePointVideo =
+    'https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Loan_Origination.mp4?CT=1772605356150&OR=OWA-NT-Mail&CID=f3d572c0-5ba1-3cf7-c644-983dfc8e12f7'
+
+  return industries.map((ind) => ({
+    ...ind,
+    starterPacks: Array.isArray(ind.starterPacks)
+      ? ind.starterPacks.map((pack) => {
+          const key = (pack.title || '').toLowerCase().replace(/[^a-z0-9]/g, '')
+          const validVideo =
+            pack.videoUrl && !pack.videoUrl.includes('BigBuckBunny')
+              ? pack.videoUrl
+              : videoMap[key] || defaultSharePointVideo
+
+          return {
+            ...pack,
+            videoUrl: validVideo,
+          }
+        })
+      : [],
+  }))
+}
+
 export const marketplaceService = {
   /**
    * Fetches the live curated catalog from S3 / CloudFront or API Gateway.
@@ -37,7 +77,8 @@ export const marketplaceService = {
         if (res.ok) {
           const data = await res.json()
           if (data && (data.industries || data.domains)) {
-            const industries = Array.isArray(data.industries) && data.industries.length > 0 ? data.industries : INDUSTRIES
+            const rawIndustries = Array.isArray(data.industries) && data.industries.length > 0 ? data.industries : INDUSTRIES
+            const industries = enrichStarterPacksWithVideoUrls(rawIndustries)
             const domains = Array.isArray(data.domains) && data.domains.length > 0 ? data.domains : AGENT_DOMAINS
             console.info('[marketplaceService] fetchCatalog: using API_ENDPOINT, industries:', industries.length, 'domains:', domains.length)
             return { industries, domains }
@@ -56,11 +97,13 @@ export const marketplaceService = {
           const data = await res.json()
           if (Array.isArray(data)) {
             // S3 curated starter-packs.json
-            console.info('[marketplaceService] fetchCatalog: using CATALOG_URL (array), industries:', data.length)
-            return { industries: data, domains: AGENT_DOMAINS }
+            const industries = enrichStarterPacksWithVideoUrls(data)
+            console.info('[marketplaceService] fetchCatalog: using CATALOG_URL (array), industries:', industries.length)
+            return { industries, domains: AGENT_DOMAINS }
           }
           if (data && typeof data === 'object') {
-            const industries = Array.isArray(data.industries) ? data.industries : INDUSTRIES
+            const rawIndustries = Array.isArray(data.industries) ? data.industries : INDUSTRIES
+            const industries = enrichStarterPacksWithVideoUrls(rawIndustries)
             const domains = Array.isArray(data.domains) ? data.domains : AGENT_DOMAINS
             console.info('[marketplaceService] fetchCatalog: using CATALOG_URL (object), industries:', industries.length, 'domains:', domains.length)
             return { industries, domains }
@@ -72,7 +115,8 @@ export const marketplaceService = {
     }
 
     // 3. Fallback to bundled dataset (explicit local JSON to ensure full starter packs)
-    const industries = Array.isArray(localStarterPacks) && localStarterPacks.length > 0 ? localStarterPacks : INDUSTRIES
+    const rawIndustries = Array.isArray(localStarterPacks) && localStarterPacks.length > 0 ? localStarterPacks : INDUSTRIES
+    const industries = enrichStarterPacksWithVideoUrls(rawIndustries)
     console.info('[marketplaceService] fetchCatalog: falling back to bundled localStarterPacks, industries:', industries.length)
     return { industries, domains: AGENT_DOMAINS }
   },

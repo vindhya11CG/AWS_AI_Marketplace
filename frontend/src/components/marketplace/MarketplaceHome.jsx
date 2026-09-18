@@ -20,6 +20,7 @@ import {
   buildDomainFilterOptions,
 } from '../../data/marketplaceData'
 import { marketplaceService } from '../../services/marketplaceService'
+import localStarterPacks from '../../../starter-packs.json'
 
 
 function filterIndustries(industries, industryId, searchText) {
@@ -64,12 +65,18 @@ function filterDomains(domains, domainId, searchText) {
 export default function MarketplaceHome({ activeHref = '#/marketplace', onNavigate }) {
   // Toggle between 'Starter Pack' and 'Agents'
   const [activeList, setActiveList] = useState('Starter Pack')
-  const [catalogIndustries, setCatalogIndustries] = useState(INDUSTRIES)
+  const [catalogIndustries, setCatalogIndustries] = useState(() =>
+    Array.isArray(localStarterPacks) && localStarterPacks.length > 0 ? localStarterPacks : INDUSTRIES
+  )
   const [catalogDomains, setCatalogDomains] = useState(AGENT_DOMAINS)
   
 
   // Accordion Expand/Collapse Map
-  const [industryOpenMap, setIndustryOpenMap] = useState(() => ({ bfsi: true }))
+  const [industryOpenMap, setIndustryOpenMap] = useState(() => ({
+    healthcare: true,
+    'banking-and-financial-services-bfsi': true,
+    bfsi: true,
+  }))
   const [domainOpenMap, setDomainOpenMap] = useState(() => ({ consultancy: true }))
 
   // Search and Filter State

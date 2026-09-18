@@ -107,7 +107,13 @@ export function normalizeStarterPack(rawItem) {
     benefits: rawItem.Benefits || rawItem.benefits || 'Accelerates idea-to-production with automated compliance.',
     demoAvailable: true,
     agenticLinkUrl: rawItem['Agentic link'] || rawItem.Agentic_x0020_Link || rawItem.agenticLinkUrl || 'https://agenticexperience.azurewebsites.net/login',
-    videoUrl: rawItem.videoUrl || rawItem.Demo_x0020_Video || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+    videoUrl:
+      (typeof rawItem.DemoVideo === 'object' ? rawItem.DemoVideo?.Url : rawItem.DemoVideo) ||
+      (typeof rawItem['Demo Video'] === 'object' ? rawItem['Demo Video']?.Url : rawItem['Demo Video']) ||
+      (typeof rawItem.Demo_x0020_Video === 'object' ? rawItem.Demo_x0020_Video?.Url : rawItem.Demo_x0020_Video) ||
+      (typeof rawItem.videoUrl === 'object' ? rawItem.videoUrl?.Url : rawItem.videoUrl) ||
+      (typeof rawItem.Video === 'object' ? rawItem.Video?.Url : rawItem.Video) ||
+      'https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Loan_Origination.mp4?CT=1772605356150&OR=OWA-NT-Mail&CID=f3d572c0-5ba1-3cf7-c644-983dfc8e12f7',
     duration: rawItem.duration || '1:45',
     problemSolved,
     solutionDescription,

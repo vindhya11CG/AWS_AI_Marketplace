@@ -1,0 +1,78 @@
+{
+  "description": "Consolidated AWS Security, IAM, S3, and CORS Policies for AI Marketplace",
+  "trustPolicy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "lambda.amazonaws.com"
+        },
+        "Action": "sts:AssumeRole"
+      }
+    ]
+  },
+  "iamS3Policy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "ReadWriteRawZone",
+        "Effect": "Allow",
+        "Action": [
+          "s3:GetObject",
+          "s3:PutObject",
+          "s3:PutObjectTagging"
+        ],
+        "Resource": "arn:aws:s3:::ai-marketplace-624807913752-us-east-1-an/raw/*"
+      },
+      {
+        "Sid": "ReadWriteCuratedZone",
+        "Effect": "Allow",
+        "Action": [
+          "s3:GetObject",
+          "s3:PutObject",
+          "s3:PutObjectTagging"
+        ],
+        "Resource": "arn:aws:s3:::ai-marketplace-624807913752-us-east-1-an/curated/*"
+      },
+      {
+        "Sid": "ListBucket",
+        "Effect": "Allow",
+        "Action": [
+          "s3:ListBucket"
+        ],
+        "Resource": "arn:aws:s3:::ai-marketplace-624807913752-us-east-1-an"
+      }
+    ]
+  },
+  "s3BucketPolicy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "PublicReadForCuratedZone",
+        "Effect": "Allow",
+        "Principal": "*",
+        "Action": "s3:GetObject",
+        "Resource": "arn:aws:s3:::ai-marketplace-624807913752-us-east-1-an/curated/*"
+      }
+    ]
+  },
+  "s3CorsPolicy": {
+    "CORSRules": [
+      {
+        "AllowedOrigins": ["*"],
+        "AllowedMethods": ["GET", "HEAD"],
+        "AllowedHeaders": ["*"],
+        "ExposeHeaders": ["ETag", "Content-Type", "Content-Length"],
+        "MaxAgeSeconds": 3600
+      }
+    ]
+  },
+  "lambdaFunctionUrlCors": {
+    "AllowOrigins": ["*"],
+    "AllowMethods": ["*"],
+    "AllowHeaders": ["*"],
+    "ExposeHeaders": ["*"],
+    "MaxAge": 3600
+  }
+}
