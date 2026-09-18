@@ -76,9 +76,9 @@ MS_GRAPH_CLIENT_ID = os.environ.get("MS_GRAPH_CLIENT_ID")
 MS_GRAPH_CLIENT_SECRET = os.environ.get("MS_GRAPH_CLIENT_SECRET")
 MS_GRAPH_SITE_ID = os.environ.get("MS_GRAPH_SITE_ID")
 
-# Removed hardcoded SharePoint demo video path to avoid embedding tenant-protected URLs
-# Default is intentionally empty so that downstream code must explicitly set public video URLs
-DEFAULT_VIDEO = ""
+# Default demo video (public sample) used as a safe fallback for the first starter pack
+# Keep this as a benign public URL so the SPA always has a playable demo when no videoUrl is provided.
+DEFAULT_VIDEO = "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
 DEFAULT_DEMO = "https://sogeti.navattic.com/flowofagenticsystem?g=cmgg9vmwh000004lccfo0cg8o&s=0"
 
 
