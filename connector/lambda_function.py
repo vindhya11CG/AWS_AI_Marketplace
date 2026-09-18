@@ -506,8 +506,14 @@ def build_full_catalogs(raw_items):
     if isinstance(raw_items, list):
         for item in raw_items:
             fields = item.get("fields", item) if isinstance(item, dict) else item
-            status = str(_first(fields, "Status", "status", default="Published")).lower()
-            if status and status not in ("published", "active", ""):
+            status = str(_first(fields, "Status", "status", default="Published")).strip().lower()
+
+            # Only exclude clearly non-live states. Some SharePoint exports use
+            # values like "Ready", "Approved", or "Published " instead of the
+            # canonical "Published"/"Active" strings. If a value is missing, treat
+            # it as valid to avoid silently dropping records from the catalog.
+            excluded_statuses = {"draft", "archived", "deleted", "retired", "rejected", "inactive", "disabled", "cancelled", "canceled"}
+            if status and status in excluded_statuses:
                 continue
 
             if is_agent_item(fields):

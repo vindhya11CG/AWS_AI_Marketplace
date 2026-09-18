@@ -439,9 +439,9 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
 
   try {
     return (
-      <div className="starter-modal-backdrop" onClick={onClose}>
+      <div className="starter-modal-overlay" onClick={onClose}>
         <div
-          className="starter-modal-dialog"
+          className="starter-modal-container"
           onClick={(e) => e.stopPropagation()}
           role="dialog"
           aria-modal="true"
@@ -449,10 +449,10 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
           {/* Modal Header */}
           <div className="starter-modal-header">
             <div className="modal-header-top-row">
-              <span className="modal-category-pill">{category}</span>
+              <span className="modal-category-badge">{category}</span>
               <button
                 type="button"
-                className="modal-close-icon-btn"
+                className="modal-close-btn"
                 onClick={onClose}
                 aria-label="Close modal"
               >
@@ -461,7 +461,7 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
             </div>
 
             <div className="modal-title-row">
-              <h2 className="modal-title-clean">{title}</h2>
+              <h2 className="modal-pack-title">{title}</h2>
               {pack.agenticLinkUrl && (
                 <a
                   href={pack.agenticLinkUrl}
@@ -700,7 +700,7 @@ export default function StarterPackDetailModal({ isOpen, pack, onClose, autoplay
           <div className="starter-modal-footer">
             <button
               type="button"
-              className="btn-modal-cancel"
+              className="btn-modal-close"
               onClick={onClose}
             >
               Close
