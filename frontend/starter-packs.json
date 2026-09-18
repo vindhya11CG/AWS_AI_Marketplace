@@ -10,7 +10,7 @@
         "description": "An AI-driven patient intake and triage assistant that captures symptoms, prioritizes cases, and routes patients efficiently reducing wait times and freeing clinicians to focus on care.",
         "industry": "Healthcare",
         "category": "Healthcare",
-        "benefits": "Streamlines clinical documentation, improving accuracy",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-fx433b49uaf",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Clinical_Documentation_Assistants.mp4?CT=1772605617789&OR=OWA-NT-Mail&CID=27662c5b-baf6-22b5-faa9-cfaed3006a7b",
@@ -48,7 +48,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 1
         },
@@ -87,7 +87,7 @@
         "description": "It is an autonomous solution that streamlines clinical review by digitizing provider requests, validating eligibility, and summarizing medical documentation. It continuously monitors care plans, detects issues in real time, and orchestrates autonomous agents to reduce manual effort and improve care outcomes.",
         "industry": "Healthcare",
         "category": "Healthcare",
-        "benefits": "Faster authorization decisions, reduced administrative workload for providers and payers, fewer unnecessary denials, clearer communication to patients, and improved adherence to coverage rules.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-ixh8ckklouh",
         "videoUrl": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Prior%20Authorization_Healthcare.mp4",
@@ -112,14 +112,14 @@
           "Amplifier for Agentic Experience"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "40–70% reduction in prior‑authorization turnaround time"
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -158,7 +158,7 @@
         "description": "An AI-powered system that automatically detects and protects sensitive personal data across documents and workflows, using specialized agents for PII classification, redaction, masking, and policy enforcement ensuring privacy compliance, reducing risk, and maintaining data integrity at scale.",
         "industry": "Healthcare",
         "category": "Healthcare",
-        "benefits": "Faster preparation of compliant datasets, reduced privacy breach risk, consistent redaction outcomes, lower manual review burden, and stronger confidence for DPO and auditor approval.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-vzjrjlehn2p",
         "videoUrl": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/PII%20Redaction_Healthcare.mp4",
@@ -190,7 +190,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -235,7 +235,7 @@
         "description": "A fast, AI‑driven loan automation engine that verifies identities, checks eligibility, and validates documents instantly calculating optimal loan terms while boosting accuracy, compliance, and processing speed.",
         "industry": "Banking and Financial Services (BFSI)",
         "category": "Banking",
-        "benefits": "Speeds approvals, reduces errors, and boosts customer experience.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-dbs51di16w7",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Loan_Origination.mp4?CT=1772605356150&OR=OWA-NT-Mail&CID=f3d572c0-5ba1-3cf7-c644-983dfc8e12f7",
@@ -261,9 +261,9 @@
           }
         ],
         "availability": [
-          "Amplifier for Agentic Experience",
           "Azure AI Foundry",
-          "Amplifier for Foundations"
+          "Amplifier for Foundations",
+          "Amplifier for Agentic Experience"
         ],
         "roiMetrics": {
           "timeSavings": "60%",
@@ -312,7 +312,7 @@
         "description": "An AI-powered fraud defense system that monitors transactions in real time, detects anomalies, and automates AML/KYC workflows to reduce financial loss and compliance exposure.",
         "industry": "Banking and Financial Services (BFSI)",
         "category": "Banking",
-        "benefits": "Improves detection accuracy, reduces investigation time, and cuts financial losses",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-1x11pukxakm",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Intelligent_Fraud_Detector.mp4?CT=1772605197801&OR=OWA-NT-Mail&CID=e9e81897-e1fa-9852-aff8-1da84f888410",
@@ -358,7 +358,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 2.0,
+          "score": 2,
           "maxScore": 5,
           "count": 1
         },
@@ -397,7 +397,7 @@
         "description": "An automated claims validation engine that checks eligibility, enforces regulatory compliance, and accelerates payouts while reducing errors and manual effort.",
         "industry": "Banking and Financial Services (BFSI)",
         "category": "Banking",
-        "benefits": "Minimizes risk exposure, reduces compliance workload, and enhances data security.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/login",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Compliance_Security_Healthcare.mp4?CT=1768569513027&OR=OWA-NT-Mail&CID=49c0ab41-6dd5-709f-c874-285fe0aa5c13",
@@ -424,14 +424,14 @@
           "Amplifier for Foundations"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "Enforces healthcare regulations autonomously, detects threats and automates corrective actions, protects patient data, and ensures audit readiness."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -470,7 +470,7 @@
         "description": "A smart underwriting engine that analyzes risk factors and disclosures to recommend coverage, premiums, and decisions with transparency, accuracy, and regulatory compliance.",
         "industry": "Banking and Financial Services (BFSI)",
         "category": "Banking",
-        "benefits": "Accelerates approvals, reduces workload, and enhances compliance.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-hhh5zdkuxdb",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Intelligent_Underwriter_Advisor.mp4?CT=1772605495065&OR=OWA-NT-Mail&CID=76335369-d707-a258-c607-255d4ec6f8af",
@@ -501,14 +501,14 @@
           "Amplifier for Foundations"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "approx 15% time saved in underwriting"
         },
         "ratings": {
-          "score": 2.0,
+          "score": 2,
           "maxScore": 5,
           "count": 2
         },
@@ -553,7 +553,7 @@
         "description": "An AI-based equipment health monitoring system that predicts failures early, triggers smart alerts, and optimizes maintenance schedules to reduce downtime and extend asset life.",
         "industry": "Manufacturing",
         "category": "Manufacturing",
-        "benefits": "Enables proactive maintenance",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-xmlpa7ilyhf&jobid=7",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Predictive%20Maintenance-%20Avatar%20Demo%201.mp4?CT=1772605468345&OR=OWA-NT-Mail&CID=cf9b740d-0d5e-9de6-7257-a92e6bb5b7dc",
@@ -634,7 +634,7 @@
         "description": "An intelligent inspection engine that analyzes sensor and visual data in real time to detect defects early and enforce consistent, data‑driven quality control.",
         "industry": "Manufacturing",
         "category": "Manufacturing",
-        "benefits": "Enhances product quality and compliance",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-lhejk4z1ej",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Quality%20Inspection%20%5bDemo%5d.mp4?CT=1772605435251&OR=OWA-NT-Mail&CID=50a53177-3525-5600-68b2-6d10158fa680",
@@ -669,9 +669,9 @@
           "Amplifier for Foundations"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "approx +15% faster product quality reporting"
         },
@@ -715,7 +715,7 @@
         "description": "An AI solution that validates engineering documents for accuracy, consistency, and compliance across drawings, BOMs, and specifications",
         "industry": "Manufacturing",
         "category": "Manufacturing",
-        "benefits": "Improves drawing validation and compliance",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-ljr9m2gn6ep&jobid=2",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Design_Document_Quality_Check.mp4?CT=1772605554067&OR=OWA-NT-Mail&CID=9fef5ef8-9543-d561-5913-2b0dec0bc309",
@@ -750,9 +750,9 @@
           "Amplifier for Foundations"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "approx -25% errors in documents"
         },
@@ -796,7 +796,7 @@
         "description": "A multi‑agent production optimization system that monitors telemetry, enforces compliance, and continuously improves throughput and operational stability.",
         "industry": "Manufacturing",
         "category": "Manufacturing",
-        "benefits": "Reduces manual intervention, improves compliance, and boosts operational efficiency.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-55rkwybadd",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Self-Optimizing_Production_Line_Agents.mp4?CT=1772605384153&OR=OWA-NT-Mail&CID=82ae1c19-446e-fe69-c9c0-1d907fac959f",
@@ -831,14 +831,14 @@
           "Amplifier for Foundations"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "approx +20% Faster reporting"
         },
         "ratings": {
-          "score": 4.0,
+          "score": 4,
           "maxScore": 5,
           "count": 2
         },
@@ -883,7 +883,7 @@
         "description": "A smart sales assistant that manages context, updates documents, and refines profiles on demand keeping interactions focused, clean, and efficient.",
         "industry": "Horizontal",
         "category": "Horizontal",
-        "benefits": "Cuts manual effort, saves time, and boosts productivity.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/login",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Loan_Origination.mp4?CT=1772605356150&OR=OWA-NT-Mail&CID=f3d572c0-5ba1-3cf7-c644-983dfc8e12f7",
@@ -908,14 +908,14 @@
           "Amplifier for Agentic Experience"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -954,7 +954,7 @@
         "description": "An end‑to‑end procurement automation engine that handles sourcing, vendor matching, and coordination accelerating cycles and improving compliance.",
         "industry": "Horizontal",
         "category": "Horizontal",
-        "benefits": "Improves tender detection, boosts efficiency, and increases win rates and revenue.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-uveimejau6",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Autonomous_Procurement_Agent.mp4?CT=1772605658762&OR=OWA-NT-Mail&CID=d640d40f-c8cf-a92b-5fc8-2966ace5720b",
@@ -975,14 +975,14 @@
           "Amplifier for Agentic Experience"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 1
         },
@@ -1021,7 +1021,7 @@
         "description": "An AI talent engine that matches skills to roles, assesses readiness, supports interviews, and builds personalized growth paths.",
         "industry": "Horizontal",
         "category": "Horizontal",
-        "benefits": "Cuts bench duration, improves client readiness, and saves time for managers.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-cjhwwhti1r9",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Talent_Advisor.mp4?CT=1772605314515&OR=OWA-NT-Mail&CID=d765bc1b-504b-df1d-7bce-5ecf49f92e52",
@@ -1042,14 +1042,14 @@
           "Amplifier for Agentic Experience"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1088,7 +1088,7 @@
         "description": "An AI-powered contract review assistant that identifies risks, checks compliance, and recommends fallback clauses across legal and regulatory requirements.",
         "industry": "Horizontal",
         "category": "Horizontal",
-        "benefits": "Cuts legal costs, accelerates turnaround, and improves compliance accuracy.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-dvz43jkmv3m",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Contract_Legal_Analyzer%26Advisor%20.mp4?CT=1772605590929&OR=OWA-NT-Mail&CID=7fe80644-a4c3-58e4-4f6a-6f34ddc1d905",
@@ -1109,9 +1109,9 @@
           "Amplifier for Agentic Experience"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
@@ -1161,7 +1161,7 @@
         "description": "It is an AI-driven system that automatically interprets citizen service reports, removes duplicates, classifies issues, and generates routed work orders in real time—streamlining the entire intake‑to‑resolution process for city operations.",
         "industry": "Public Sector",
         "category": "Public",
-        "benefits": "Faster response to public issues, fewer duplicate and incorrect dispatches, improved SLA performance, and higher citizen satisfaction.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-034ipp1dajw",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart%20Municipal%20Complaint%20Agent_Public%20Sector.mp4",
@@ -1201,7 +1201,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1240,7 +1240,7 @@
         "description": "It is an AI‑enabled system that manages end‑to‑end Data Subject Access Requests by automating intake, verification, data retrieval, redaction, and response delivery—ensuring public bodies stay fully compliant, consistent, and timely in meeting GDPR obligations.",
         "industry": "Public Sector",
         "category": "Public",
-        "benefits": "Faster DSAR completion,  improved consistency and reduced manual coordination.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-x6hlds35a8i",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/GDPR_Public%20Sector.mp4",
@@ -1272,7 +1272,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1311,7 +1311,7 @@
         "description": "It is an AI‑enabled screening system that automatically checks tender submissions for administrative completeness, legal eligibility, and compliance with procurement rules. It ensures consistent, audit‑ready validation by detecting missing documents, improper signatures, and exclusion‑ground issues—while routing ambiguous cases for controlled human review.",
         "industry": "Public Sector",
         "category": "Public",
-        "benefits": "Faster and legally consistent tender screening, reduced risk of wrongful exclusion, improved audit defensibility, lower administrative burden, and smoother handoff to detailed evaluation stages.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-tjop29df82",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Tender%20Review_Public%20Sector.mp4",
@@ -1347,7 +1347,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1386,7 +1386,7 @@
         "description": "An AI‑driven intake and eligibility validation agent for social housing (HLM) applications that captures structured data, validates documents, applies national eligibility rules, detects duplicates, and ensures full auditability before dossiers enter allocation workflows.",
         "industry": "Public Sector",
         "category": "Public",
-        "benefits": "Faster dossier readiness, reduced rework for eligibility officers, improved data quality and compliance, and smoother downstream allocation processes.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-51yia5xxfu",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Action%20Logement_Public%20Sector.mp4",
@@ -1426,7 +1426,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 1
         },
@@ -1465,7 +1465,7 @@
         "description": "A deterministic, rules-driven workflow that ingests government requirement PDFs and bidder submissions, extracts and normalizes content into comparable structures, applies version-controlled compliance rules, produces reproducible scoring, and generates an audit-ready evaluation report with evidence references and full trace logs.",
         "industry": "Public Sector",
         "category": "Public",
-        "benefits": "Faster evaluation cycles, consistent and repeatable scoring across bidders, reduced administrative overhead, stronger audit readiness with evidence traceability, and lower risk of disputes due to clear rule-hit explanations.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-1m2u8y612ps",
         "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Tender%20Comparision_Public%20Sector.mp4",
@@ -1497,7 +1497,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1542,7 +1542,7 @@
         "description": "It is an AI‑driven system that automates how property details are captured, checked, and prepared for listing. It validates mandatory information, ensures data consistency, enriches records, and routes them into CRM/ERP systems creating accurate, compliant, and ready‑to‑publish property listings with minimal manual effort.",
         "industry": "Real Estate",
         "category": "Real",
-        "benefits": "Faster listing onboarding, higher data accuracy and consistency, reduced rework between agents and back office teams, improved compliance visibility, and quicker handoff to marketing and publication channels.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-gtz8cbfflrp",
         "videoUrl": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Property%20Listing%20-%20Real%20Estate%20-%20%5BFinal%5D.mp4",
@@ -1574,7 +1574,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1613,7 +1613,7 @@
         "description": "An agentic underwriting workflow that validates submission documents, structures risk data, analyzes construction and environmental hazards, applies underwriting rules, and produces a clear underwriting decision with conditional premium adjustments.",
         "industry": "Real Estate",
         "category": "Real",
-        "benefits": "Faster and more consistent underwriting decisions, reduced manual effort for underwriters, improved regulatory compliance, and clearer visibility into risk drivers and premium adjustments.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-xsu4o87ma7&jobid=9",
         "videoUrl": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Construction%20Underwriting%20-%20Real%20Estate%20%5BFinal%5D%20-%20Copy.mp4",
@@ -1641,7 +1641,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1686,7 +1686,7 @@
         "description": "It is an AI‑powered system that interprets shopper inputs images, style prompts, or both, and instantly returns visually similar, style‑matched products. It eliminates keyword‑based guesswork by understanding patterns, colors, silhouettes, and intent, giving customers accurate, personalized results in seconds.",
         "industry": "Retail",
         "category": "Retail",
-        "benefits": "More relevant search results for intent-led shopping, higher engagement on visual search journeys, fewer failed searches/zero-result sessions, and improved conversion on high-intent discovery flows (occasion wear, trends, inspiration).",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-ck4qj9org3c",
         "videoUrl": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Fashion%20Retrieval%20Agent%20-%20Retail%20%5BFinal%5D.mp4",
@@ -1718,7 +1718,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1733,7 +1733,7 @@
             "id": "deck",
             "label": "Pitch Deck",
             "icon": "deck",
-            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Retail_Starter%20Pack%20%20(1).pptx?d=w4016b00406bb44dda018594ba6091097&csf=1&web=1&e=uquaMb"
+            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7B501CF622-C349-4E1F-BEF4-A97EEBF61167%7D&file=Retail_Starter%20Pack%20.pptx&action=edit&mobileredirect=true"
           },
           {
             "id": "setup",
@@ -1757,7 +1757,7 @@
         "description": "An AI‑driven agent that validates and authorizes in‑store returns by enforcing policy rules, screening for fraud signals, computing refund entitlements, and orchestrating POS/ERP updates with full audit logging and controlled manager escalation.",
         "industry": "Retail",
         "category": "Retail",
-        "benefits": "Faster and more consistent returns processing, reduced fraud and financial leakage, lower staff workload, improved customer experience, and stronger audit and loss‑prevention controls.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-swn2g89to2",
         "videoUrl": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Return%20Authorisation%20and%20Processing.mp4",
@@ -1789,7 +1789,7 @@
           "summary": "Accelerates turnaround and cuts operational overhead."
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1804,7 +1804,7 @@
             "id": "deck",
             "label": "Pitch Deck",
             "icon": "deck",
-            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Retail_Starter%20Pack%20%20(1).pptx?d=w4016b00406bb44dda018594ba6091097&csf=1&web=1&e=uquaMb"
+            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7B501CF622-C349-4E1F-BEF4-A97EEBF61167%7D&file=Retail_Starter%20Pack%20.pptx&action=edit&mobileredirect=true"
           },
           {
             "id": "setup",
@@ -1828,7 +1828,7 @@
         "description": "A policy‑driven agent that governs end‑to‑end customs and cross‑border compliance by validating shipment dossiers, applying EU and member‑state rule packs, orchestrating submissions, tracking authority interactions, and synchronizing outcomes with ERP/EMR and logistics systems.",
         "industry": "Retail",
         "category": "Retail",
-        "benefits": "Faster and more predictable customs clearance, fewer last‑minute holds, reduced compliance risk, improved visibility across shipments, and lower operational effort for trade and logistics teams.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-3wleoxhhafu",
         "videoUrl": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Export%20Import%20Compliance%20-%20Retail%20%5BFinal%5D.mp4",
@@ -1853,14 +1853,14 @@
           "Amplifier for Agentic Experience"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "20–40% reduction in issues with customs clearance"
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1875,7 +1875,7 @@
             "id": "deck",
             "label": "Pitch Deck",
             "icon": "deck",
-            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Retail_Starter%20Pack%20%20(1).pptx?d=w4016b00406bb44dda018594ba6091097&csf=1&web=1&e=uquaMb"
+            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7B501CF622-C349-4E1F-BEF4-A97EEBF61167%7D&file=Retail_Starter%20Pack%20.pptx&action=edit&mobileredirect=true"
           },
           {
             "id": "setup",
@@ -1899,7 +1899,7 @@
         "description": "It is an AI‑powered solution that streamlines invoice validation by automating data checks, simplifying workflows, and reducing manual effort. It helps organizations improve accuracy, enhance compliance, and accelerate processing through secure, scalable automation.",
         "industry": "Retail",
         "category": "Retail",
-        "benefits": "Accelerated invoice processing, reduced manual effort, fewer errors and duplicate payments, improved compliance, and better vendor experience through timely payments.",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
         "demoAvailable": true,
         "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-ep0we1acmas&jobid=7",
         "videoUrl": "https://capgemini.sharepoint.com/:v:/r/sites/KnowNow/AI/Invoice%20Processing%20-%20Retail%20%5BFinal%5D.mp4",
@@ -1924,14 +1924,14 @@
           "Amplifier for Agentic Experience"
         ],
         "roiMetrics": {
-          "timeSavings": "~60%",
-          "timeLabel": "time-to-approval",
-          "costSavings": "~35%",
+          "timeSavings": "~50%",
+          "timeLabel": "efficiency gain",
+          "costSavings": "~30%",
           "costLabel": "cost reduction",
           "summary": "40–60% reduction in manual AP effort"
         },
         "ratings": {
-          "score": 5.0,
+          "score": 5,
           "maxScore": 5,
           "count": 10
         },
@@ -1946,7 +1946,7 @@
             "id": "deck",
             "label": "Pitch Deck",
             "icon": "deck",
-            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/AI/Retail_Starter%20Pack%20%20(1).pptx?d=w4016b00406bb44dda018594ba6091097&csf=1&web=1&e=uquaMb"
+            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7B501CF622-C349-4E1F-BEF4-A97EEBF61167%7D&file=Retail_Starter%20Pack%20.pptx&action=edit&mobileredirect=true"
           },
           {
             "id": "setup",
@@ -1959,6 +1959,140 @@
             "label": "Sample Input File",
             "icon": "file",
             "url": "https://capgemini.sharepoint.com/:w:/r/sites/KnowNow/AIMarketplace/SiteAssets/SitePages/Industrialized%20Use%20cases%20sample%20files/Retail/Invoice%20Validation/Invoice_Validation_Rules_Document.docx?d=wc66ed6da8a56413796e60badbcf4c31d&csf=1&web=1&e=ZgIZ3U"
+          }
+        ],
+        "comments": []
+      },
+      {
+        "id": "45",
+        "title": "Market Intelligence Analyst",
+        "tagline": "Analyzes demand forecasts, purchasing trends, inventory coverage, supplier performance, and external...",
+        "description": "Analyzes demand forecasts, purchasing trends, inventory coverage, supplier performance, and external market signals to identify supply risks and pricing impacts. Evaluates sourcing alternatives, assesses logistics and transit constraints, and generates risk-aware procurement actions, recommended sourcing mix, pricing guidance, and a consolidated intelligence report with confidence scores.",
+        "industry": "Retail",
+        "category": "Retail",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
+        "demoAvailable": true,
+        "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-6aurl8nj48t",
+        "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Loan_Origination.mp4?CT=1772605356150&OR=OWA-NT-Mail&CID=f3d572c0-5ba1-3cf7-c644-983dfc8e12f7",
+        "duration": "1:45",
+        "problemSolved": "Organizations struggle to make timely procurement and pricing decisions amid demand volatility, supplier risks, logistics disruptions, and changing market conditions, resulting in higher costs, stock shortages, and margin erosion.",
+        "solutionDescription": "It uses AI agents to analyze demand, inventory, suppliers, logistics, and market signals, optimizing procurement, pricing, sourcing decisions, and risk management.",
+        "agentPipeline": [
+          {
+            "name": "Data IngestorGeo Pricing OrchestratorSupplier Evaluation AgentCompliance Gate AgentPricing Synthesis and Report AgentExternal Intelligence Agent",
+            "role": "Autonomous Multi-Agent Step"
+          }
+        ],
+        "availability": [
+          "Amplifier for Agentic Experience"
+        ],
+        "roiMetrics": {
+          "timeSavings": "10%",
+          "timeLabel": "procurement costs",
+          "costSavings": "20%",
+          "costLabel": "stockout incidents",
+          "summary": "Accelerates turnaround and cuts operational overhead."
+        },
+        "ratings": {
+          "score": 5,
+          "maxScore": 5,
+          "count": 10
+        },
+        "quickLinks": [
+          {
+            "id": "demo",
+            "label": "Click Through Demo",
+            "icon": "video",
+            "url": "https://sogeti.navattic.com/zax0o64"
+          },
+          {
+            "id": "deck",
+            "label": "Pitch Deck",
+            "icon": "deck",
+            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7B501CF622-C349-4E1F-BEF4-A97EEBF61167%7D&file=Retail_Starter%20Pack%20.pptx&action=edit&mobileredirect=true"
+          },
+          {
+            "id": "setup",
+            "label": "Workflow Setup Instructions",
+            "icon": "workflow",
+            "url": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Market%20Intelligence%20Analyst_setup%20.mp4?csf=1&web=1&e=meHumz"
+          },
+          {
+            "id": "sample",
+            "label": "Sample Input File",
+            "icon": "file",
+            "url": "https://capgemini.sharepoint.com/:x:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Retail/Market%20Intelligence%20Analyst/Sample%20Input/scenario2_avocado_bengaluru/scenario2_avocado_bengaluru/supplier_performance.csv?d=wb2235bbf42f54d36974823789f4fb401&csf=1&web=1&e=Lbx4cA"
+          }
+        ],
+        "comments": []
+      }
+    ]
+  },
+  {
+    "id": "luxury",
+    "name": "Luxury",
+    "starterPacks": [
+      {
+        "id": "44",
+        "title": "Brand Guard",
+        "tagline": "AI-powered brand compliance and governance solution that automatically reviews marketing, promotiona...",
+        "description": "AI-powered brand compliance and governance solution that automatically reviews marketing, promotional, and customer-facing assets against enterprise brand guidelines, ensuring consistent, high-quality brand representation at scale.",
+        "industry": "Luxury",
+        "category": "Luxury",
+        "benefits": "Accelerates idea-to-production with automated compliance.",
+        "demoAvailable": true,
+        "agenticLinkUrl": "https://agenticexperience.azurewebsites.net/chat?sessionId=agents-mehjoj1bka",
+        "videoUrl": "https://capgemini.sharepoint.com/sites/KnowNow/AI/Smart_Loan_Origination.mp4?CT=1772605356150&OR=OWA-NT-Mail&CID=f3d572c0-5ba1-3cf7-c644-983dfc8e12f7",
+        "duration": "1:45",
+        "problemSolved": "Organizations spend substantial time manually reviewing presentations, brochures, advertisements, social media content, and campaign assets for compliance. This process is slow, resource-intensive, and prone to inconsistencies, leading to brand deviations, delayed approvals, costly rework, and increased operational overhead across marketing and creative functions.",
+        "solutionDescription": "Automates end-to-end brand compliance validation across content, visuals, layouts, logos, typography, colors, and messaging. Generates actionable review reports with corrective recommendations, enabling faster approvals and consistent brand adherence.",
+        "agentPipeline": [
+          {
+            "name": "Brand Compliance Agent",
+            "role": "Validates assets against brand guidelines]Visual Review Agent [Checks logos, colors, typography, and layouts]Content Validation Agent [Reviews messaging, tone, and disclaimers]Recommendation Agent [Suggests compliant fixes and improvements]Report Generator Agent [Creates compliance review reports"
+          }
+        ],
+        "availability": [
+          "Amplifier for Agentic Experience",
+          "Azure AI Foundry",
+          "MS Copilot Studio"
+        ],
+        "roiMetrics": {
+          "timeSavings": "80%",
+          "timeLabel": "manual review effort",
+          "costSavings": "60%",
+          "costLabel": "review turnaround time",
+          "summary": "Accelerates turnaround and cuts operational overhead."
+        },
+        "ratings": {
+          "score": 5,
+          "maxScore": 5,
+          "count": 10
+        },
+        "quickLinks": [
+          {
+            "id": "demo",
+            "label": "Click Through Demo",
+            "icon": "video",
+            "url": "https://sogeti.navattic.com/fc1s03re"
+          },
+          {
+            "id": "deck",
+            "label": "Pitch Deck",
+            "icon": "deck",
+            "url": "https://capgemini.sharepoint.com/:p:/r/sites/KnowNow/_layouts/15/Doc.aspx?sourcedoc=%7B53801717-EDA9-4E49-A1B8-093FDCA8348A%7D&file=Luxury%20Starter%20Pack.pptx&action=edit&mobileredirect=true"
+          },
+          {
+            "id": "setup",
+            "label": "Workflow Setup Instructions",
+            "icon": "workflow",
+            "url": "https://capgemini.sharepoint.com/:v:/r/sites/TeamAI-AITeam-Delivery/Shared%20Documents/AI%20Team%20-%20Delivery/Projects/Agentic%20hub/Industrialized%20Use%20Cases/Workflow%20Setup/Brand%20Guard%20Setup.mp4?csf=1&web=1&e=Q7ww7h"
+          },
+          {
+            "id": "sample",
+            "label": "Sample Input File",
+            "icon": "file",
+            "url": "https://capgemini.sharepoint.com/sites/TeamAI-AITeam-Delivery/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTeamAI%2DAITeam%2DDelivery%2FShared%20Documents%2FAI%20Team%20%2D%20Delivery%2FProjects%2FAgentic%20hub%2FIndustrialized%20Use%20Cases%2FRetail%2FMarkt%20Intelligence%20Analyst%2FSample%20Input&viewid=a5a40318%2D2265%2D4b41%2D9913%2D723b31f2e087&CID=de6cee5b%2Dc7eb%2D46c6%2Db9dc%2Dcc958497869b&FolderCTID=0x012000E6389613854FFA4CA9E6B7E794FAAF90"
           }
         ],
         "comments": []
