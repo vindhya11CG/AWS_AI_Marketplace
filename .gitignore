@@ -3,6 +3,13 @@ logs
 *.log
 npm-debug.log*
 
+# Environment files
+.env
+.env.*
+.env.example
+*.env
+*.env.example
+
 # Dependency directories
 node_modules
 

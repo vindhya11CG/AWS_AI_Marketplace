@@ -85,7 +85,8 @@ aws iam put-role-policy `
 Write-Host "`n[3/6] Deploying Lambda function: $FunctionName..." -ForegroundColor Yellow
 $existingFn = aws lambda list-functions --region $Region --query "Functions[?FunctionName=='$FunctionName'].FunctionName" --output text 2>$null
 
-$envVars = "Variables={CURATED_BUCKET=$Bucket,CURATED_KEY_STARTER_PACKS=curated/starter-packs.json,CURATED_KEY_AGENTS=curated/agents.json,CURATED_KEY_CATALOG=curated/marketplace-catalog.json,RAW_PREFIX=$RawPrefix,RESOURCE_TAG=$ResourceTag}"
+$envVars = "Variables={CURATED_BUCKET=$Bucket,CURATED_KEY=curated/starter-packs.json,CURATED_KEY_STARTER_PACKS=curated/starter-packs.json,CURATED_KEY_AGENTS=curated/agents.json,CURATED_KEY_CATALOG=curated/marketplace-catalog.json,RAW_PREFIX=$RawPrefix,RESOURCE_TAG=$ResourceTag,SP_HOSTNAME=capgemini.sharepoint.com,SP_SITE_PATH=/sites/KnowNow/AIMarketplace,SP_LIST_NAME='Industrialized Use cases',INGESTION_API_URL=https://yymryxj4se.execute-api.us-east-1.amazonaws.com/prod/transform}"
+
 
 if ([string]::IsNullOrWhiteSpace($existingFn)) {
     Write-Host "  Creating new Lambda function..." -ForegroundColor Cyan

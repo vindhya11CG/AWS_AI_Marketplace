@@ -56,12 +56,19 @@ except ImportError:
     boto3 = None
     s3 = None
 
-CURATED_BUCKET = os.environ.get("CURATED_BUCKET", "ai-marketplace-624807913752-us-east-1-an")
-CURATED_KEY_STARTER_PACKS = os.environ.get("CURATED_KEY_STARTER_PACKS", "curated/starter-packs.json")
+CURATED_BUCKET = os.environ.get("CURATED_BUCKET") or os.environ.get("S3_BUCKET", "ai-marketplace-624807913752-us-east-1-an")
+CURATED_KEY = os.environ.get("CURATED_KEY", "curated/starter-packs.json")
+CURATED_KEY_STARTER_PACKS = os.environ.get("CURATED_KEY_STARTER_PACKS", CURATED_KEY)
 CURATED_KEY_AGENTS = os.environ.get("CURATED_KEY_AGENTS", "curated/agents.json")
 CURATED_KEY_CATALOG = os.environ.get("CURATED_KEY_CATALOG", "curated/marketplace-catalog.json")
 RAW_PREFIX = os.environ.get("RAW_PREFIX", "raw/")
 RESOURCE_TAG = os.environ.get("RESOURCE_TAG", "aep_aws")
+
+# SharePoint Site and List details
+SP_HOSTNAME = os.environ.get("SP_HOSTNAME", "capgemini.sharepoint.com")
+SP_SITE_PATH = os.environ.get("SP_SITE_PATH", "/sites/KnowNow/AIMarketplace")
+SP_LIST_NAME = os.environ.get("SP_LIST_NAME", "Industrialized Use cases")
+INGESTION_API_URL = os.environ.get("INGESTION_API_URL", "https://yymryxj4se.execute-api.us-east-1.amazonaws.com/prod/transform")
 
 # Optional Microsoft Graph credentials for direct polling
 MS_GRAPH_TENANT_ID = os.environ.get("MS_GRAPH_TENANT_ID")
@@ -761,9 +768,13 @@ def handle_submit_rating(event, item_id):
         new_rating = float(payload.get("rating", 5))
     except (TypeError, ValueError):
         return cors_response(400, {"error": "Invalid rating value"})
+    if not 1 <= new_rating <= 5:
+        return cors_response(400, {"error": "Rating must be between 1 and 5"})
 
     industries = read_s3_json(CURATED_BUCKET, CURATED_KEY_STARTER_PACKS, default=[])
+    domains = read_s3_json(CURATED_BUCKET, CURATED_KEY_AGENTS, default=[])
     updated = False
+    rated_item = None
     for ind in industries:
         for pack in ind.get("starterPacks", []):
             if pack.get("id") == item_id or _slug(pack.get("title")) == _slug(item_id):
@@ -773,16 +784,33 @@ def handle_submit_rating(event, item_id):
                 new_count = old_count + 1
                 new_score = round(((old_score * old_count) + new_rating) / new_count, 1)
                 pack["ratings"] = {"score": new_score, "maxScore": 5, "count": new_count}
+                rated_item = pack
                 updated = True
                 break
         if updated:
             break
 
+    if not updated:
+        for domain in domains:
+            for agent in domain.get("agents", []):
+                if agent.get("id") == item_id or _slug(agent.get("title")) == _slug(item_id):
+                    curr = agent.get("ratings", {"score": 5.0, "count": 10})
+                    old_score = curr.get("score", 5.0)
+                    old_count = curr.get("count", 10)
+                    new_count = old_count + 1
+                    new_score = round(((old_score * old_count) + new_rating) / new_count, 1)
+                    agent["ratings"] = {"score": new_score, "maxScore": 5, "count": new_count}
+                    rated_item = agent
+                    updated = True
+                    break
+            if updated:
+                break
+
     if updated:
         write_s3_json(CURATED_BUCKET, CURATED_KEY_STARTER_PACKS, industries)
-        domains = read_s3_json(CURATED_BUCKET, CURATED_KEY_AGENTS, default=[])
+        write_s3_json(CURATED_BUCKET, CURATED_KEY_AGENTS, domains)
         write_s3_json(CURATED_BUCKET, CURATED_KEY_CATALOG, {"industries": industries, "domains": domains})
-        return cors_response(200, {"status": "success", "ratings": pack["ratings"]})
+        return cors_response(200, {"status": "success", "ratings": rated_item["ratings"]})
 
     return cors_response(404, {"error": f"Item '{item_id}' not found"})
 
